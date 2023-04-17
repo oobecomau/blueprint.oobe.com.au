@@ -652,11 +652,11 @@
   </li>
         
             <li class="md-nav__item">
-    <a href="#windows-10-hardware" class="md-nav__link">
-      Windows 10 hardware
+    <a href="#windows-hardware" class="md-nav__link">
+      Windows hardware
     </a>
     
-      <nav class="md-nav" aria-label="Windows 10 hardware">
+      <nav class="md-nav" aria-label="Windows hardware">
         <ul class="md-nav__list">
           
               <li class="md-nav__item">
@@ -693,11 +693,11 @@
   </li>
         
             <li class="md-nav__item">
-    <a href="#windows-10-deployment-management" class="md-nav__link">
-      Windows 10 deployment &amp; management
+    <a href="#windows-deployment-management" class="md-nav__link">
+      Windows deployment &amp; management
     </a>
     
-      <nav class="md-nav" aria-label="Windows 10 deployment &amp; management">
+      <nav class="md-nav" aria-label="Windows deployment &amp; management">
         <ul class="md-nav__list">
           
               <li class="md-nav__item">
@@ -720,11 +720,11 @@
   </li>
         
             <li class="md-nav__item">
-    <a href="#windows-10-standard-operating-environment" class="md-nav__link">
-      Windows 10 standard operating environment
+    <a href="#windows-standard-operating-environment" class="md-nav__link">
+      Windows standard operating environment
     </a>
     
-      <nav class="md-nav" aria-label="Windows 10 standard operating environment">
+      <nav class="md-nav" aria-label="Windows standard operating environment">
         <ul class="md-nav__list">
           
               <li class="md-nav__item">
@@ -908,11 +908,11 @@
   </li>
         
             <li class="md-nav__item">
-    <a href="#windows-10-security" class="md-nav__link">
-      Windows 10 security
+    <a href="#windows-security" class="md-nav__link">
+      Windows security
     </a>
     
-      <nav class="md-nav" aria-label="Windows 10 security">
+      <nav class="md-nav" aria-label="Windows security">
         <ul class="md-nav__list">
           
               <li class="md-nav__item">
@@ -923,8 +923,8 @@
   </li>
           
               <li class="md-nav__item">
-    <a href="#windows-10-hardening" class="md-nav__link">
-      Windows 10 hardening
+    <a href="#windows-hardening" class="md-nav__link">
+      Windows hardening
     </a>
     
   </li>
@@ -1454,20 +1454,20 @@
 </thead>
 <tbody>
 <tr>
-<td>Windows 10 Hardware</td>
+<td>Windows Hardware</td>
 <td>The Hardware Platform section includes the physical hardware, firmware drivers, and peripherals.</td>
 </tr>
 <tr>
-<td>Windows 10 Deployment &amp; Management</td>
+<td>Windows Deployment &amp; Management</td>
 <td>The Deployment &amp; Management section shows the typical deployment options for cloud &amp; hybrid as well as the management options that can be used in the application of the SOE and security.</td>
 </tr>
 <tr>
-<td>Windows 10 Standard Operating Environment (SOE)</td>
+<td>Windows Standard Operating Environment (SOE)</td>
 <td>The SOE section defines all the operating system components that are installed on the physical hardware. It includes the operating system and core services.</td>
 </tr>
 <tr>
-<td>Windows 10 Security</td>
-<td>The Windows Security section describes the configuration and methods of locking down the configuration to align with Microsoft security best practices and ACSC guidance for Windows 10 clients.</td>
+<td>Windows Security</td>
+<td>The Windows Security section describes the configuration and methods of locking down the configuration to align with Microsoft security best practices and ACSC guidance for Windows 10/11 clients.</td>
 </tr>
 <tr>
 <td>iOS</td>
@@ -1478,14 +1478,16 @@
 <p>For each component within the document there is a brief description of the contents of the section, a commentary on the things that have been considered in determining the decisions and the design decisions themselves.</p>
 <h2 id="assumptions">Assumptions</h2>
 <ul>
-<li>The Microsoft Endpoint Manager (MEM) Console is the preferred method to manage all settings regardless of a cloud native or hybrid implementation. Although a combination of the Microsoft Endpoint Configuration Manager (MECM) Console and Group Policy Objects (GPOs) would  be able to achieve the same settings in a hybrid environment, this blueprint does not include MECM and GPOs example configurations due to the level of dissimilarities and per agency customisation in existing MECM and GPOs configurations across Commonwealth entities.</li>
-<li>Minimum version of MECM 1710 is required for co-management, recommended minimum version at is 2002 update version. See <a href="https://docs.microsoft.com/en-us/mem/configmgr/core/servers/manage/current-branch-versions-supported">support for Configuration Manager current branch versions.</a></li>
+<li>The Microsoft Endpoint Manager (MEM) Console is the preferred method to manage all settings regardless of a cloud native or hybrid implementation. Although a combination of the Microsoft Endpoint Configuration Manager (MECM) Console and Group Policy Objects (GPOs) would be able to achieve the same settings in a hybrid environment, this blueprint does not include MECM and GPOs example configurations due to the level of dissimilarities and per agency customisation in existing MECM and GPOs configurations across Commonwealth entities.</li>
+<li>Minimum version of MECM 1710 is required for co-management, recommended minimum version at is 2002 update version. See <a href="https://learn.microsoft.com/en-au/mem/configmgr/core/servers/manage/current-branch-versions-supported">support for Configuration Manager current branch versions.</a></li>
+<li>Minimum version of MECM 2211 is required for management of Windows 11 devices. See <a href="https://learn.microsoft.com/en-au/mem/configmgr/core/plan-design/configs/support-for-windows-11">support for Windows 11 in Configuration Manager.</a></li>
 </ul>
-<h2 id="windows-10-hardware">Windows 10 hardware</h2>
-<p>While most modern hardware will be capable of running Windows 10, making sure the right choice of hardware is made will ensure that the Standard Operating Environment (SOE) runs efficiently. This section focuses on the technical requirements to support Windows 10 features described in this design.</p>
+<h2 id="windows-hardware">Windows hardware</h2>
+<p>While most modern hardware will be capable of running Windows 10, making sure the right choice of hardware is made will ensure that the Standard Operating Environment (SOE) runs efficiently. This section focuses on the technical requirements to support Windows features described in this design.</p>
+<p>Windows 11 has additional hardware requirements compared with Windows 10, including a specific set of supported processors (CPUs) and increased system firmware capabilities (e.g., TPM version 2.0).</p>
 <p>The style of hardware will also need to be considered, whether a typical desktop model which will be permanently located on a desk or a laptop model to facilitate a more mobile workforce. The DTA recommends that, within operational constraints, agencies consider a laptop deployment to increase the flexibility and mobility of an agency workforce. </p>
 <h3 id="hardware-requirements">Hardware requirements</h3>
-<p>The hardware platform chosen to support the SOE is key to its stability  and provides the components that can be configured by the operating system and applications.</p>
+<p>The hardware platform chosen to support the SOE is key to its stability and provides the components that can be configured by the operating system and applications.</p>
 <p>The selected processor architecture and associated firmware capability directly influence the supportability of applications and security features of an operating system. The minimum hardware requirements listed below will ensure that the system runs reliably and is supported by the vendor, Microsoft.</p>
 <p>Agencies should select a reputable hardware platform that supports enterprise features, such as having an interface to provision zero-touch UEFI configuration and updates.</p>
 <p>Note: agencies that wish to implement virtual desktops or VDI (Virtual Desktop Infrastructure) should assess the chosen virtualisation or hypervisor (including cloud platforms) platform to determine the features available meet the desired security risk profile for the agency.</p>
@@ -1563,22 +1565,23 @@
 <tr>
 <td>TPM</td>
 <td>Minimum version 2.0 (with device attestation preferred)</td>
-<td>Required to support Microsoft Endpoint Manager - Intune (Intune) Windows Autopilot and MECM. Note: TPM device attestation is preferred to allow <a href="https://docs.microsoft.com/en-us/mem/autopilot/self-deploying">Windows Autopilot Self-deploying mode</a>.</td>
+<td>Required to support Microsoft Endpoint Manager - Intune (Intune) Windows Autopilot and MECM. Note: TPM device attestation is preferred to allow <a href="https://learn.microsoft.com/en-au/mem/autopilot/self-deploying">Windows Autopilot Self-deploying mode</a>.</td>
 </tr>
 </tbody>
 </table>
+<p>In addition for Windows 11 SOEs, the processor must be selected from the supported list for <a href="https://learn.microsoft.com/en-au/windows-hardware/design/minimum/windows-processor-requirements">Windows Processor Requirements</a>.</p>
 <h3 id="drivers-and-peripherals">Drivers and peripherals</h3>
 <p>Drivers allow hardware and software to function within a SOE. Drivers are essentially written code that allows Windows to recognise physical components of a computer such as printers, keyboards, mouse, graphics cards and peripherals. It is critical these drivers are supported on the Operating System version and are deployed at the right time.</p>
 <p>Drivers that are essential to the hardware platform can be deployed in the base reference image, during device deployment task sequence through MECM, via Microsoft Intune or later by Microsoft Windows Update. Drivers such as network drivers are critical during the deployment phase, whereas a microphone driver is not. The more generic a reference image, the lower the deployment and maintenance costs.</p>
 <p>Other drivers like printer drivers can be deployed after the end user has logged onto the device using either a "Follow Me Print" or "Defined print queue list" selected by the end user.</p>
-<p>Peripheral installation can natively be controlled through Group Policies or Intune (administrative templates or the <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-deviceinstallation">Device installation CSP</a>). As device identifiers may be spoofed, a defence in depth approach should be followed using additional methods of protection such as:</p>
+<p>Peripheral installation can natively be controlled through Group Policies or Intune (administrative templates or the <a href="https://learn.microsoft.com/en-au/windows/client-management/mdm/policy-csp-deviceinstallation">Device installation CSP</a>). As device identifiers may be spoofed, a defence in depth approach should be followed using additional methods of protection such as:</p>
 <ul>
 <li>denying write to removable media unless the device is encrypted by BitLocker, </li>
 <li>blocking of unsigned and untrusted executables, and </li>
 <li>ensuring Microsoft Defender is actively scanning for threats on removable media.</li>
 </ul>
-<p>When restricting the installation of peripherals, there are many common human input devices (HID) (eg mice, keyboards etc.) where a blanket allow approach may be taken to avoid additional operational overheads, see <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors">System-Defined Device Setup Classes</a>. </p>
-<p>Bluetooth pairing and allowed services are also controllable. The default state of Windows allows all services, thus care should be taken to define only the <a href="https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide">Bluetooth services</a> required.</p>
+<p>When restricting the installation of peripherals, there are many common human input devices (HID) (e.g. mice, keyboards etc.) where a blanket allow approach may be taken to avoid additional operational overheads, see <a href="https://learn.microsoft.com/en-au/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors">System-Defined Device Setup Classes</a>. </p>
+<p>Bluetooth pairing and allowed services are also controllable. The default state of Windows allows all services, thus care should be taken to define only the <a href="https://learn.microsoft.com/en-au/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide">Bluetooth services</a> required.</p>
 <p>Drivers and Peripherals Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -1627,7 +1630,7 @@
 <tr>
 <td>Bluetooth Restrictions</td>
 <td>Configured</td>
-<td>The agency should define a list of approved Bluetooth services to only those necessary, using <a href="https://docs.microsoft.com/en-us/microsoft-365/security/defender-endpoint/control-usb-devices-using-intune?view=o365-worldwide#limit-services-that-use-bluetooth">Intune device restrictions profile</a>.</td>
+<td>The agency should define a list of approved Bluetooth services to only those necessary, using <a href="https://learn.microsoft.com/en-au/microsoft-365/security/defender-endpoint/mde-device-control-device-installation?view=o365-worldwide#limit-services-that-use-bluetooth">Intune device restrictions profile</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -1677,7 +1680,7 @@
 <tr>
 <td>Secure Boot Configuration Method</td>
 <td>Configured via MEM or MECM</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Trusted Boot</td>
@@ -1692,29 +1695,29 @@
 <tr>
 <td>UEFI Password</td>
 <td>Configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>USB Boot</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>SD Card Boot</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Allow boot locations other than the internal hard disk drive</td>
 <td>Require password</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="trusted-platform-module">Trusted platform module</h3>
 <p>A Trusted Platform Module (TPM) is a microchip designed to provide basic security-related functions, primarily involving encryption keys. The TPM is usually installed on the motherboard of a computer or laptop and communicates with the rest of the system using a hardware bus.</p>
 <p>With a TPM, private portions of key pairs are kept separate from the memory controlled by the Operating System. Keys can be sealed to the TPM, and certain assurances about the state of a system—that define its "trustworthiness"—can be made before the keys are unsealed and released for use. Because the TPM uses its own internal firmware and logic circuits for processing instructions, it does not rely upon the Operating System and is not exposed to external software vulnerabilities.</p>
-<p>A TPM of specific version number is required to support Windows 10 features such as Windows Hello and BitLocker to help meet ACSC hardening guidelines for the OS.</p>
+<p>A TPM of specific version number is required to support Windows features such as Windows Hello and BitLocker to help meet ACSC hardening guidelines for the OS. Windows 11 requires TPM version 2.0.</p>
 <p>Trusted Platform Module Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -1728,21 +1731,21 @@
 <tr>
 <td>TPM</td>
 <td>Enabled in BIOS/UEFI from hardware vendor or manually configured</td>
-<td>Required for Windows 10 and BitLocker.</td>
+<td>Required for Windows 10/11 and BitLocker.</td>
 </tr>
 <tr>
 <td>TPM Version</td>
 <td>2.0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance and support Windows 11.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="windows-10-deployment-management">Windows 10 deployment &amp; management</h2>
+<h2 id="windows-deployment-management">Windows deployment &amp; management</h2>
 <p>The type of deployment and management methods used for the SOE will vary depending on the use of either a cloud native or hybrid configuration. Cloud native will typically utilise pre-installed or offline custom images with Windows Autopilot for the deployment method and utilise Intune as the ongoing management method.</p>
 <p>Hybrid can benefit from enabling the MECM Co-management feature. Once enabled this allows additional deployment methods which can be utilised to ensure images remain light weight. Co-management provides a more staged approach to moving workloads into the cloud that may assist existing larger environments to complete a more gradual transition.</p>
 <h3 id="deployment">Deployment</h3>
-<p>Windows 10 can be deployed via Intune or MECM, or a combination of both. The configuration of a Windows 10 deployment will depend upon which technologies are available to an agency and whether a hybrid deployment is required.</p>
-<p>Windows 10 deployments will be based on either a deployment which is cloud native or hybrid.</p>
+<p>Windows 10 and 11 can be deployed via Intune or MECM, or a combination of both. The configuration of a Windows deployment will depend upon which technologies are available to an agency and whether a hybrid deployment is required.</p>
+<p>Windows deployments will be based on either a deployment which is cloud native or hybrid.</p>
 <ul>
 <li>Cloud native – Image on the workstation will be modified using Windows Autopilot and Intune. The OEM image in use should be from a trusted vendor or custom-built by the agency and provided to the OEM vendor for implementation prior to being dispatched to the agency. Alternatively, an offline image will need to be created by the agency and applied to the workstation prior to Windows Autopilot and Intune. The offline image should be light weight consisting of the base Windows image and required base drivers only.</li>
 <li>Hybrid – OEM image or MECM task sequence should be used as the base for Windows 10, with Intune and Windows Autopilot applied over the top of the image for further customisation. The OEM image in use should be from a trusted vendor or custom built by the agency and provided to the OEM vendor for implementation prior to being dispatched to the agency. Alternatively, an agency specific MECM task sequence including the Windows image and base drivers. This image will then be further customised with Intune and Windows Autopilot.</li>
@@ -1782,18 +1785,18 @@
 </tbody>
 </table>
 <h3 id="management">Management</h3>
-<p>Windows 10 can be managed via Intune or MECM, or a combination of both. The configuration of Windows 10 management will depend upon which technologies are available to an agency and whether a hybrid deployment is required.</p>
-<p>Windows 10 management options will be based on either a deployment which is cloud native or hybrid. This section provides detailed information on the different configuration options for Windows 10 management.</p>
-<p>Cloud native deployments provides the agency the immediate benefits of working with Intune and Windows Autopilot while also integrating directly with other cloud services including Microsoft 365 and Azure Active Directory (AAD). Using Intune will simplify the overall deployment and management of Windows 10 to a single console which is also shared with the mobile device management of iOS devices.</p>
-<p>A hybrid deployment gives the option of co-management which enables the agency to manage Windows 10 by using both MECM and Intune. Enabling co-management within MECM allows the agency to utilise their investment in MECM and take advantage of additional cloud capabilities. This allows the agency additional flexibility to use the technology solution that works best for them and facilitates a more gradual move to cloud native as the agency can pilot test various workloads in Intune first.</p>
+<p>Windows 10 and 11 can be managed via Intune or MECM, or a combination of both. The configuration of Windows management will depend upon which technologies are available to an agency and whether a hybrid deployment is required.</p>
+<p>Windows management options will be based on either a deployment which is cloud native or hybrid. This section provides detailed information on the different configuration options for Windows management.</p>
+<p>Cloud native deployments provides the agency the immediate benefits of working with Intune and Windows Autopilot while also integrating directly with other cloud services including Microsoft 365 and Azure Active Directory (AAD). Using Intune will simplify the overall deployment and management of Windows to a single console which is also shared with the mobile device management of iOS devices.</p>
+<p>A hybrid deployment gives the option of co-management which enables the agency to manage Windows by using both MECM and Intune. Enabling co-management within MECM allows the agency to utilise their investment in MECM and take advantage of additional cloud capabilities. This allows the agency additional flexibility to use the technology solution that works best for them and facilitates a more gradual move to cloud native as the agency can pilot test various workloads in Intune first.</p>
 <p>Hybrid deployments can choose to enable MECM or Intune for client management depending on the cloud maturity level of the agency or operational requirements. It is not a requirement of agencies undertaking hybrid implementations to use MECM. This blueprint provides guidance on integration between MECM and Intune for hybrid deployments however agencies with existing infrastructure may alternatively elect to migrate device management from MECM to Intune, which will not affect cyber security postures.</p>
-<p>Management methods that can be used to manage Windows 10 in a Microsoft 365 environment.</p>
+<p>Management methods that can be used to manage Windows in a Microsoft 365 environment.</p>
 <table>
 <thead>
 <tr>
 <th>Microsoft 365 Implementation</th>
 <th>MECM Implementation</th>
-<th>Management Method for Windows 10</th>
+<th>Management Method for Windows</th>
 <th>Benefits</th>
 </tr>
 </thead>
@@ -1806,7 +1809,7 @@
 </tr>
 <tr>
 <td>Hybrid with Intune management</td>
-<td>Suitable for:<br>- No MECM or<br>- MECM with co-management enabled and Workloads set to Intune</td>
+<td>Suitable for:<br> * No MECM or<br>* MECM with co-management enabled and Workloads set to Intune</td>
 <td>Intune</td>
 <td>Existing on-premises MECM infrastructure with Hybrid Azure AD joined workstation. Well suited for an agency that does not have MECM or does not want to use MECM to manage workstations.</td>
 </tr>
@@ -1826,11 +1829,11 @@
 <li>Device Configuration – The device configuration workload includes settings that you manage for devices in your organization. Switching this workload also moves the Endpoint Protection and Resource Access workloads.</li>
 <li>Endpoint Protection – The Endpoint Protection workload includes the Windows Defender suite of antimalware protection features including Defender Advanced Threat Protection.</li>
 <li>Resource Access Policies – Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.</li>
-<li>Client Apps – Use Intune to manage client apps and PowerShell scripts on co-managed Windows 10 devices. After transitioning this workload, any available apps deployed from Intune will be available in the Company Portal. Apps that are deployed from Configuration Manager are available in Software Centre.</li>
+<li>Client Apps – Use Intune to manage client apps and PowerShell scripts on co-managed Windows devices. After transitioning this workload, any available apps deployed from Intune will be available in the Company Portal. Apps that are deployed from Configuration Manager are available in Software Centre.</li>
 <li>Office Click-to-Run Apps – This workload manages Office 365 apps on co-managed devices.</li>
-<li>Windows Update Policies – Windows Update for Business policies allow deferral policies for Windows 10 feature updates or quality updates for Windows 10 devices managed directly by Windows Update for Business.</li>
+<li>Windows Update Policies – Windows Update for Business policies allow deferral policies for Windows feature updates or quality updates for Windows devices managed directly by Windows Update for Business.</li>
 </ul>
-<p>With co-management disabled and no cloud integration, the agency will rely on on-premises management of the Windows 10 workstations. These could include utilising MECM task sequencing, MECM Compliance and Endpoint Protection policies, various scripting methods and Group Policy Preferences. </p>
+<p>With co-management disabled and no cloud integration, the agency will rely on on-premises management of the Windows workstations. These could include utilising MECM task sequencing, MECM Compliance and Endpoint Protection policies, various scripting methods and Group Policy Preferences. </p>
 <p>There are many benefits to going cloud native or hybrid co-management utilising workloads weighted to Intune. The workstations can be managed from any internet-connected location whether that be in the office or a remote location (home, client site etc).</p>
 <p>Management Design Decisions for cloud native implementations</p>
 <table>
@@ -1845,7 +1848,7 @@
 <tr>
 <td>Management method</td>
 <td>Cloud native Intune management</td>
-<td>Cloud native implementation offers a simple and efficient implementation. Single console to manage both Windows 10 and iOS.</td>
+<td>Cloud native implementation offers a simple and efficient implementation. Single console to manage both Windows and iOS.</td>
 </tr>
 </tbody>
 </table>
@@ -1871,20 +1874,20 @@
 </tr>
 </tbody>
 </table>
-<h2 id="windows-10-standard-operating-environment">Windows 10 standard operating environment</h2>
-<p>The Standard Operating Environment (SOE) consists of the customisations to Windows 10 that will vary between environments. The customisations are largely cosmetic and functional in nature to ensure that end users can operate efficiently.</p>
+<h2 id="windows-standard-operating-environment">Windows standard operating environment</h2>
+<p>The Standard Operating Environment (SOE) consists of the customisations to Windows 10/11 that will vary between environments. The customisations are largely cosmetic and functional in nature to ensure that end users can operate efficiently.</p>
 <h3 id="operating-system">Operating system</h3>
 <p>The operating system allows software application to interface with the hardware. The operating system manages input and output device components like the mouse, keyboard, network and storage.</p>
-<p>Windows 10 is available in several editions these include:</p>
+<p>Windows 10 and 11 are available in several editions, including:</p>
 <ul>
 <li>Home – minimal management and deployment features and cannot be joined to either an on-premises or Azure AD domain. It is targeted from home use only</li>
 <li>Professional – this edition includes management and deployment features and can be joined to both an on-premises and Azure AD domain</li>
 <li>Enterprise – this edition has additional enterprise security features as well as the UE-V and App-V clients built in and only distributable through Microsoft's Volume Licensing Program</li>
 </ul>
-<p>Servicing of Windows 10 falls into three distinct channels or rings:</p>
+<p>Servicing of Windows 10 and 11 falls into three distinct channels (previously known as rings):</p>
 <ul>
 <li>Windows Insider Program – Windows Insider Program receive feature updates immediately allowing pilot machines to evaluate early builds than the General Availability channel. A business must opt-in for this service and install a specific Windows Insider Program for Business Preview build.</li>
-<li>General Availability – General Availability Channel receives feature update annually and is designed for the broad population of general-purpose devices within an organisation. The General Availability Channel is the default servicing channel for all Windows 10 devices with the exception of Long Term Servicing Branch (LTSB) edition of Windows 10 Enterprise.</li>
+<li>General Availability – General Availability Channel receives feature update annually and is designed for the broad population of general-purpose devices within an organisation. The General Availability Channel is the default servicing channel for all Windows 10 and 11 devices with the exception of Long Term Servicing Channel (LTSC) release of Windows 10/11 Enterprise.</li>
 <li>Long-Term Servicing Channel – Long-Term Servicing Channel (LTSC) receives releases much more gradually (expected every 2 - 3 years) and is designed for special purpose devices such as those used in Point of Sale (POS) systems or controlling factory or medical equipment, and those machines without Microsoft Office. Additionally, a number of applications are not supported on LTSC Windows devices, for example Microsoft Edge, Microsoft Store, and Microsoft Mail, amongst others.</li>
 </ul>
 <p>Operating System Design Decisions for all agencies and implementation types.</p>
@@ -1898,25 +1901,30 @@
 </thead>
 <tbody>
 <tr>
-<td>Windows 10 Edition</td>
-<td>Windows 10 Enterprise 64-bit</td>
-<td>Enterprise is required to support BitLocker.<br>The 64-bit edition of Windows is required to support security such as BitLocker and Windows Defender Application Control (WDAC) as specified by ACSC Windows 10 hardening guide.</td>
+<td>Windows 10/11 Edition</td>
+<td>Enterprise (64-bit)</td>
+<td>Enterprise is required to support BitLocker.<br>The 64-bit edition of Windows is required to support security such as BitLocker and Windows Defender Application Control (WDAC) as specified by ACSC Windows hardening guide.</td>
 </tr>
 <tr>
-<td>Windows 10 Servicing Channels</td>
+<td>Windows 10/11 Servicing Channel</td>
 <td>General Availability Channel</td>
-<td>General Availability Channel is the recommended ring to deploy to most enterprise clients, especially those with Office 365.</td>
+<td>The General Availability Channel is the recommended ring to deploy to most enterprise clients, especially those with Office 365.</td>
 </tr>
 <tr>
 <td>Windows 10 Build</td>
-<td>21H2</td>
-<td>Microsoft recommends deploying the latest General Availability version, please refer to (<a href="https://docs.microsoft.com/en-us/windows/release-health/release-information">Windows 10 - release information</a>). Note, at the time of the latest update to this design, build 21H1 is the latest build with an accompanying hardening guide from the ACSC and 1909 remains the most recent version to have undergone formal evaluation (refer to <a href="https://www.commoncriteriaportal.org/products/">Common Criteria evaluations</a>).</td>
+<td>22H2</td>
+<td>Microsoft recommends deploying the latest General Availability version, please refer to (<a href="https://learn.microsoft.com/en-au/windows/release-health/release-information">Windows 10 release information</a>).</td>
+</tr>
+<tr>
+<td>Windows 11 Build</td>
+<td>22H2</td>
+<td>Microsoft recommends deploying the latest General Availability version, please refer to (<a href="https://learn.microsoft.com/en-au/windows/release-health/windows11-release-information">Windows 11 release information</a>).</td>
 </tr>
 </tbody>
 </table>
 <h3 id="activation-and-licencing">Activation and licencing</h3>
 <p>Licence keys and activation processes are leveraged by Microsoft to ensure that the device or user is eligible to use the feature or run the product (i.e. Windows 10).</p>
-<p>Windows 10 licensing has evolved significantly since the initial release by Microsoft. In addition to the traditional activation methods for on premises networks (KMS, MAK and AD Based Activation) it is also possible to use Windows 10 Subscription Activation. The evolution of Windows 10 activation is described below:</p>
+<p>Windows 10/11 licensing has evolved significantly since the initial release by Microsoft. In addition to the traditional activation methods for on-premises networks (KMS, MAK and AD Based Activation) it is also possible to use Windows Subscription Activation. The evolution of Windows 10 activation is described below:</p>
 <ul>
 <li>Starting from Windows 10 Pro version 1703, Windows 10 Subscription Activation feature enables a step up from Windows 10 Pro edition to Windows 10 Enterprise for those with a qualifying Windows 10 or Microsoft 365 subscription.</li>
 <li>Azure Active Directory (Azure AD) available for identity management.</li>
@@ -1936,14 +1944,14 @@
 </thead>
 <tbody>
 <tr>
-<td>Licencing for Microsoft Windows 10 Enterprise <br>Microsoft Office 365 E5</td>
-<td>Microsoft 365 E5 which includes Windows 10 E5, Office 365 E5 and EM+S E5 per user</td>
+<td>Licencing for Microsoft Windows 10/11 Enterprise <br>Microsoft Office 365 E5</td>
+<td>Microsoft 365 E5 which includes Windows 10/11 E5, Office 365 E5 and EM+S E5 per user</td>
 <td>For agencies to meet their obligations under the ISM, PSPF, and ACSC cloud guidance as they relate to PROTECTED security classification. It is recommended in this design that agencies purchase a Microsoft 365 E5 licence for each user.</td>
 </tr>
 <tr>
 <td>Windows Activation Method</td>
-<td>Windows 10 Subscription</td>
-<td>All devices will meet the requirements for Subscription Activation (a supported <a href="https://docs.microsoft.com/en-us/windows/release-health/release-information">Windows 10 version</a> and internet access), as this is the simplest solution to implement and manage as part of the licensing entitlement.</td>
+<td>Windows Subscription</td>
+<td>All devices will meet the requirements for Subscription Activation (a supported <a href="https://learn.microsoft.com/en-au/windows/release-health/release-information">Windows 10 version</a> or <a href="https://learn.microsoft.com/en-au/windows/release-health/windows11-release-information">Windows 11 version</a> and internet access), as this is the simplest solution to implement and manage as part of the licensing entitlement.</td>
 </tr>
 <tr>
 <td>Office Activation Method</td>
@@ -1953,8 +1961,8 @@
 </tbody>
 </table>
 <h3 id="windows-features">Windows features</h3>
-<p>Windows 10 incorporates optional features that can be enabled to offer additional functionality.</p>
-<p>When deploying a Windows 10 SOE, removing unnecessary features from the standard installation creates a simpler image to maintain. In Windows if a feature is not required or used within an environment, its removal means a faster deployment and a simpler user experience.</p>
+<p>Windows 10 and 11 incorporates optional features that can be enabled to offer additional functionality.</p>
+<p>When deploying a Windows SOE, removing unnecessary features from the standard installation creates a simpler image to maintain. In Windows if a feature is not required or used within an environment, its removal means a faster deployment and a simpler user experience.</p>
 <p>Windows Features Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -1973,12 +1981,12 @@
 <tr>
 <td>.Net Framework 4.8</td>
 <td>Enabled</td>
-<td>This is to allow new .net applications in the Windows 10 device.</td>
+<td>This is to support modern .Net applications on the Windows SOE device.</td>
 </tr>
 <tr>
 <td>Internet Explorer 11</td>
 <td>Disabled</td>
-<td>Disabled by default to meet user application hardening guidelines in the <a href="../solution-overview#essential-eight-maturity">ACSC Essential Eight.</a> and the deprecation of the IE 11 feature.</td>
+<td>Disabled by default to meet user application hardening guidelines in the <a href="../solution-overview#essential-eight-maturity">ACSC Essential Eight.</a> and the deprecation of the IE 11 feature. Note, this is not applicable to Windows 11.</td>
 </tr>
 <tr>
 <td>Windows Media Features</td>
@@ -1986,7 +1994,7 @@
 <td>Support media content functionality.</td>
 </tr>
 <tr>
-<td>Windows 10 Ink</td>
+<td>Windows Ink Workspace</td>
 <td>Enabled</td>
 <td>Required to support full functionality of devices to be deployed, including Handwriting support.</td>
 </tr>
@@ -2036,9 +2044,9 @@
 </thead>
 <tbody>
 <tr>
-<td>Windows 10 SOE Footprint</td>
+<td>Windows SOE Footprint</td>
 <td>Reduce</td>
-<td>The Agency will reduce the size of the Windows 10 SOE footprint by configuring the settings in the next table unless the Agency has a specific requirement for these applications to be enabled.</td>
+<td>The Agency will reduce the size of the Windows SOE footprint by configuring the settings in the next table unless the Agency has a specific requirement for these applications to be enabled.</td>
 </tr>
 </tbody>
 </table>
@@ -2155,7 +2163,7 @@
 <tr>
 <td>Microsoft Xbox</td>
 <td>Removed</td>
-<td>The Xbox experience on Windows 10. The Xbox app brings together friends, games, and accomplishments across Xbox One and Windows 10 devices.</td>
+<td>The Xbox experience on Windows. The Xbox app brings together friends, games, and accomplishments across Xbox One and Windows devices.</td>
 </tr>
 <tr>
 <td>Zune</td>
@@ -2182,7 +2190,7 @@
 <tr>
 <td>Microsoft Public Store</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Store for Business</td>
@@ -2195,7 +2203,7 @@
 <p>Enterprise applications provide organisations and end users the functionality they require to perform day to day activities.</p>
 <p>Applications can be delivered to the user's desktop by one of the following methods:</p>
 <ul>
-<li>Intune – Ideally suited for Windows 10 only deployments. The only option for delivering application to iOS clients.</li>
+<li>Intune – Ideally suited for Windows 10/11 only deployments. The only option for delivering application to iOS clients.</li>
 <li>MECM – Ideally suited where an agency has a large existing investment of packaged applications. The only option for delivering application to servers. Only option for delivering virtual applications. </li>
 </ul>
 <p>Self-Service applications are requested by users directly. They can be delivered via Software Centre which is installed as part of the MECM client or Company Portal which is available as part of Intune and the Microsoft 365 tenant. As of MECM version 1802 "user-available" apps now appear in Software Centre under the applications tab where they were previously available in the Application Catalogue</p>
@@ -2255,7 +2263,7 @@
 </tbody>
 </table>
 <h3 id="power-management">Power Management</h3>
-<p>The power settings in Windows 10 can be fully managed by Intune, MECM, or Group Policy. Individual settings can be enforced or set as defaults that can then be changed by the user as desired.</p>
+<p>The power settings in Windows can be fully managed by Intune, MECM, or Group Policy. Individual settings can be enforced or set as defaults that can then be changed by the user as desired.</p>
 <p>Users can adjust power and performance options via the system tray power slider icon to:</p>
 <ul>
 <li>Better Battery / Recommended - Better Battery / Recommended provides extended battery life than the default settings on previous versions of Windows</li>
@@ -2290,77 +2298,77 @@
 <tr>
 <td>Allow standby states when sleeping (on battery)</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Allow standby states when sleeping (plugged in)</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Require a password when a computer wake (on battery)</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Require a password when a computer wakes (plugged in)</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify system hibernate timeout (on battery)</td>
 <td>Enabled<br>System Hibernate Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify system hibernate timeout (plugged in)</td>
 <td>Enabled<br>System Hibernate Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify system sleep timeout (on battery)</td>
 <td>Enabled<br>System Sleep Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify system sleep timeout (plugged in)</td>
 <td>Enabled<br>System Sleep Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify the unattended sleep timeout (on battery)</td>
 <td>Enabled<br>Unattended Sleep Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Specify the unattended sleep timeout (plugged in)</td>
 <td>Enabled<br>Unattended Sleep Timeout (seconds): 0</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Turned off hybrid sleep (on battery)</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Turned off hybrid sleep (plugged in)</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Show hibernate in the power options menu</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Show sleep in the power options menu</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="windows-search-and-cortana">Windows Search and Cortana</h3>
-<p>The Windows Search feature of Windows 10 provides indexing capability of the operating and file system allowing rapid searching for content stored on an attached hard disk. Once indexed, a file can be searched using either the file name or the content contained within the file.</p>
+<p>The Windows Search feature of Windows 10/11 provides indexing capability of the operating and file system allowing rapid searching for content stored on an attached hard disk. Once indexed, a file can be searched using either the file name or the content contained within the file.</p>
 <p>Cortana is a voice search capability of Windows 10. Cortana's features include being able to set reminders, recognise natural voice without the user having to input a predefined series of commands, and answer questions using information from Bing (like current weather and traffic conditions, sports scores, and biographies).</p>
 <p>Cortana can be used to perform tasks like setting a reminder, asking a question, or launching the app.</p>
 <p>Configuration of Cortana features can be managed by GPO or modern management (such as Microsoft Intune).</p>
@@ -2414,7 +2422,7 @@
 </tbody>
 </table>
 <h3 id="tablet-mode">Tablet mode</h3>
-<p>Tablet Mode is an adaptive user experience feature in Windows 10 that optimises the look and behaviour of applications and the Windows shell for the physical form factor and end-user's usage preferences.</p>
+<p>Tablet Mode is an adaptive user experience feature in Windows that optimises the look and behaviour of applications and the Windows shell for the physical form factor and end-user's usage preferences.</p>
 <p>Tablet Mode is a feature that switches a device experience from tablet mode to desktop mode and back. The primary way for an end-user to enter and exit "tablet mode" is manually through the Action Centre. In addition, Original Equipment Manufacturers (OEMs) can report hardware transitions (for example, transformation of 2-in-1 device from clamshell to tablet and vice versa), enabling automatic switching between the two modes.</p>
 <p>Tablet Mode Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -2434,7 +2442,7 @@
 </tbody>
 </table>
 <h3 id="fast-user-switching">Fast user switching</h3>
-<p>Fast User Switching allows more than one concurrent connection to a Windows 10 device, however only one session can be active at a time.</p>
+<p>Fast User Switching allows more than one concurrent connection to a Windows device, however only one session can be active at a time.</p>
 <p>Fast User Switching creates potential security risks around session-jacking and credential breaches. If one user reboots or shuts down the computer while another user is logged on, the other user may lose work as applications may not automatically save documents.</p>
 <p>Fast User Switching Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -2455,7 +2463,7 @@
 </table>
 <h3 id="corporate-branding">Corporate branding</h3>
 <p>Organisational branding enables a consistent corporate user experience.</p>
-<p>Windows 10 permits the image displayed at the lock screen, logon screen, and desktop wallpaper to be customised and support various resolutions. The appropriate resolution is selected based on an image file name. Windows will automatically select the appropriate image based on the current screen resolution. If a file matching the screen resolution cannot be found, a default image file is used, and the picture stretched to fit the screen.</p>
+<p>Windows 10/11 permits the image displayed at the lock screen, logon screen, and desktop wallpaper to be customised and support various resolutions. The appropriate resolution is selected based on an image file name. Windows will automatically select the appropriate image based on the current screen resolution. If a file matching the screen resolution cannot be found, a default image file is used, and the picture stretched to fit the screen.</p>
 <p>Custom themes can be deployed to workstations either enforcing the theme or allowing a user to customise it after the initial SOE deployment. Each client agency would be required to provide information necessary to customise the branding.</p>
 <p>Although a system is capable of being assessed as PROTECTED, banners and backgrounds should not be set to PROTECTED in the SOE or desktop background until an IRAP assessment has been completed.</p>
 <p>Corporate Branding Design Decisions for all agencies and implementation types.</p>
@@ -2579,7 +2587,7 @@
 </tbody>
 </table>
 <h3 id="start-menu">Start Menu</h3>
-<p>The Windows 10 Start Menu contains tiles that represent different programs that a user can launch by clicking on the tile. </p>
+<p>The Windows 10 Start Menu contains tiles that represent different programs that a user can launch by clicking on the tile. The Windows 11 Start Menu has been further updated to include both pinned applications and recommended documents by default.</p>
 <p>The default Start Menu layout can be configured for all users that use the device. Applications can be pinned to the start menu by administrators to ensure a consistent user experience across the environment. There are three levels of enforcement which are possible within the start menu:</p>
 <ul>
 <li>Full enforcement – The start menu is deployed centrally and cannot be altered by users in any way. Applications dictated by administrators are the only items which are present in the start menu. </li>
@@ -2625,17 +2633,17 @@
 <tr>
 <td>Machine Inactivity</td>
 <td>Configured – 900 seconds</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Users Can Configure the Screen Saver</td>
 <td>No</td>
-<td>Disable the ability for users to configure the screen saver for all Windows 10 SOE devices.</td>
+<td>Disable the ability for users to configure the screen saver for all Windows SOE devices.</td>
 </tr>
 <tr>
 <td>Require Password on Wake</td>
 <td>Configured</td>
-<td>Users will be required to enter their password on machine wake up to align with the ACSC Windows 10 hardening guidance.</td>
+<td>Users will be required to enter their password on machine wake up to align with the ACSC Windows hardening guidance.</td>
 </tr>
 </tbody>
 </table>
@@ -2649,7 +2657,7 @@
 <li>Mandatory Profiles – Mandatory profiles are a profile that does not save profile changes and are enforced at each logon</li>
 <li>Roaming Profiles – Roaming user profiles are stored in a central location on the network, which is generally a shared folder on a server. When the user logs on to a workstation, the roaming user profile is downloaded from the network location and loaded onto the workstation. When the user logs off the workstation, any profile changes are saved to the network share. In addition to maintaining a copy of the roaming profile on the network share, Windows also keeps a locally cached copy of the roaming profile on each workstation that the user logs on. </li>
 </ul>
-<p>Windows 10 provides two main roaming profile technologies in User Experience Virtualization (UE-V) and FSLogix. FSLogix is now the preferred Roaming Profile option as it provides a consistently higher performance than UE-V and can provide a cloud-based roaming profile when configured with suitable Azure cloud storage blobs.</p>
+<p>Windows 10/11 provides two main roaming profile technologies in User Experience Virtualization (UE-V) and FSLogix. FSLogix is now the preferred Roaming Profile option as it provides a consistently higher performance than UE-V and can provide a cloud-based roaming profile when configured with suitable Azure cloud storage blobs.</p>
 <p>Profiles, Personalization, and Folder Redirection Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -2822,13 +2830,13 @@
 </tbody>
 </table>
 <h3 id="operational-support">Operational support</h3>
-<p>Windows 10 and supporting management tools offer various SOE support features to allow support personnel to access a machine remotely or provide users with the option to perform automated repairs.</p>
-<p>The following support components are available to support Windows 10:</p>
+<p>Windows 10/11 and supporting management tools offer various SOE support features to allow support personnel to access a machine remotely or provide users with the option to perform automated repairs.</p>
+<p>The following support components are available to support Windows 10/11:</p>
 <ul>
 <li>Intune – Intune can remotely wipe, reset and remove a device from Azure AD. These functions are controlled by role-based administration, permitting only certain administrators to control these settings.</li>
 <li>Windows Remote Management (WinRM) – WinRM is the Microsoft implementation of the WS-Management Protocol, a standard Simple Object Access Protocol (SOAP) based, firewall-friendly protocol that allows hardware and Operating Systems from different vendors to interoperate.</li>
 <li>WS-Management protocol - The WS-Management protocol specification provides a common way for systems to access and exchange management information across an IT infrastructure. WinRM and Intelligent Platform Management Interface (IPMI), along with the Event Collector are components of the Windows Hardware Management features.</li>
-<li>Windows Remote Assistance – Windows Remote Assistance in Windows 10 uses the Remote Desktop Protocol (RDP) protocol to provide a Remote Desktop connection that is interactive between the locally logged on user and a remote user.</li>
+<li>Windows Remote Assistance – Windows Remote Assistance in Windows uses the Remote Desktop Protocol (RDP) protocol to provide a Remote Desktop connection that is interactive between the locally logged on user and a remote user.</li>
 <li>Remote Desktop – Remote Desktop enables a user to remotely logon interactively to a workstation from another computer with a supported Remote Desktop client.</li>
 <li>Remote Control – Remote control options are limited to the following:</li>
 <li>TeamViewer which is a paid service that fully integrates in Intune.</li>
@@ -2853,12 +2861,12 @@
 <tr>
 <td>WinRM</td>
 <td>Enabled</td>
-<td>To meet operating support requirements for the Agency. Consideration should be made to harden the use of WinRM in the agency environment to increase the security of Windows 10 endpoints.</td>
+<td>To meet operating support requirements for the Agency. Consideration should be made to harden the use of WinRM in the agency environment to increase the security of Windows 10/11 endpoints.</td>
 </tr>
 <tr>
 <td>Windows Remote Assistance</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance and reduces the attack surface.</td>
+<td>To align with the ACSC Windows hardening guidance and reduces the attack surface.</td>
 </tr>
 <tr>
 <td>Remote Desktop</td>
@@ -2868,7 +2876,7 @@
 <tr>
 <td>Remote Desktop Client</td>
 <td>Enabled</td>
-<td>The Remote Desktop Client will be enabled for Windows 10 devices to enable access to remote services (e.g., servers).</td>
+<td>The Remote Desktop Client will be enabled for Windows 10/11 devices to enable access to remote services (e.g., servers).</td>
 </tr>
 <tr>
 <td>Remote Control via Teams</td>
@@ -2885,13 +2893,13 @@
 <ul>
 <li>Windows Server Update Service – WSUS enables administrators to deploy the most recent Microsoft updates. A WSUS server connects directly to Microsoft Update or an "upstream" WSUS server. This allows administrators to control what updates are applied and when, rather than having every computer on the network going to the Internet and installing every available update immediately.</li>
 <li>Microsoft Endpoint Configuration Manager (MECM) – MECM integrates with a WSUS server to deliver patch management. WSUS obtains updates from the internet and MECM is used to approve and deploy the updates. Using MECM to deploy software updates allows for more control over many aspects of the process such as targeting, maintenance windows, scheduling, and reporting.</li>
-<li>Microsoft Intune – Windows Update for Business provides management policies for several types of updates to Windows 10 devices.</li>
+<li>Microsoft Intune – Windows Update for Business provides management policies for several types of updates to Windows devices.</li>
 <li>Feature updates: feature updates contain security and quality revisions, significant feature additions and changes; they are released semi-annually in March and September.</li>
 <li>Quality updates: these are traditional operating system updates, typically released the second Tuesday of each month (though they can be released at any time). These include security, critical, and driver updates. Windows Update for Business also treats non-Windows updates (such as those for Microsoft Office or Visual Studio) as quality updates. These non-Windows Updates are known as "Microsoft updates" and can configure devices to receive or not receive such updates along with their Windows updates.</li>
 <li>Driver updates: these are non-Microsoft drivers that are applicable to the devices. Driver updates can be turned off by using Windows Update for Business policies.</li>
 <li>Microsoft product updates: these are updates for other Microsoft products, such as Office. These updates can be enabled or disabled by using Windows Update for Business policy.</li>
 </ul>
-<p>Update rings are policies that are assigned to groups of devices. Intune can define update rings that specify how and when service updates are deployed to Windows 10 devices. By using update rings, it is possible to create an update strategy that mirrors business needs.</p>
+<p>Update rings are policies that are assigned to groups of devices. Intune can define update rings that specify how and when service updates are deployed to Windows devices. By using update rings, it is possible to create an update strategy that mirrors business needs.</p>
 <p>To deploy patches to endpoints as quickly as possible, client-side settings should not restrict or delay the installation of patches where it does not interfere with critical operation or cause loss of data due to unexpected reboots.</p>
 <p>Windows Update and Patching Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -2916,22 +2924,22 @@
 <tr>
 <td>Feature Updates</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Quality Updates</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Driver Updates</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Product Updates</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Patching Frequency</td>
@@ -2941,9 +2949,9 @@
 </tbody>
 </table>
 <h3 id="networking">Networking</h3>
-<p>Windows 10 contains networking technologies built into the operating system. These features allow Windows to communicate with other networked devices including those on the Internet.</p>
-<p>IPv6 can be enabled or disabled within Windows 10 depending on the network to which the device will be connected. IPv6 should be disabled unless it is exclusively used throughout the network. </p>
-<p>Windows 10 provides support for several wireless networking technologies that allow devices to connect to a wireless network. The two most popular technologies supported in Windows currently are Wi-Fi and Mobile Broadband networking.</p>
+<p>Windows 10/11 contains networking technologies built into the operating system. These features allow Windows to communicate with other networked devices including those on the Internet.</p>
+<p>IPv6 can be enabled or disabled within Windows 10/11 depending on the network to which the device will be connected. IPv6 should be disabled unless it is exclusively used throughout the network. </p>
+<p>Windows provides support for several wireless networking technologies that allow devices to connect to a wireless network. The two most popular technologies supported in Windows currently are Wi-Fi and Mobile Broadband networking.</p>
 <p>802.1x ensures that only appropriate users or devices can connect to a protected network and that data is secure at the radio transmission level. The Single Sign-On (SSO) feature executes Layer 2 network authentication at the appropriate time given the network security configuration, integrating with the user's Windows logon experience.</p>
 <p>Networking Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -2958,7 +2966,7 @@
 <tr>
 <td>IPv6</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.<br>Exceptions to this rule are if IPv6 is wholly deployed within an Agency network with no IPv4.</td>
+<td>To align with the ACSC Windows hardening guidance.<br>Exceptions to this rule are if IPv6 is wholly deployed within an Agency network with no IPv4.</td>
 </tr>
 <tr>
 <td>Wireless</td>
@@ -2968,7 +2976,7 @@
 <tr>
 <td>Wireless Configuration</td>
 <td>Refer to Table below for wireless configuration recommendations.</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Broadband</td>
@@ -2978,7 +2986,7 @@
 <tr>
 <td>Network Bridging</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Wake on LAN (WoL)</td>
@@ -3005,17 +3013,17 @@
 <tr>
 <td>Automatically Connect to Suggested Open Hotspots</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Prohibit installation and configuration of Network Bridge</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Single Sign On 802.1x</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Wireless Profile Configuration</td>
@@ -3029,12 +3037,12 @@
 <p>Within an organisation application deployments and patch updates can occur daily to keep an organisation secure and provide the end users the capabilities to perform their work. These application deployments and patch updates can consume high levels of bandwidth, increasing the cost to an organisation. To allow organisations to decrease bandwidth use and cost organisations can implement Delivery Optimisation solutions within their main and remote offices. Delivery Optimisation is essentially a peer-to-peer client service that allows end clients to source installation packages and updates from other clients/servers within the network as opposed to always obtaining them from the source servers or the internet. There are two types of configuration options for Delivery Optimisation:</p>
 <p>The following options apply to cloud native and Hybrid (configured in Intune):</p>
 <ul>
-<li>HTTP only, no peering:  Delivery Optimisation cloud service used to provide metadata only. Content to be retrieved from the downloads original source with peer-to-peer disabled. </li>
+<li>HTTP only, no peering: Delivery Optimisation cloud service used to provide metadata only. Content to be retrieved from the downloads original source with peer-to-peer disabled. </li>
 <li>HTTP blended with peering behind same NAT: Peer-to-peer sharing within the same network. Delivery Optimisation cloud service locates peers that connect to the internet using the same public IP and attempts to connect peers using their private subnet IP. </li>
 <li>HTTP blended with peering across private group: Peers are automatically grouped by using the Active Directory Domain Services site or domain they reside in. Custom groups can also be used with peers being either manually or dynamically added to the group. Peers within the same group are connected.</li>
 <li>HTTP blended with internet peering: Enabled Internet peer sources for Delivery Optimisation.</li>
-<li>Simple download mode with no peering:  Delivery Optimisation cloud services are disabled. This mode is automatically used with the Delivery Optimisation cloud service is not accessible or when the content file size is less than 10 MB.</li>
-<li>Bypass mode:  Microsoft BITS will be used instead and should only be used if WSUS is in use and the preference is for BranchCache. </li>
+<li>Simple download mode with no peering: Delivery Optimisation cloud services are disabled. This mode is automatically used with the Delivery Optimisation cloud service is not accessible or when the content file size is less than 10 MB.</li>
+<li>Bypass mode: Microsoft BITS will be used instead and should only be used if WSUS is in use and the preference is for BranchCache. </li>
 </ul>
 <p>The following options apply to Hybrid (configured in MECM):</p>
 <ul>
@@ -3098,14 +3106,14 @@
 <li>Microsoft 365 Apps for enterprise – Microsoft 365 Apps for enterprise combines the Microsoft Office desktop suite with cloud-based versions of Microsoft's communications and collaboration services—including Microsoft Exchange Online, Microsoft SharePoint Online, Office Online, and Microsoft Teams. Microsoft 365 Apps for enterprise is upgraded with new features on a regular basis via feature update channels.</li>
 <li>Traditional Microsoft Office – Traditional Microsoft Office is sold as a one-time purchase and provides Office applications for a single computer. There are no upgrade channel options which means to upgrade to the next major release, another copy of MS Office will have to be procured. Traditional Microsoft Office is not upgraded with new features for the life of the release. Microsoft Office 2019 is the latest traditional version available.</li>
 </ul>
-<p>Within these release cycles, you can choose the architecture of 32-bit or 64-bit. Microsoft Office provides 32-bit or 64-bit version to be installed on Windows 10 devices. Microsoft 64-bit version of Office will be automatically chosen to be installed, unless 32-bit version is installed. The 64-bit version of Office provides ability working with larger datasets and files. However, 64-bit version of Office does not support legacy macros, and COM Add-In.</p>
-<p>Microsoft 365 Apps for enterprise provides there feature update channels for customers to choose:</p>
+<p>Within these release cycles, you can choose the architecture of 32-bit or 64-bit. Microsoft Office provides 32-bit or 64-bit version to be installed on Windows devices. Microsoft 64-bit version of Office will be automatically chosen to be installed, unless 32-bit version is installed. The 64-bit version of Office provides ability working with larger datasets and files. However, 64-bit version of Office does not support legacy macros, and COM Add-In.</p>
+<p>Microsoft 365 Apps for enterprise provides three feature update channels for customers to choose:</p>
 <ul>
 <li>Current Channel - new Office features are available as soon as they are released, not on a set schedule.</li>
 <li>Monthly Enterprise Channel: new office features are released in a predictable monthly schedule.</li>
 <li>Semi-annual Enterprise Channel: new Office features are released twice a year. </li>
 </ul>
-<p>Microsoft Project and Visio (365 and 2019) are available as click-to-run editions that can be either licenced through Microsoft 365 or through hybrid licensing. Regardless of the licence type, they can be installed through Intune or MECM (for hybrid deployments). The installation media is configured using the <a href="https://www.microsoft.com/download/details.aspx?id=49117">Office Deployment Tool (ODT)</a> which generates the installer and configuration options for the deployment. Microsoft Office 365 E3/E5 licensing does not include the rights to use these applications. There are some caveats to what combination of Office versions are supported alongside Project and Visio, please see the <a href="https://docs.microsoft.com/en-us/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer">supported scenarios</a>.</p>
+<p>Microsoft Project and Visio (365 and 2019) are available as click-to-run editions that can be either licenced through Microsoft 365 or through hybrid licensing. Regardless of the licence type, they can be installed through Intune or MECM (for hybrid deployments). The installation media is configured using the <a href="https://www.microsoft.com/download/details.aspx?id=49117">Office Deployment Tool (ODT)</a> which generates the installer and configuration options for the deployment. Microsoft Office 365 E3/E5 licensing does not include the rights to use these applications. There are some caveats to what combination of Office versions are supported alongside Project and Visio, please see the <a href="https://learn.microsoft.com/en-au/deployoffice/install-different-office-visio-and-project-versions-on-the-same-computer">supported scenarios</a>.</p>
 <p>Microsoft Office Edition Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -3261,7 +3269,7 @@
 <tr>
 <td>Default Location</td>
 <td><code>%userprofile%</code></td>
-<td>Default OneDrive folder location is suitable for the Windows 10 SOE.</td>
+<td>Default OneDrive folder location is suitable for the Windows SOE.</td>
 </tr>
 <tr>
 <td>Allow Changing Default Location</td>
@@ -3276,7 +3284,7 @@
 <tr>
 <td>Backup - Sync Windows Known Folders</td>
 <td>Enabled</td>
-<td>Syncing Windows known folders to OneDrive for Business will be configured for the Windows 10 SOE. This will enable the users Documents, Pictures and Desktop folders to be saved in OneDrive automatically.</td>
+<td>Syncing Windows known folders to OneDrive for Business will be configured for the Windows SOE. This will enable the users Documents, Pictures and Desktop folders to be saved in OneDrive automatically.</td>
 </tr>
 <tr>
 <td>Network settings – Upload</td>
@@ -3329,10 +3337,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="windows-10-security">Windows 10 security</h2>
+<h2 id="windows-security">Windows security</h2>
 <p>Security settings are applied to the SOE largely to slow down and prevent malicious adversaries and payloads from causing harm to an Agency. The security settings should not prevent legitimate users from conducting work and should provide them with the correct amount of access to the environment to allow them to operate without impeding the work.</p>
 <h3 id="microsoft-defender">Microsoft Defender</h3>
-<p>Microsoft delivers several threat protection and mitigation capabilities in Windows 10 Enterprise devices delivered through Microsoft Defender.</p>
+<p>Microsoft delivers several threat protection and mitigation capabilities in Windows Enterprise devices delivered through Microsoft Defender.</p>
 <p>These capabilities do not require additional agents and are manageable via Intune Endpoint Protection Profiles.</p>
 <p>The following details the Microsoft Defender capabilities:</p>
 <ul>
@@ -3378,22 +3386,22 @@
 <tr>
 <td>Microsoft Defender Antivirus Exclusions</td>
 <td>Enabled and configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Defender Exploit Guard Configuration</td>
 <td>Enabled and configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Defender Application Control Configuration</td>
 <td>Enabled and configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Defender Smart Screen Configuration</td>
 <td>Enabled and configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Defender Credential Guard Configuration</td>
@@ -3403,21 +3411,22 @@
 <tr>
 <td>Microsoft Defender Firewall Configuration</td>
 <td>Enabled and configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="windows-10-hardening">Windows 10 hardening</h3>
-<p>The following design components apply to the hardening of Microsoft Windows 10 21H1 and above.</p>
-<p>The Windows 10 security settings detailed in this section are based on Microsoft best practice and the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-windows-10-version-21h1-workstations">Hardening Microsoft Windows 10 version 21H1 Workstations (Oct-2021)</a> guidance.</p>
-<p>Windows 10 Hardening Design Decisions for all agencies and implementation types.</p>
+<h3 id="windows-hardening">Windows hardening</h3>
+<p>The following design components apply to the hardening of Microsoft Windows 10 21H1 and above, including Windows 11.</p>
+<p>The Windows security settings detailed in this section are based on Microsoft best practice and the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-windows-10-version-21h1-workstations">Hardening Microsoft Windows 10 version 21H1 Workstations (Oct-2021)</a> guidance.</p>
+<p>Note, the ACSC Government Uplift team have advised that the controls in their Windows 10 hardening guide also apply to Windows 11, and therefore should continue to be used. </p>
+<p>Windows Hardening Design Decisions for all agencies and implementation types.</p>
 <ul>
 <li>Attack Surface Reduction</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Attack Surface Reduction rules – Enabled
   <code>(BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550,D4F940AB-401B-4EFC-AADC-AD5F3C50688A,3B576869-A4EC-4529-8536-B80A7769E899,75668C1F-73B5-4CF0-BB93-3ECF5CB7CC84,D3E037E1-3EB8-44C8-A917-57927947596D,5BEB7EFE-FD9A-4556-801D-275E5FFC04CC,92E97FA1-2EDF-4476-BDD6-9DD0B4DDDC7B,01443614-CD74-433A-B99E-2ECDC07BFC25E,C1DB55AB-C21A-4637-BB3F-A12568109D35,9E6C4E1F-7D60-472F-BA1A-A39EF669E4B2,D1E49AAC-8F56-4280-B9BA-993A6D77406C,B2B3F03D-6A65-4F7B-A9C7-1C7EF74A9BA4,26190899-1602-49E8-8B27-EB1D0A1CE869,7674BA52-37EB-4A4F-A9A1-F0F9A1619A2C,E6DB77E5-3DF2-4CF1-B95A-636979351E5B)</code></li>
 <li>Credential caching</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Interactive logon: Number of previous logons to cache: 1 logon</li>
 <li>Network access: Do not allow storage of passwords and credentials for network authentication: Enabled</li>
 <li>WDigest Authentication: Disabled</li>
@@ -3425,12 +3434,12 @@
 <li>Select Platform Security Level: Secure Boot and DMA Protection</li>
 <li>Credential Guard Configuration: Enabled with UEFI lock</li>
 <li>Controlled Folder Access</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Configure allowed applications: Enabled</li>
 <li>Configure Controlled folder access: Enabled</li>
 <li>Configure protected folders: Enabled</li>
 <li>Credential entry</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Do not display network selection UI: Enabled</li>
 <li>Enumerate local users on domain-joined computers: Disabled</li>
 <li>Do not display the password reveal button: Enabled</li>
@@ -3441,11 +3450,11 @@
 <li>Sign-in last interactive user automatically after a system-initiated restart: Disabled</li>
 <li>Interactive logon: Do not require CTRL+ALT+DEL: Disabled</li>
 <li>Early Launch Antimalware</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Boot-Start Driver Initialization Policy: Enabled</li>
 <li>Choose the boot-start drivers that can be initialized: Good and unknown</li>
 <li>Elevating privileges</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>User Account Control<ul>
 <li>Admin Approval Mode for the Built-in Administrator account: Enabled</li>
 <li>Allow UIAccess applications to prompt for elevation without using the secure desktop: Disabled</li>
@@ -3459,17 +3468,17 @@
 </ul>
 </li>
 <li>Exploit protection</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Use a common set of exploit protection settings: Enabled</li>
 <li>Prevent users from modifying settings: Enabled</li>
 <li>Turn off Data Execution Prevention for Explorer: Disabled</li>
 <li>Enabled Structured Exception Handling Overwrite Protection (SEHOP): Enabled</li>
 <li>Local administrator accounts</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Accounts: Administrator account status: Disabled</li>
 <li>Apply UAC restrictions to local accounts on network logons: Enabled</li>
 <li>Password policy</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Turn off picture password sign-in: Enabled</li>
 <li>Turn on convenience PIN sign-in: Disabled</li>
 <li>Maximum password age: 365 days</li>
@@ -3478,12 +3487,12 @@
 <li>Store passwords using reversible encryption: Disabled</li>
 <li>Accounts: Limit local account use of blank passwords to console logon only: Enabled</li>
 <li>Account lockout policy</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Account lockout duration: 0</li>
 <li>Account lockout threshold: 5 invalid login attempts</li>
 <li>Reset account lockout counter after: 15 minutes</li>
 <li>Anonymous connections</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Enable insecure guest logons: Disabled</li>
 <li>Network access:<ul>
 <li>Allow anonymous SID/Name translation: Disabled</li>
@@ -3502,7 +3511,7 @@
 <li>Access this computer from the network: Administrators, Remote Desktop Users</li>
 <li>Deny access to this computer from the network - NT AUTHORITY\Local Account</li>
 <li>Antivirus software</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Turn off Windows Defender Antivirus: Disabled</li>
 <li>Configure local setting override for reporting to Microsoft MAPS: Disabled</li>
 <li>Configure the 'Block at First Sight' feature: Enabled</li>
@@ -3522,38 +3531,38 @@
 <li>Turn on e-mail scanning: Enabled</li>
 <li>Turn on heuristics: Enabled</li>
 <li>Attachment Manager</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Do not preserve zone information in file attachments: Disabled</li>
 <li>Hide mechanisms to remove zone information: Enabled</li>
 <li>Audit event management</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Audit event management: Enabled</li>
 <li>Audit Application: Enabled (65535KB)</li>
 <li>Audit Security: Enabled (2097152KB)</li>
 <li>Audit System: Enabled (65535KB)</li>
 <li>Manage auditing and security log: Administrators</li>
 <li>Autoplay and AutoRun</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Disallow Autoplay for non-volume devices: Enabled</li>
 <li>Set the default behavior for AutoRun: Enabled (Default AutoRun Behavior: Do not execute any autorun commands)</li>
 <li>Turn off Autoplay: Enabled (Turn off Autoplay on: All drives)</li>
 <li>Bridging networks</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prohibit installation and configuration of Network Bridge on your DNS domain network: Enabled</li>
 <li>Prohibit use of Internet Connection Sharing on your DNS domain network: Enabled</li>
 <li>Route all traffic through the internal network: Enabled (Select from the following states: Enabled State)</li>
 <li>Prohibit connection to non-domain networks when connected to domain authenticated network: Enabled</li>
 <li>Built-in guest accounts</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Accounts: Guest account status: Disabled</li>
 <li>CD burner access</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Remove CD Burning features: Enabled</li>
 <li>Command Prompt</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prevent access to the command prompt: Enabled (Disable the command prompt script processing also: Yes)</li>
 <li>Direct Memory Access</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prevent installation of devices that match any of these device IDs: Enabled<ul>
 <li>Prevent installation of devices that match any of these Device IDs: <code>PCI\CC_0C0010, PCI\CC_0C0A</code></li>
 <li>Also apply to matching devices that are already installed.</li>
@@ -3565,9 +3574,9 @@
 </ul>
 </li>
 <li>Drive encryption</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance. Note, the encryption key strength exceeds the requirements of the ACSC guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance. Note, the encryption key strength exceeds the requirements of the ACSC guidance.</li>
 <li>BitLocker Drive Encryption:<ul>
-<li>Choose drive encryption method and cipher strength: Enabled (XTS-AES 256-bit)   </li>
+<li>Choose drive encryption method and cipher strength: Enabled (XTS-AES 256-bit) </li>
 <li>Disable new DMA devices when this computer is locked: Enabled</li>
 <li>Prevent memory overwrite on restart: Disabled</li>
 </ul>
@@ -3606,7 +3615,7 @@
 </ul>
 </li>
 <li>Endpoint device control</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>All Removable Storage classes: <ul>
 <li>Deny all access: Enabled</li>
 </ul>
@@ -3646,61 +3655,61 @@
 </ul>
 </li>
 <li>File and print sharing</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prevent the computer from joining a homegroup: Enabled</li>
 <li>Prevent users from sharing files within their profile: Enabled</li>
 <li>Installing applications and drivers</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Configure Windows Defender SmartScreen: Enabled (Warn and prevent bypass)</li>
 <li>Allow user control over installs: Disabled</li>
 <li>Always install with elevated privileges: Disabled</li>
 <li>Devices: Prevent users from installing printer drivers: Enabled</li>
 <li>Always install with elevated privileges: Disabled</li>
 <li>Legacy and run once lists</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Do not process the legacy run list: Enabled</li>
 <li>Do not process the run once list: Enabled</li>
 <li>Run these programs at user logon: Disabled</li>
 <li>Microsoft accounts</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Block all consumer Microsoft account user authentication: Enabled</li>
 <li>Prevent the usage of OneDrive for file storage: Enabled</li>
 <li>Accounts: Block Microsoft accounts: Users can't add or log on with Microsoft accounts</li>
 <li>MSS settings</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>IP source routing protection level: Enabled</li>
 <li>Allow ICMP redirects to override OSPF generated routes: Disabled</li>
 <li>Allow the computer to ignore NetBIOS name release requests except from WINS servers: Enabled</li>
 <li>Network authentication</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Configure encryption types allowed for Kerberos: AES128_HMAC_SHA1, AES256_HMAC_SHA1</li>
 <li>LAN Manager authentication level: Send NTLMv2 response only. Refuse LM &amp; NTLM</li>
 <li>Minimum session security for NTLM SSP based clients: Require NTLMv2 session security, Require 128-bit encryption</li>
 <li>Minimum session security for NTLM SSP based servers: Require NTLMv2 session security, Require 128-bit encryption</li>
 <li>No LM Hash policy</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Do not store LAN Manager hash value on next password change: Enabled</li>
 <li>PowerShell</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Turn on PowerShell Script Block Logging: Enabled</li>
 <li>Turn on Script Execution: Enabled (Allow only signed scripts)</li>
 <li>Registry editing tools</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prevent access to registry editing tools: Enabled (Disable regedit from running silently: Yes)</li>
 <li>Remote Assistance</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Configure Offer Remote Assistance: Disabled</li>
 <li>Configure Solicited Remote Assistance: Disabled</li>
 <li>Remote Desktop Services</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Allow users to connect remotely by using Remote Desktop Services: Disabled</li>
 <li>Allow log on through Remote Desktop Services: blank</li>
 <li>Deny log on through Remote Desktop Services: Administrators, NT AUTHORITY\Local Account</li>
 <li>Remote Procedure Call</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Restrict Unauthenticated RPC clients: Enabled (RPC Runtime Unauthenticated Client Restriction to Apply: Authenticated)</li>
 <li>Reporting system information</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.
+<li>Justification: To align with the ACSC Windows hardening guidance.
   Note, additional telemetry is required for <a href="../client-devices#telemetry-collection">Desktop Analytics</a> and Agencies may choose to enable it to aid in Microsoft Support troubleshooting.</li>
 <li>Microsoft Support Diagnostic Tool:<ul>
 <li>Turn on MSDT interactive communication with support provider: Disabled</li>
@@ -3711,16 +3720,16 @@
 <li>Allow Telemetry: Enabled (0: Security)</li>
 <li>Configure Corporate Windows Error Reporting: Enabled</li>
 <li>Safe Mode</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>SafeModeBlockNonAdmins: <code>REG_DWORD 0x00000001 (1)</code></li>
 <li>Secure channel communications</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Digitally encrypt or sign secure channel data (always): Enabled</li>
 <li>Digitally encrypt secure channel data (when possible): Enabled</li>
 <li>Digitally sign secure channel data (when possible): Enabled</li>
 <li>Require strong (Windows 2000 or later) session key: Enabled</li>
 <li>Security policies</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Turn off multicast name resolution: Enabled</li>
 <li>Allow Windows to automatically connect to suggested open hotspots, to networks shared by contacts, and to hotspots offering paid services: Disabled</li>
 <li>Turn off Microsoft consumer experiences: Enabled</li>
@@ -3737,7 +3746,7 @@
 <li>Require case insensitivity for non-Windows subsystems: Enabled</li>
 <li>Strengthen default permissions of internal system objects: Enabled</li>
 <li>Server Message Block sessions</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Configure SMB v1 client driver: Enabled (Configure MrxSmb10 driver: Disable driver)</li>
 <li>Configure SMB v1 server: Disabled</li>
 <li>Digitally sign communications (always): Enabled</li>
@@ -3745,7 +3754,7 @@
 <li>Send unencrypted password to third-party SMB servers: Disabled</li>
 <li>Amount of idle time required before suspending session: 15 minutes</li>
 <li>Session locking</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Prevent enabling lock screen camera: Enabled</li>
 <li>Prevent enabling lock screen slide show: Enabled</li>
 <li>Allow users to select when a password is required when resuming from connected standby: Disabled</li>
@@ -3759,18 +3768,18 @@
 <li>Turn off toast notifications on the lock screen: Enabled</li>
 <li>Do not suggest third-party content in Windows spotlight: Enabled</li>
 <li>Sound Recorder</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Do not allow Sound Recorder to run: Enabled</li>
 <li>System backup and restore</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Back up files and directories: Administrators</li>
 <li>Restore files and directories: Administrators</li>
 <li>System cryptography</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Force strong key protection for user keys stored on the computer: User must enter a password each time they use a key</li>
 <li>Use FIPS compliant algorithms for encryption, hashing, and signing: Enabled</li>
 <li>User rights policies</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Access Credential Manager as a trusted caller: blank</li>
 <li>Act as part of the operating system: blank</li>
 <li>Allow log on locally: Administrators, Users</li>
@@ -3789,16 +3798,16 @@
 <li>Profile single process: Administrators</li>
 <li>Take ownership of files or other objects: Administrators</li>
 <li>Windows Remote Management</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Allow Basic authentication: Disabled</li>
 <li>Allow unencrypted traffic: Disabled</li>
 <li>Disallow Digest authentication: Enabled</li>
 <li>Disallow WinRM from storing RunAs credentials: Enabled</li>
 <li>Windows Remote Shell access</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Allow Remote Shell Access: Disabled</li>
 <li>Windows Search and Cortana</li>
-<li>Justification: To align with the ACSC Windows 10 hardening guidance.</li>
+<li>Justification: To align with the ACSC Windows hardening guidance.</li>
 <li>Allow Cortana: Disabled</li>
 </ul>
 <h3 id="microsoft-edge-hardening">Microsoft Edge hardening</h3>
@@ -3817,69 +3826,69 @@
 <tr>
 <td>Allow download restrictions</td>
 <td>Block potentially dangerous or unwanted downloads</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Configure Do Not Track</td>
 <td>Enable</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Control the mode of DNS-over-HTTPS</td>
 <td>Disable DNS-over-HTTPS</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Control where developer tools can be used</td>
 <td>Don't allow using the developer tools</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>DNS interception checks enabled</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Default pop-up window setting</td>
 <td>Do not allow any site to show popups</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Enable saving passwords to the password manager</td>
 <td>Disable</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Configure Windows Defender SmartScreen</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Prevent bypassing Microsoft Defender SmartScreen prompts for sites</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Prevent users and apps from accessing dangerous websites</td>
 <td>Enabled (Block)</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Turn on Windows Defender Application Guard in Managed Mode</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 </tbody>
 </table>
 <h4 id="web-advertisement-blocking">Web advertisement blocking</h4>
 <p>Web advertisements may be used by threat actors to deliver malicious code or to attempt to phish legitimate users.</p>
-<p>The ACSC recommends blocking web advertisements at the browser level. Microsoft Edge's native web advertisement capability is limited and does not provide an effective mitigation against the risk of malicious web advertisement. Edge supports third-party add-ons to provide greater web advertisement blocking with examples including uBlock Origin and Ad Block Plus. However, please note that the DTA does not explicitly recommend either product or other third-party add-ons. Instead, agencies should perform their own risk based assessment prior to using them as part of a blueprint deployment.</p>
-<p>If supported by their existing proxy implementations, agencies may also implement web advertisement blocking at the proxy level for additional protection against web advertisement-based threats.</p>
+<p>The ACSC recommends blocking browsers from processing web advertisements as part of the Essential Eight. Microsoft Edge's native web advertisement capability is limited and does not provide an effective mitigation against the risk of malicious web advertisement. Edge supports third-party add-ons to provide greater web advertisement blocking with examples including uBlock Origin and Ad Block Plus. However, please note that the DTA does not explicitly recommend either product or other third-party add-ons. Instead, agencies should perform their own risk-based assessment prior to using them as part of a blueprint deployment.</p>
+<p>If supported by their existing web content filtering implementations, agencies may also implement web advertisement blocking at the proxy level for additional protection against web advertisement-based threats.</p>
 <p>Web Advertisement Blocking Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -3893,7 +3902,7 @@
 <tr>
 <td>Native Edge advertisement blocking</td>
 <td>Enabled - BlockAds (default)</td>
-<td>To align with Essential Eight user application hardening guidance.</td>
+<td>To leverage native capabilities within the browser.</td>
 </tr>
 <tr>
 <td>Third-party add-on</td>
@@ -3923,17 +3932,17 @@
 <tr>
 <td>Application Whitelisting Product</td>
 <td>WDAC</td>
-<td>Microsoft recommended product for <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control#choose-when-to-use-wdac-or-applocker">application control</a> and aligns with ACSC Essential Eight guidance.</td>
+<td>Microsoft recommended product for <a href="https://learn.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control#choose-when-to-use-wdac-or-applocker">application control</a> and aligns with ACSC Essential Eight guidance.</td>
 </tr>
 <tr>
 <td>User Mode Code Integrity</td>
 <td>Enabled</td>
-<td>Restricts both kernel-mode and user-mode binaries. To align with the ACSC Windows 10 hardening guidance.</td>
+<td>Restricts both kernel-mode and user-mode binaries. To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Windows Hardware Quality Labs Signing</td>
 <td>Required</td>
-<td>Blocks the execution of legacy drivers and ensures drivers have passed <a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/install/whql-release-signature">Windows Hardware Certification Testing</a>.</td>
+<td>Blocks the execution of legacy drivers and ensures drivers have passed <a href="https://learn.microsoft.com/en-au/windows-hardware/drivers/install/whql-release-signature">Windows Hardware Certification Testing</a>.</td>
 </tr>
 <tr>
 <td>Flight Signing</td>
@@ -3993,7 +4002,7 @@
 <tr>
 <td>Hypervisor-protected code integrity</td>
 <td>Enabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Application Control method</td>
@@ -4003,7 +4012,7 @@
 <tr>
 <td>Microsoft Block Rules</td>
 <td>Configured</td>
-<td>To align with the ACSC Windows 10 hardening guidance. The latest Microsoft recommended block rules for <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules">Windows 10</a> and <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">Drivers</a> are available online at Microsoft.</td>
+<td>To align with the ACSC Windows hardening guidance. The latest Microsoft recommended block rules for <a href="https://learn.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules">Windows</a> and <a href="https://learn.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">Drivers</a> are available online at Microsoft.</td>
 </tr>
 <tr>
 <td>Intelligent Security Graph connection</td>
@@ -4018,8 +4027,8 @@
 </tbody>
 </table>
 <h3 id="identity-providers">Identity providers</h3>
-<p>The identity providers section considers the different methods of logging on to the Windows 10 device. The local administrator account is addressed in a separate section.</p>
-<p>Windows 10 provides various user account types or identity providers. This section outlines the identity providers that can be implemented for a Windows 10 device.</p>
+<p>The identity providers section considers the different methods of logging on to the Windows 10/11 device. The local administrator account is addressed in a separate section.</p>
+<p>Windows 10/11 provides various user account types or identity providers. This section outlines the identity providers that can be implemented for a Windows 10/11 device.</p>
 <ul>
 <li>Local Accounts - A local account is an account on a single Windows system. Local accounts are not replicated and cannot access to corporate resources. They allow access to local storage only. It may be desirable to disable, rename and scramble the passwords for the in-built local accounts.</li>
 <li>Active Directory Domain - Domain identities are used to grant access to corporate resources and are implemented using Active Directory Domain Services. Administrators manage domain identities and ensure that users have access to the appropriate resources when group policies or any profile management solution is applied to the account. Domain identities are recommended if personalisation data will be stored in a corporate datacentre and will be synchronised to multiple corporate devices.</li>
@@ -4039,27 +4048,27 @@
 <tr>
 <td>Guest Account (Local)</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Guest Account Name</td>
 <td>Renamed</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Microsoft Accounts</td>
 <td>Disabled</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Windows Hello for Business</td>
 <td>Agency decision</td>
-<td>As per the ACSC Windows 10 hardening guidance, Agencies may consider if Windows Hello for Business is suitable for their environment.</td>
+<td>As per the ACSC Windows hardening guidance, Agencies may consider if Windows Hello for Business is suitable for their environment.</td>
 </tr>
 <tr>
 <td>Windows Hello for Business Configuration Method</td>
 <td>Agency decision</td>
-<td>As per the ACSC Windows 10 hardening guidance, Agencies may consider if Windows Hello for Business is suitable for their environment.</td>
+<td>As per the ACSC Windows hardening guidance, Agencies may consider if Windows Hello for Business is suitable for their environment.</td>
 </tr>
 </tbody>
 </table>
@@ -4112,10 +4121,10 @@
 <p>Desktop Analytics can be used with Configuration Manager to:</p>
 <ul>
 <li>Capture application inventory for an organisation.</li>
-<li>Analyse application compatibility with latest Windows 10 feature updates.</li>
+<li>Analyse application compatibility with latest Windows 10/11 feature updates.</li>
 <li>Determine compatibility issues and provide potential resolutions.</li>
 <li>Analyse the data to provide pilot groups consisting of devices which cover most of the organisation's application set.</li>
-<li>Deploy Windows 10 to pilot and production-managed devices.</li>
+<li>Deploy Windows 10/11 to pilot and production-managed devices.</li>
 </ul>
 <p>Desktop Analytics is replacing Windows Analytics and Configuration Manager (MECM) is a pre-requisite to enabling Desktop Analytics. Desktop Analytics provides:</p>
 <ul>
@@ -4147,13 +4156,13 @@
 </tbody>
 </table>
 <h3 id="telemetry-collection">Telemetry collection</h3>
-<p>Windows 10 and Windows Server include the Connected User Experiences and Telemetry component, which uses Event Tracing for Windows (ETW) trace logging technology that gathers and stores diagnostic data events and data.</p>
+<p>Windows 10/11 and Windows Server include the Connected User Experiences and Telemetry component, which uses Event Tracing for Windows (ETW) trace logging technology that gathers and stores diagnostic data events and data.</p>
 <p>The operating system and some Microsoft management solutions, such as MECM use the same logging technology.</p>
 <p>Windows uses telemetry information to analyse and fix software problems. It also helps Microsoft improve its software and provide updates that enhance the security and reliability of devices within organisations.</p>
 <p>Telemetry level options are:</p>
 <ul>
 <li>Off – Disable telemetry data collection.</li>
-<li>Security – Information that is required to help keep Windows secure, including info about telemetry client settings, the Malicious Software Removal Tool, and Windows Defender. This level is available only on Windows 10 Enterprise and Windows 10 Education, and Windows 10 IoT Core.</li>
+<li>Security – Information that is required to help keep Windows secure, including info about telemetry client settings, the Malicious Software Removal Tool, and Windows Defender. This level is available only on Windows 10/11 Enterprise and Windows 10/11 Education, and Windows 10/11 IoT Core.</li>
 <li>Basic – Basic device info, including quality-related info, application compatibility, and info from the Security level.</li>
 <li>Enhanced – Additional insights, including how Windows and Windows apps are used, how they perform, advanced reliability info, and info from both the Basic and the Security levels.</li>
 <li>Full – All info necessary to identify and help to fix problems, plus info from the Security, Basic, and Enhanced levels.</li>
@@ -4247,7 +4256,7 @@
 <li>Force file extension to match file type: Enabled - Always match file type</li>
 <li>File Type Blocking</li>
 <li>Justification: To align with the ACSC Microsoft Office hardening guidance.</li>
-<li>Set default file block behavior: Enabled -  Blocked files are not opened</li>
+<li>Set default file block behavior: Enabled - Blocked files are not opened</li>
 <li>Excel: File Block Settings
   <code>(dBase III / IV files, Dif and Sylk files, Excel 2 macrosheets and add-in files, Excel 2 worksheets, Excel 3 macrosheets and add-in files, Excel 3 worksheets, Excel 4 macrosheets and add-in files, Excel 4 workbooks, Excel 4 worksheets, Excel 95 workbooks, Excel 95-97 workbooks and templates, Excel 97-2003 workbooks and templates, Web pages and Excel 2003 XML spreadsheets)</code></li>
 <li>PowerPoint: File Block Settings
@@ -4324,20 +4333,20 @@
 </tbody>
 </table>
 <ul>
-<li>Microsoft Office 2016 Security Settings</li>
+<li>Microsoft Office Security Settings</li>
 <li>Automation Security: Enabled (Use application macro security level)</li>
 <li>Disable all Trust Bar notifications for security issues: Enabled</li>
 <li>Disable VBA for Office applications: Disabled</li>
 <li>Macro Runtime Scan Scope: Enable for all documents</li>
 <li>Allow mix of policy and user locations: Disabled</li>
-<li>Microsoft Access 2016</li>
+<li>Microsoft Access </li>
 <li>Turn off trusted documents: Enabled</li>
 <li>Turn off Trusted Documents on the network: Enabled</li>
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
 <li>Allow Trusted Locations on the network: Disabled</li>
 <li>Disable all trusted locations: Enabled</li>
 <li>Disable commands: Enabled (19092)</li>
-<li>Microsoft Excel 2016</li>
+<li>Microsoft Excel </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Scan encrypted macros in Excel Open XML workbooks: Scan encrypted macros (default)</li>
 <li>Block macros from running in Office files from the Internet: Enabled</li>
@@ -4347,11 +4356,11 @@
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
 <li>Allow Trusted Locations on the network: Disabled</li>
 <li>Disable all trusted locations: Enabled</li>
-<li>Microsoft Outlook 2016</li>
+<li>Microsoft Outlook </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Apply macro security settings to macros, add-ins and additional actions: Enabled</li>
 <li>Security settings for macros: Enabled (Security Level: Warn for signed, disable unsigned)</li>
-<li>Microsoft PowerPoint 2016</li>
+<li>Microsoft PowerPoint </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Scan encrypted macros in PowerPoint Open XML presentations: Scan encrypted macros (default)</li>
 <li>Block macros from running in Office files from the Internet: Enabled</li>
@@ -4361,15 +4370,15 @@
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
 <li>Allow Trusted Locations on the network: Disabled</li>
 <li>Disable all trusted locations: Enabled</li>
-<li>Microsoft Project 2016</li>
+<li>Microsoft Project </li>
 <li>Allow Trusted Locations on the network: Disabled</li>
 <li>Disable all trusted locations: Enabled</li>
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
-<li>Microsoft Publisher 2016</li>
+<li>Microsoft Publisher </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Publisher Automation Security Level: Enabled (By UI (prompted))</li>
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
-<li>Microsoft Visio 2016</li>
+<li>Microsoft Visio </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Enable Microsoft Visual Basic for Applications project creation: Disabled</li>
 <li>Load Microsoft Visual Basic for Applications projects from text: Disabled</li>
@@ -4379,7 +4388,7 @@
 <li>Turn off trusted documents: Enabled</li>
 <li>Turn off Trusted Documents on the network: Enabled</li>
 <li>VBA Macro Notification Settings: Enabled (Disable all except digitally signed macros)</li>
-<li>Microsoft Word 2016</li>
+<li>Microsoft Word </li>
 <li>Disable commands: Enabled (19092)</li>
 <li>Scan encrypted macros in Word Open XML documents: Scan encrypted macros (default)</li>
 <li>Block macros from running in Office files from the Internet: Enabled</li>
@@ -4392,7 +4401,7 @@
 </ul>
 <h3 id="ole-hardening">OLE hardening</h3>
 <p>Object Linking and Embedding (OLE) is a functionality within Microsoft Office which allows for the embedding and linking to documents and other objects. OLE is utilised to seamlessly integrate several types of data or components within a Microsoft Office file. </p>
-<p>Adversaries have leveraged the OLE functionality to enable and download malicious content or execute a malicious payload.  Within Microsoft Office 365 and Microsoft Office 2019 clients, the activation of objects that link to extensions that are considered high risk are blocked from executing. The list of high risk extensions can be configured through the use of Intune or GPOs.</p>
+<p>Adversaries have leveraged the OLE functionality to enable and download malicious content or execute a malicious payload. Within Microsoft Office 365 and Microsoft Office 2019 clients, the activation of objects that link to extensions that are considered high risk are blocked from executing. The list of high risk extensions can be configured through the use of Intune or GPOs.</p>
 <p>The ACSC provides guidance around securing systems against malicious OLE packages and recommend they are implemented in all Windows environments. The guidance is to block all OLE packages from executing in Word, PowerPoint, and Excel.</p>
 <p>Office OLE Hardening Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -4430,17 +4439,17 @@
 <tr>
 <td>Local Administrator Account</td>
 <td>Disabled</td>
-<td>The local administrator account will be disabled to align with the ACSC Windows 10 hardening guidance.</td>
+<td>The local administrator account will be disabled to align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Local Administrator Account Name</td>
 <td>Renamed</td>
-<td>The local administrator account will be renamed during the image deployment<br>In line with <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/accounts-rename-administrator-account">Microsoft recommendations for securing the local administrator account</a>.</td>
+<td>The local administrator account will be renamed during the image deployment<br>In line with <a href="https://learn.microsoft.com/en-au/windows/security/threat-protection/security-policy-settings/accounts-rename-administrator-account">Microsoft recommendations for securing the local administrator account</a>.</td>
 </tr>
 <tr>
 <td>Local Administrator Account Password</td>
 <td>Randomised</td>
-<td>To align with the ACSC Windows 10 hardening guidance.</td>
+<td>To align with the ACSC Windows hardening guidance.</td>
 </tr>
 <tr>
 <td>Additional Local Administrator Accounts</td>
@@ -4458,7 +4467,7 @@
 <p>The blueprint's recommendation is to utilise iOS for Agency devices following the design decisions based on the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/security-configuration-guide-apple-ios-14-devices">Security Configuration Guide – Apple iOS 14 Devices (Oct-2021)</a> guidance.</p>
 <h3 id="ios-devices">iOS devices</h3>
 <p>iOS follows a yearly major release cycle. With every major release of iOS, older iPhone devices are deprecated from support, hence security updates will not be available to these devices. </p>
-<p>Update policies control the update frequency  of managed devices. Intune can define update policies that specify how and when service updates are deployed to iOS devices. By using update rings, it is possible to create an update strategy that mirrors business needs.</p>
+<p>Update policies control the update frequency of managed devices. Intune can define update policies that specify how and when service updates are deployed to iOS devices. By using update rings, it is possible to create an update strategy that mirrors business needs.</p>
 <p>iOS devices should be configured to adhere to the ACSC hardening requirements to provide secure access to corporate information. ACSC recommends that the latest version of iOS is used in order to have the most secure operating system present on the device.</p>
 <p>iOS Devices Design Decisions for all agencies and implementation types.</p>
 <table>
