@@ -1,0 +1,2626 @@
+  
+  <!doctype html>
+  <html lang="en" class="no-js">
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+        
+          <link rel="canonical" href="https://oobecomau.github.io/theblueprint/security/hybrid-security-risk-management-plan/">
+        
+        
+          <link rel="prev" href="../hybrid-incident-response-plan/">
+        
+        
+          <link rel="next" href="../hybrid-standard-operating-procedures/">
+        
+        <link rel="icon" href="../../img/favicon.ico">
+        <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+      
+      
+        
+          <title>Hybrid security risk management plan - The blueprint</title>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/main.min.css">
+        
+          
+          <link rel="stylesheet" href="../../css/palette.min.css">
+        
+        
+
+      
+      
+      
+        
+          
+          
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+          <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/extra.css">
+      
+      <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      
+        
+
+      
+      
+      
+    </head>
+    
+    <body dir="ltr">
+      
+      
+      <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+      <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+      <label class="md-overlay" for="__drawer"></label>
+      <div data-md-component="skip">
+        
+          
+          <a href="#hybrid-security-risk-management-plan" class="md-skip">
+            Skip to content
+          </a>
+        
+      </div>
+      <div data-md-component="announce">
+        
+      </div>
+      
+      
+          
+  
+    
+  
+  <header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href="../.." title="The blueprint" class="md-header__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        <img src="../../img/The-blueprint-site-title-White.svg" alt="blueprint">  
+      </a>
+    </nav>
+    
+      
+        
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+         
+            
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blueprint/" class="md-tabs__link">
+          Blueprint
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          News
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+      
+    
+  
+  
+    
+    
+    
+   
+        
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="md-search-container">
+        <div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form id="search-flex-container" class="md-search__form" name="search">
+        <div class="form-outline">
+          <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+        </div>
+        <div class="form-icon">
+          <label class="md-search__icon md-icon" for="__search">
+            <img src="../../img/The-blueprint-icon-Magnify-glass-Blue.svg" alt="Magnify"> 
+          </label>
+        </div>
+        <nav class="md-search__options" aria-label="Search">
+          
+          <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="md-powered-logo">
+    <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-header__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+      <img src="../../img/oobe-powered-by-White-RGB.svg" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
+      
+    
+  </header>
+      
+      <div class="md-container" data-md-component="container">
+        
+        
+          
+        
+        <main class="md-main" data-md-component="main">
+          <div class="md-main__inner md-grid">
+           
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                      
+  
+    
+  
+  
+    
+  
+  <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a href="../.." title="The blueprint" class="md-nav__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+      </a>
+      The blueprint
+    </label>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+          
+  
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../.." class="md-nav__link">
+          Home
+        </a>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            As built as configured
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-nav__link">
+          Admin disable inactive users
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/conditional-access-policies/" class="md-nav__link">
+          Conditional access policies
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/hybrid-network-configuration/" class="md-nav__link">
+          Hybrid network configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/hybrid-task-sequence/" class="md-nav__link">
+          Hybrid task sequence
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-applications/" class="md-nav__link">
+          Intune applications
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-compliance/" class="md-nav__link">
+          Intune compliance
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-configuration/" class="md-nav__link">
+          Intune configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-enrolment/" class="md-nav__link">
+          Intune enrolment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-software-updates/" class="md-nav__link">
+          Intune software updates
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/wdac-policy-creation/" class="md-nav__link">
+          Wdac policy creation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/wfw-rules-import/" class="md-nav__link">
+          Wfw rules import
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../blueprint/">Blueprint</a>
+            
+              <label for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+          Abbreviations and acronyms
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+          As built as configured
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/automation/" class="md-nav__link">
+          Automation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/client-devices/" class="md-nav__link">
+          Client devices
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+          Essential eight maturity
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/security/" class="md-nav__link">
+          Security
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/solution-overview/" class="md-nav__link">
+          Solution overview
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../news/">News</a>
+            
+              <label for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+          Enhanced MFA
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+          Introducing The blueprint
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/windows-11-2020-04-23/" class="md-nav__link">
+          Windows 11
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+      
+    
+    
+      
+      <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            Security
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+          Cloud assessment and authorisation alignment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../continuous-monitoring-plan/" class="md-nav__link">
+          Continuous monitoring plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-incident-response-plan/" class="md-nav__link">
+          Hybrid incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+      
+    
+    
+      <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+        
+          
+        
+        
+          <label class="md-nav__link md-nav__link--active" for="__toc">
+            Hybrid security risk management plan
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <a id="active-nav-link" href="./" class="md-nav__link md-nav__link--active">
+          Hybrid security risk management plan
+        </a>
+        
+            
+  
+  <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+    
+    
+      
+    
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Hybrid security risk management plan
+      </label>
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+            <li class="md-nav__item">
+    <a href="#introduction" class="md-nav__link">
+      Introduction
+    </a>
+    
+      <nav class="md-nav" aria-label="Introduction">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#purpose" class="md-nav__link">
+      Purpose
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#scope" class="md-nav__link">
+      Scope
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#methodology" class="md-nav__link">
+      Methodology
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#risk-assessment" class="md-nav__link">
+      Risk assessment
+    </a>
+    
+      <nav class="md-nav" aria-label="Risk assessment">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#r01-inadequate-privileged-account-management" class="md-nav__link">
+      R01 Inadequate privileged account management
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r02-sensitiveclassified-email-sent-to-unauthorised-recipients" class="md-nav__link">
+      R02 Sensitive/classified email sent to unauthorised recipients
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r03-unauthorised-access-to-data-hosted-within-office-365" class="md-nav__link">
+      R03 Unauthorised access to data hosted within Office 365
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r04-malicious-insider-disables-security-capabilities" class="md-nav__link">
+      R04 Malicious insider disables security capabilities
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r05-unskilled-administrator-misconfigures-services" class="md-nav__link">
+      R05 Unskilled administrator misconfigures services
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r06-components-infected-by-malicious-code" class="md-nav__link">
+      R06 Components infected by malicious code
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r07-unauthorised-access-to-email-on-exchange-online" class="md-nav__link">
+      R07 Unauthorised access to email on Exchange Online
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r08-denial-of-service-attacks" class="md-nav__link">
+      R08 Denial of service attacks
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r09-cyber-security-incident-not-detected" class="md-nav__link">
+      R09 Cyber security incident not detected
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r10-inability-to-recover-from-a-data-loss-event" class="md-nav__link">
+      R10 Inability to recover from a data loss event
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r11-operating-system-vulnerability-allows-exploitation" class="md-nav__link">
+      R11 Operating system vulnerability allows exploitation
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r12-application-vulnerability-allows-exploitation" class="md-nav__link">
+      R12 Application vulnerability allows exploitation
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r13-attacker-bypasses-application-control-capability" class="md-nav__link">
+      R13 Attacker bypasses application control capability
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r14-password-spray-attack-directed-at-azure-ad" class="md-nav__link">
+      R14 Password spray attack directed at Azure AD
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r15-lack-of-availability-due-to-cloud-service-provider-outage" class="md-nav__link">
+      R15 Lack of availability due to cloud service provider outage
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r16-privileged-access-workstations-not-implemented-for-administration" class="md-nav__link">
+      R16 Privileged Access Workstations not implemented for administration
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r17-mobile-device-compromised" class="md-nav__link">
+      R17 Mobile device compromised
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r18-use-of-un-assessed-cloud-services-creates-exposures" class="md-nav__link">
+      R18 Use of un-assessed cloud services creates exposures
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r19-users-declassifying-emails-without-the-owners-permission" class="md-nav__link">
+      R19 Users declassifying emails without the owner’s permission
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r20-compromise-of-the-azure-ad-connect-database" class="md-nav__link">
+      R20 Compromise of the Azure AD Connect database
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#r21-compromise-of-the-sharepoint-database" class="md-nav__link">
+      R21 Compromise of the SharePoint database
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+      </ul>
+    
+  </nav>
+        
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-standard-operating-procedures/" class="md-nav__link">
+          Hybrid standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-system-security-plan/" class="md-nav__link">
+          Hybrid system security plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../incident-response-plan/" class="md-nav__link">
+          Incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../security-risk-management-plan/" class="md-nav__link">
+          Security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../standard-operating-procedures/" class="md-nav__link">
+          Standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../system-security-plan/" class="md-nav__link">
+          System security plan
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+           
+            
+              <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                  
+                      
+  
+  
+  
+    <hr />
+<h1 id="hybrid-security-risk-management-plan">Hybrid security risk management plan</h1>
+<p id="date-and-time">33 minutes to read - 30 March 2023</p>
+
+<p>This Security Risk Management Plan (SRMP) has been developed to demonstrate the reduction in risk that can be achieved by implementing the HybridSystem to secure access to Microsoft Office 365 services from Windows 10 endpoints and iOS mobile devices. </p>
+<p>Each risk has been assessed in the context of the controls implemented by the HybridSystem directly, those implemented by Microsoft as part of the Office 365 service, as well as those that are expected to be implemented by Australian Government Agencies that will leverage the HybridSystem. The risk matrix, including definitions of likelihood and consequence, is provided at <a href="../../files/security/risk-matrix.pdf">Risk Matrix</a>. Agencies leveraging the HybridSystem should review the risk ratings and align them to their internal risk management framework as applicable.</p>
+<p>The residual risk to the Agency has been assessed as Medium. This can be further reduced to Medium-Low by implementing the additional treatments detailed in this document. It is an Agency’s responsibility to accept the risks and associated residual risk rating as described within this document.</p>
+<p>A summary of the identified risks and the assessed risk ratings are listed in Table 1.</p>
+<p style="text-align: center;">
+Table 1 Summary of Risk Events and Risk Ratings
+</p>
+
+<table>
+<thead>
+<tr>
+<th>Risk Event ID</th>
+<th>Risk Event Description</th>
+<th>Inherent Risk Rating</th>
+<th>Residual Risk Rating</th>
+<th>Target Risk Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>Inadequate privileged account management</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>Sensitive/classified email sent to unauthorised recipients</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>Unauthorised access to data hosted within Office 365</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R04</td>
+<td>Malicious insider disables security capabilities</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>Unskilled administrator misconfigures services</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Components infected by malicious code</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R07</td>
+<td>Unauthorised access to email on Exchange Online</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Denial of service attacks</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Cyber security incident not detected</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>Inability to recover from a data loss event</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R11</td>
+<td>Operating System vulnerability allows exploitation</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R12</td>
+<td>Application vulnerability allows exploitation</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R13</td>
+<td>Attacker bypasses application control capability</td>
+<td>High</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R14</td>
+<td>Password spray attack directed at Azure AD</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R15</td>
+<td>Lack of availability due to cloud service provider outage</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R16</td>
+<td>Privileged Access Workstations not implemented for administration</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R17</td>
+<td>Mobile device compromised</td>
+<td>High</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>R18</td>
+<td>Use of un-assessed cloud services creates exposures</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R19</td>
+<td>Users declassifying emails without the owner’s permission</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R20</td>
+<td>Compromise of the Azure AD Connect database</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R21</td>
+<td>Compromise of the SharePoint database</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="introduction">Introduction</h2>
+<p>This Security Risk Management (SRMP) has been prepared by the Digital Transformation Agency (DTA) to support Agencies planning to leverage the HybridSystem. The document demonstrates the controls implemented by the HybridSystem that reduce the risk of leveraging Office 365 up to and including PROTECTED security classified information.</p>
+<p>PROTECTED is used thought the document to describe the maximum security classification of information able to be managed by the system. Where PROTECTED is used, the security markings described by the Protective Security Policy Framework (PSPF) such as OFFICIAL and OFFICIAL: Sensitive are inferred.</p>
+<h3 id="purpose">Purpose</h3>
+<p>The purpose of this SRMP is to identify the risks and the residual risk to an Agency implementing the HybridSystem.</p>
+<h3 id="scope">Scope</h3>
+<p>The scope of this SRMP is limited to those threats and risks specific to the use of Office 365 as part of the HybridSystem. </p>
+<p>The Microsoft Office 365 service is addressed in the Information Security Registered Assessors Program (IRAP) report (available in the <a href="https://servicetrust.microsoft.com/ViewPage/Australia">Service Trust Portal</a>), therefore, risks specific to the underlying Office 365 service are not reassessed by this SRMP.</p>
+<p>Agencies should make themselves aware of any risks identified in the IRAP assessment that have been inherited by the HybridSystem.</p>
+<h3 id="methodology">Methodology</h3>
+<p>The assessment of the threats and risks presented in this SRMP has been performed in accordance with industry best practice in line with AS/NZS ISO 31000:2009. The risk matrix that was used in the assessment of risk ratings is included in <a href="../../files/security/risk-matrix.pdf">Risk Matrix</a>.</p>
+<h2 id="risk-assessment">Risk assessment</h2>
+<p>Detailed assessment of the risks to the operation of the system are outlined in the following sections which demonstrate the controls required to manage risks within the solution. All risk ratings have been updated to align with the risk matrix identified in <a href="../../files/security/risk-matrix.pdf">Risk Matrix</a>.</p>
+<h3 id="r01-inadequate-privileged-account-management">R01 Inadequate privileged account management</h3>
+<h4 id="risk-overview">Risk overview</h4>
+<p>If a privileged account were to be compromised or system privileges were incorrectly assigned, the environment could be accessed by staff without a legitimate need to know. Once inside, the unauthorised user could use the account to make malicious changes, such as the addition, alteration or deletion of data. Depending on the nature of the account used, the unauthorised user could bring down the environment.</p>
+<h4 id="assets-affected">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers, and endpoints)</li>
+</ul>
+<h4 id="threat-sources">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Trusted Insider, Insider, Outsider</li>
+<li>Unintentional – Agency system administrator</li>
+</ul>
+<h4 id="threat-events">Threat events</h4>
+<ul>
+<li>Obtain unauthorised access to:</li>
+<li>Deny access to Agency information to authorised users</li>
+<li>Modify Agency information and making the integrity of the information unavailable or no longer trustworthy </li>
+<li>Obfuscate adversary actions</li>
+<li>Obtain information by opportunistically stealing or scavenging information systems/components</li>
+<li>Compromise organisational information systems to facilitate exfiltration of data/information</li>
+<li>Obtain sensitive and or classified information via exfiltration</li>
+</ul>
+<h4 id="inherent-likelihood">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Agency IT Security Policy for authorised staff to not provide privileged access to unauthorised staff and not allow logging in using service accounts</li>
+<li>Administrative break glass accounts will only be utilised when no other privileged account can be utilised</li>
+<li>Approval process to obtain a privileged user account</li>
+<li>Training to Agency nominated system administrators </li>
+<li>HybridSystem treatments</li>
+<li>Conditional Access enforces Multi-Factor Authentication (MFA) for all privileged users</li>
+<li>Azure AD Identity Protection enabled to alert on detected User and Sign-in risks</li>
+<li>Azure AD Privileged Identity Management (PIM) provides Just-In-Time (JIT) privileged access</li>
+<li>Leverages built-in Azure AD / Office 365 Role Groups to implement a robust Role-Based Access Control (RBAC) model</li>
+<li>All Azure AD and Office 365 logs are centralised into a single Log Analytics workspace</li>
+<li>Emergency access accounts are configured in accordance with <a href="https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-emergency-access">Microsoft best practice</a> to prevent administrators from being locked-out of Azure services</li>
+<li>Defender for Identity monitors Active Directory authentications and performs User and Entity Behaviour Analytics (UEBA)</li>
+</ul>
+<h4 id="residual-likelihood">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments">Proposed treatments</h4>
+<ul>
+<li>An annual audit of privileged accounts is performed by the Agency leveraging Azure AD access reviews</li>
+<li>Forward logs to a Security Information and Event Management (SIEM) solution</li>
+<li>Administrator training provided for specific technologies utilised within the HybridSystem</li>
+<li>Agency training for security and system administrators for the use of Security Centre / Sentinel</li>
+<li>Monitoring of events within Security Centre / Sentinel</li>
+<li>Managed Service Accounts (MSAs), including group MSAs (gMSAs), are used where supported</li>
+<li>Privileged accounts are added to the “Protected Users” security group</li>
+</ul>
+<h4 id="target-likelihood">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating">Target risk rating</h4>
+<p>1 – Low</p>
+<h3 id="r02-sensitiveclassified-email-sent-to-unauthorised-recipients">R02 Sensitive/classified email sent to unauthorised recipients</h3>
+<h4 id="risk-overview_1">Risk overview</h4>
+<p>A user sends an OFFICIAL: Sensitive or PROTECTED classified mail/attachment, or personal information (as defined by the Privacy Act 1988) to an unauthorised recipient resulting in a data spill.</p>
+<h4 id="assets-affected_1">Assets affected</h4>
+<ul>
+<li>OFFICIAL: Sensitive and PROTECTED data </li>
+<li>Personal information</li>
+</ul>
+<h4 id="threat-sources_1">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Unintentional – General user</li>
+</ul>
+<h4 id="threat-events_1">Threat events</h4>
+<ul>
+<li>Cause disclosure by spilling sensitive and or classified information to a system and or person not authorised to view or handle the information</li>
+</ul>
+<h4 id="inherent-likelihood_1">Inherent likelihood</h4>
+<p>4 – Likely</p>
+<h4 id="inherent-consequence_1">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_1">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_1">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>All email transits via a gateway mail server which enforces email security classification label checking</li>
+<li>User awareness training to staff</li>
+<li>HybridSystem treatments</li>
+<li>Microsoft Information Protection (MIP) requires users to apply a classification marking to all emails and documents</li>
+<li>The sensitivity and classification markings from the PSPF for up-to PROTECTED are configured as MIP sensitivity labels   </li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_1">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_1">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_1">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_1">Proposed treatments</h4>
+<ul>
+<li>Implement an automated security classification labelling solution for emails based on the classification of attachments</li>
+<li>Data spill processes and procedures are developed and regularly tested</li>
+</ul>
+<h4 id="target-likelihood_1">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_1">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_1">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r03-unauthorised-access-to-data-hosted-within-office-365">R03 Unauthorised access to data hosted within Office 365</h3>
+<h4 id="risk-overview_2">Risk overview</h4>
+<p>An unauthorised user attempts to access data hosted within Microsoft’s Office 365 cloud services, including Exchange Online, OneDrive for Business, SharePoint Online, and Teams to gain access to PROTECTED data. The attacker may attempt to use either stolen or guessed credentials or attempt to introduce malicious code into one or more Office 365 services.</p>
+<h4 id="assets-affected_2">Assets affected</h4>
+<ul>
+<li>PROTECTED data within the tenant</li>
+</ul>
+<h4 id="threat-sources_2">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider (including Microsoft support staff)</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_2">Threat events</h4>
+<ul>
+<li>Compromise organisational information systems to facilitate exfiltration of data/information</li>
+<li>Obtain sensitive and or classified information via exfiltration</li>
+<li>Obtain unauthorised access to:</li>
+<li>Deny access to Agency information to authorised users</li>
+<li>Modify Agency information and making the integrity of the information unviable or no longer trustworthy</li>
+</ul>
+<h4 id="inherent-likelihood_2">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_2">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_2">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_2">Ongoing and completed treatments</h4>
+<ul>
+<li>Native Office 365 treatments</li>
+<li>Office 365 services IRAP assessed up to a PROTECTED level</li>
+<li>All Office 365 traffic is protected using Transport Layer Security (TLS)</li>
+<li>Exchange Online Protection (EOP) provides built in protection for Exchange Online mailboxes</li>
+<li>Microsoft’s Cyber Defence Operations Centre helps protect, detect, and respond to Office 365 cloud service threats in real time</li>
+<li>HybridSystem treatments</li>
+<li>Password complexity is enforced in line with Information Security Manual (ISM) standards, and users are required to change passwords on first use</li>
+<li>Conditional Access enforces MFA for all users and administrators</li>
+<li>Office 365 audit logging enabled to provide the ability to audit actions undertaken within the Office 365 services</li>
+<li>Microsoft Defender for Office 365 Safe Links, Safe Attachments, Safe Documents, and Anti-Phishing capabilities enabled to reduce the likelihood of malicious code infiltrating the environment</li>
+<li>Defender for Identity monitors Active Directory authentications and performs User and Entity Behaviour Analytics (UEBA)</li>
+<li>Microsoft Defender for Cloud Apps enabled and app connectors and policies configured to detect risky behaviours, violations, or suspicious data points and activities within Office 365</li>
+<li>Sender Policy Framework (SPF), Domain based Message Authentication, Reporting and Conformance (DMARC), and DomainKeys Identified Mail (DKIM) records are configured to mitigate spoofing of emails being sent into the organisation </li>
+<li>Office 365 services are only utilised within Australian regions</li>
+<li>Credential Guard is enabled and credential theft is blocked through Microsoft Defender Exploit Guard</li>
+<li>Pass-through Authentication (PTA) is used with Azure AD Connect for authentication</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_2">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_2">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_2">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_2">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_2">Target likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="target-consequence_2">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_2">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r04-malicious-insider-disables-security-capabilities">R04 Malicious insider disables security capabilities</h3>
+<h4 id="risk-overview_3">Risk overview</h4>
+<p>A malicious insider attempts to disable cloud-based security capabilities (e.g., Azure MFA) increasing the risk of further exploitation.</p>
+<h4 id="assets-affected_3">Assets affected</h4>
+<ul>
+<li>All cloud-based infrastructure</li>
+</ul>
+<h4 id="threat-sources_3">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Trusted Insider, Insider, or Privileged Insider</li>
+</ul>
+<h4 id="threat-events_3">Threat events</h4>
+<ul>
+<li>Functionality of security features are reduced or disabled</li>
+<li>Level of security monitoring is limited or disabled</li>
+<li>Allow malicious activity to be undetected</li>
+</ul>
+<h4 id="inherent-likelihood_3">Inherent likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="inherent-consequence_3">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_3">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_3">Ongoing and completed treatments</h4>
+<ul>
+<li>HybridSystem treatments</li>
+<li>Azure AD Identity Protection enabled to alert on detected User and Sign-in risks</li>
+<li>Azure AD PIM provides JIT privileged access</li>
+<li>Leverages built-in Azure AD / Office 365 Role Groups to implement a robust RBAC model</li>
+<li>Microsoft 365 audit logging is enabled</li>
+<li>All Azure AD and Office 365 logs are centralised into a single Log Analytics workspace</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+</ul>
+<h4 id="residual-likelihood_3">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_3">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_3">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_3">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre </li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_3">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_3">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_3">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r05-unskilled-administrator-misconfigures-services">R05 Unskilled administrator misconfigures services</h3>
+<h4 id="risk-overview_4">Risk overview</h4>
+<p>An authorised administrator misconfigures services increasing the risk of further exploitation. This may be due to a misunderstanding of the functionality of specific Azure or Office 365 service due to a lack of training or insufficient procedural documentation.</p>
+<h4 id="assets-affected_4">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers, and endpoints)</li>
+</ul>
+<h4 id="threat-sources_4">Threat sources</h4>
+<ul>
+<li>Accidental – Privileged User/Administrator</li>
+</ul>
+<h4 id="threat-events_4">Threat events</h4>
+<ul>
+<li>Functionality of security features are reduced</li>
+<li>Level of security monitoring is limited</li>
+</ul>
+<h4 id="inherent-likelihood_4">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_4">Inherent consequence</h4>
+<p>2 – Minor</p>
+<h4 id="inherent-risk-rating_4">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_4">Ongoing and completed treatments</h4>
+<ul>
+<li>HybridSystem treatments</li>
+<li>Azure AD Identity Protection enabled to alert on detected User and Sign-in risks</li>
+<li>Azure AD PIM provides JIT privileged access</li>
+<li>Leverages built-in Azure AD / Office 365 Role Groups to implement a robust RBAC model</li>
+<li>Microsoft 365 audit logging is enabled</li>
+<li>Standard Operating Procedures (SOPs) are provided for administrators</li>
+</ul>
+<h4 id="residual-likelihood_4">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_4">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_4">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_4">Proposed treatments</h4>
+<ul>
+<li>Administrator training provided for specific technologies utilised within the HybridSystem</li>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_4">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_4">Target consequence</h4>
+<p>1 – Minimal</p>
+<h4 id="target-risk-rating_4">Target risk rating</h4>
+<p>1 – Low</p>
+<h3 id="r06-components-infected-by-malicious-code">R06 Components infected by malicious code</h3>
+<h4 id="risk-overview_5">Risk overview</h4>
+<p>Malicious code introduced to the environment by one or more vectors leading to the loss of availability or integrity of the solution.</p>
+<h4 id="assets-affected_5">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers, and endpoints)</li>
+</ul>
+<h4 id="threat-sources_5">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_5">Threat events</h4>
+<ul>
+<li>Deliver known malicious to internal organisational information systems (e.g. virus via email including spam, whaling, spear phishing etc.)</li>
+<li>Deliver modified malicious code to internal organisational information systems</li>
+<li>Deliver targeted malicious for control of internal systems and exfiltration of data</li>
+<li>Insert untargeted malicious into downloadable software and/or into commercial information technology products</li>
+<li>Email contains unknown (zero day) exploit which is undetected by Microsoft security systems and delivered to the user</li>
+</ul>
+<h4 id="inherent-likelihood_5">Inherent likelihood</h4>
+<p>4 – Likely</p>
+<h4 id="inherent-consequence_5">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_5">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_5">Ongoing and completed treatments</h4>
+<ul>
+<li>Native Office 365 treatments</li>
+<li>Exchange Online Protection provides built-in protection for Exchange Online mailboxes</li>
+<li>Microsoft’s Cyber Defence Operations Centre helps protect, detect, and respond to Office 365 cloud service threats in real time</li>
+<li>HybridSystem treatments</li>
+<li>Microsoft Defender Antivirus provides signature and heuristic-based detection</li>
+<li>Controlled folder access configured to prevent unauthorised applications to writing to specified directories</li>
+<li>Microsoft Defender for Endpoint is enabled to provide reporting, pre-breach protection, post-breach detection, automation, and response on Windows 10 endpoints</li>
+<li>Microsoft Defender for Office 365 Safe Links, Safe Attachments, Safe Documents, and Anti-Phishing capabilities enabled to reduce the likelihood of malicious code infiltrating the environment</li>
+<li>Defender for Identity monitors Active Directory authentications and performs UEBA</li>
+<li>Windows Defender Application Control (WDAC) provides application control functionality to block unauthorised executables from running</li>
+<li>Windows Defender Exploit Guard (WDEG) ‘exploit protection’ feature is enabled</li>
+<li>Hardening of Windows 10 endpoints including application control in accordance with ACSC guidance</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+<li>Early Launch Antimalware (ELAM), Secure Boot and Trusted Boot are enabled as part of the Windows 10 SOE</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_5">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_5">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_5">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_5">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre </li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_5">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_5">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_5">Target risk rating</h4>
+<p>1 – Low</p>
+<h3 id="r07-unauthorised-access-to-email-on-exchange-online">R07 Unauthorised access to email on Exchange Online</h3>
+<h4 id="risk-overview_6">Risk overview</h4>
+<p>An unauthorised user attempts to access email within mailboxes hosted in Exchange Online which may expose sensitive and or security classified data. This may be attempted using leaked or guessed credentials, or by attempting to intercept legitimate authentication traffic in transit.</p>
+<h4 id="assets-affected_6">Assets affected</h4>
+<ul>
+<li>Sensitive and or security classified data </li>
+</ul>
+<h4 id="threat-sources_6">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_6">Threat events</h4>
+<ul>
+<li>Compromise organisational information systems to facilitate exfiltration of data/information</li>
+<li>Obtain security classified and or sensitive information via exfiltration</li>
+<li>Obtain unauthorised access to:</li>
+<li>Deny access to Agency information to authorised users</li>
+<li>Modify Agency information and making the integrity of the information unviable or no longer trustworthy</li>
+<li>Commit CEO fraud and or Business Email Compromise (BEC)</li>
+</ul>
+<h4 id="inherent-likelihood_6">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_6">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_6">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_6">Ongoing and completed treatments</h4>
+<ul>
+<li>HybridSystem treatments</li>
+<li>Password complexity is enforced in line with ISM standards, and users are required to change passwords on first use</li>
+<li>Conditional Access enforces MFA for all users and administrators</li>
+<li>Conditional Access blocks access to Office 365 from external networks</li>
+<li>Service provider networks are segregated from Agency networks through the use of a Secure Internet Gateway (SIG)</li>
+<li>Legacy authentication blocked via Conditional Access policies</li>
+<li>Credential Guard is enabled and credential theft is blocked through Microsoft Defender Exploit Guard</li>
+<li>PTA is used with Azure AD Connect for authentication</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_6">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_6">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_6">Residual risk rating</h4>
+<p>2 - Medium</p>
+<h4 id="proposed-treatments_6">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_6">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_6">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_6">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r08-denial-of-service-attacks">R08 Denial of service attacks</h3>
+<h4 id="risk-overview_7">Risk overview</h4>
+<p>An external attacker attempts to disrupt availability by launching a Denial of Service (DoS) attack targeting one or more public facing IP addresses (including Microsoft services).</p>
+<h4 id="assets-affected_7">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers, and endpoints)</li>
+<li>Agency gateway (if utilised)</li>
+</ul>
+<h4 id="threat-sources_7">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_7">Threat events</h4>
+<ul>
+<li>Conduct simple DoS attacks</li>
+<li>Conduct Distributed Denial of Service (DDoS) attacks</li>
+<li>Conduct targeted DoS attacks</li>
+</ul>
+<h4 id="inherent-likelihood_7">Inherent likelihood</h4>
+<p>4 – Likely</p>
+<h4 id="inherent-consequence_7">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_7">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_7">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Basic DoS protection is available within the Agency gateway</li>
+<li>Native Microsoft treatments</li>
+<li>Microsoft provide an underlying <a href="https://docs.microsoft.com/en-au/compliance/assurance/assurance-microsoft-dos-defense-strategy">denial-of-service defense strategy</a> for Microsoft 365</li>
+</ul>
+<h4 id="residual-likelihood_7">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_7">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_7">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_7">Proposed treatments</h4>
+<ul>
+<li>Enhance DoS/DDoS protection within the Agency’s gateway</li>
+</ul>
+<h4 id="target-likelihood_7">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_7">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_7">Target risk rating</h4>
+<p>1 - Low</p>
+<h3 id="r09-cyber-security-incident-not-detected">R09 Cyber security incident not detected</h3>
+<h4 id="risk-overview_8">Risk overview</h4>
+<p>An intrusion is not detected leading to a threat of malicious activity and possible compromise of sensitive and or security classified data and services.</p>
+<h4 id="assets-affected_8">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers and endpoints)</li>
+<li>Sensitive and or security classified data</li>
+</ul>
+<h4 id="threat-sources_8">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_8">Threat events</h4>
+<ul>
+<li>Compromise organisational information systems to facilitate exfiltration of data/information</li>
+<li>Obtain sensitive information via exfiltration</li>
+<li>Obtain unauthorised access to:</li>
+<li>Deny access to Agency information to authorised users</li>
+<li>Modify Agency information and making the integrity of the information unviable or no longer trustworthy</li>
+<li>Coordinate a campaign that spreads attacks across organisational systems from existing presence</li>
+</ul>
+<h4 id="inherent-likelihood_8">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_8">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_8">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_8">Ongoing and completed treatments</h4>
+<ul>
+<li>Native Office 365 treatments</li>
+<li>Microsoft’s Cyber Defence Operations Centre helps protect, detect, and respond to Office 365 cloud service threats in real time</li>
+<li>HybridSystem treatments</li>
+<li>Microsoft Defender for Endpoint is enabled to provide reporting, pre-breach protection, post-breach detection, automation, and response on Windows 10 endpoints</li>
+<li>Defender for Cloud Apps enabled and app connectors and policies configured to detect risky behaviours, violations, or suspicious data points and activities within Office 365</li>
+<li>Defender for Identity monitors Active Directory authentications and performs UEBA</li>
+<li>Microsoft 365 audit logging is enabled</li>
+<li>All Azure AD and Office 365 logs are centralised into a single Log Analytics workspace</li>
+<li>Credential Guard is enabled and credential theft is blocked through Microsoft Defender Exploit Guard</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_8">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_8">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_8">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_8">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_8">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_8">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_8">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r10-inability-to-recover-from-a-data-loss-event">R10 Inability to recover from a data loss event</h3>
+<h4 id="risk-overview_9">Risk overview</h4>
+<p>The failure of backup procedures leading to the inability to restore critical system components and information when data loss occurs. This risk takes into account the ISM controls relating to ‘Data backups’ that are not implemented as part of the solution.</p>
+<h4 id="assets-affected_9">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers and endpoints)</li>
+<li>Sensitive and or security classified data</li>
+</ul>
+<h4 id="threat-sources_9">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_9">Threat events</h4>
+<ul>
+<li>Availability of Agency information and systems</li>
+<li>Cause integrity loss by polluting or corrupting critical data</li>
+<li>Cause integrity loss by injecting false but believable data into organisational information systems</li>
+<li>Data corruption or accidental deletion</li>
+</ul>
+<h4 id="inherent-likelihood_9">Inherent likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="inherent-consequence_9">Inherent consequence</h4>
+<p>2 – Minor</p>
+<h4 id="inherent-risk-rating_9">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_9">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Ongoing operational procedures to monitor backups</li>
+<li>HybridSystem treatments</li>
+<li>Configuration settings of Office 365 are backed up through the As-Built As-Configured (ABAC) documentation</li>
+<li>Documents, Desktops, Pictures on endpoints are redirected to OneDrive using Windows Known Folders providing a backup of data to the cloud</li>
+<li>Cloud-based files have Recycle bin and Restore options</li>
+<li>Exchange Online has a recover deleted items from server option</li>
+<li>Retention policies will be created that ensure that 3 months of data is retained for Office 365 services</li>
+<li>Workstation configuration is stored in Intune or Microsoft Endpoint Configuration Manager (MECM), and Standard Operating Environments (SOEs) are to be used</li>
+<li>SOPs provided for administrators</li>
+</ul>
+<h4 id="residual-likelihood_9">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_9">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_9">Residual risk rating</h4>
+<p>1 – Low</p>
+<h4 id="proposed-treatments_9">Proposed treatments</h4>
+<ul>
+<li>Implement an offline backup solution in the event Office 365 services are unavailable</li>
+<li>Data backup and recovery processes and procedures are developed and regularly tested</li>
+</ul>
+<h4 id="target-likelihood_9">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_9">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_9">Target risk rating</h4>
+<p>1 – Low</p>
+<h3 id="r11-operating-system-vulnerability-allows-exploitation">R11 Operating system vulnerability allows exploitation</h3>
+<h4 id="risk-overview_10">Risk overview</h4>
+<p>Security vulnerabilities are discovered within the operating system versions utilised by the solution allowing exploitation.</p>
+<h4 id="assets-affected_10">Assets affected</h4>
+<ul>
+<li>Endpoints</li>
+</ul>
+<h4 id="threat-sources_10">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_10">Threat events</h4>
+<ul>
+<li>Exploit recently discovered vulnerabilities</li>
+<li>Exploit vulnerabilities on internal organisational information systems</li>
+<li>Exploit vulnerabilities using zero-day attacks</li>
+<li>Craft attacks specifically based on deployed information technology environment</li>
+</ul>
+<h4 id="inherent-likelihood_10">Inherent likelihood</h4>
+<p>4 – Likely</p>
+<h4 id="inherent-consequence_10">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_10">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_10">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>The Agency’s support team will monitor patching and perform manual remediation as required</li>
+<li>HybridSystem treatments</li>
+<li>Windows Update for Business and Microsoft Intune are enabled and configured to automatically update Windows 10 on endpoints</li>
+<li>Multiple software update rings provide staged approach to updates</li>
+<li>Intune or MECM can deploy firmware patches as executable files as required</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+<li>Microsoft Defender for Endpoint provides vulnerability management capabilities to detect missing patches</li>
+</ul>
+<h4 id="residual-likelihood_10">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_10">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_10">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_10">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_10">Target likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="target-consequence_10">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_10">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r12-application-vulnerability-allows-exploitation">R12 Application vulnerability allows exploitation</h3>
+<h4 id="risk-overview_11">Risk overview</h4>
+<p>Security vulnerabilities are discovered within applications utilised by the solution allowing exploitation.</p>
+<h4 id="assets-affected_11">Assets affected</h4>
+<ul>
+<li>Applications</li>
+</ul>
+<h4 id="threat-sources_11">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_11">Threat events</h4>
+<ul>
+<li>Exploit recently discovered vulnerabilities</li>
+<li>Exploit vulnerabilities on internal organisational information systems</li>
+<li>Exploit vulnerabilities using zero-day attacks</li>
+<li>Craft attacks specifically based on deployed information technology environments</li>
+</ul>
+<h4 id="inherent-likelihood_11">Inherent likelihood</h4>
+<p>4 – Likely</p>
+<h4 id="inherent-consequence_11">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_11">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_11">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>The Agency’s support team will monitor patching and perform manual remediation as required</li>
+<li>HybridSystem treatments</li>
+<li>Intune or MECM used to patch applications on a regular basis</li>
+<li>Windows Defender Firewall enabled for inbound connections</li>
+<li>User Account Control (UAC) enabled to enforce the elevation of privileges to help prevent vulnerability exploitation</li>
+<li>WDEG ‘exploit protection’ feature is enabled</li>
+<li>Local administrator account renamed and disabled via Intune policy</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+<li>Microsoft Defender for Endpoint provides vulnerability management capabilities to detect missing patches</li>
+</ul>
+<h4 id="residual-likelihood_11">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_11">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_11">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_11">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_11">Target likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="target-consequence_11">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_11">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r13-attacker-bypasses-application-control-capability">R13 Attacker bypasses application control capability</h3>
+<h4 id="risk-overview_12">Risk overview</h4>
+<p>An attacker attempts to bypass the application controls enforced on endpoints.</p>
+<h4 id="assets-affected_12">Assets affected</h4>
+<ul>
+<li>Endpoints</li>
+</ul>
+<h4 id="threat-sources_12">Threat sources</h4>
+<ul>
+<li>Accidental – Privileged User/Administrator</li>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_12">Threat events</h4>
+<ul>
+<li>Compromise software of organisational critical information systems</li>
+</ul>
+<h4 id="inherent-likelihood_12">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_12">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_12">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_12">Ongoing and completed treatments</h4>
+<ul>
+<li>HybridSystem treatments</li>
+<li>WDAC provides application control functionality to block unauthorised executables from running</li>
+<li><a href="https://docs.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules">Microsoft recommended block rules</a> and <a href="https://docs.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">Microsoft recommended driver block rules</a> implemented to prevent known WDAC bypasses</li>
+<li>Windows Application Defender Control (WDAC) policies configured centrally from Intune or MECM</li>
+<li>WDEG ‘exploit protection’ feature is enabled</li>
+<li>Microsoft Defender for Endpoint is enabled to provide reporting, pre-breach protection, post-breach detection, automation, and response on Windows 10 endpoints</li>
+<li>Attack Surface Reduction rules are enabled for Windows 10 and Office 365 in accordance with ACSC guidance</li>
+</ul>
+<h4 id="residual-likelihood_12">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_12">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_12">Residual risk rating</h4>
+<p>1 – Low</p>
+<h4 id="proposed-treatments_12">Proposed treatments</h4>
+<ul>
+<li>Forward logs to a SIEM solution</li>
+<li>Agency training for security and system administrators for the use of Security Centre</li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_12">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_12">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_12">Target risk rating</h4>
+<p>1 – Low</p>
+<h3 id="r14-password-spray-attack-directed-at-azure-ad">R14 Password spray attack directed at Azure AD</h3>
+<h4 id="risk-overview_13">Risk overview</h4>
+<p>An attacker attempts to gain access by attempting to logon using a number of different passwords against a crafted list of Azure AD accounts over a period of time.</p>
+<h4 id="assets-affected_13">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers and endpoints)</li>
+<li>Sensitive and or security classified data</li>
+</ul>
+<h4 id="threat-sources_13">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+</ul>
+<h4 id="threat-events_13">Threat events</h4>
+<ul>
+<li>Conduct login attempts/password guessing attacks</li>
+</ul>
+<h4 id="inherent-likelihood_13">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_13">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_13">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_13">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Mandatory security awareness training by the Agency to educate users on the importance of using strong passwords or passphrases</li>
+<li>HybridSystem treatments</li>
+<li>Conditional Access enforces MFA for all users and administrators</li>
+<li>Password complexity is enforced in line with ISM standards, and users are required to change passwords on first use</li>
+<li>Azure AD Smart Lockout configured to lock out accounts for a period of time after a number of invalid attempts</li>
+<li>Azure AD Identity Protection enabled to alert on detected User and Sign-in risks</li>
+<li>Defender for Identity monitors Active Directory authentications and performs UEBA</li>
+<li>PTA is used with Azure AD Connect for authentication</li>
+</ul>
+<h4 id="residual-likelihood_13">Residual likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="residual-consequence_13">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_13">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_13">Proposed treatments</h4>
+<ul>
+<li>Agency training for security and system administrators for the use of Security Centre </li>
+<li>Monitoring of events within Security Centre</li>
+</ul>
+<h4 id="target-likelihood_13">Target likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="target-consequence_13">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_13">Target risk rating</h4>
+<p>2 - Medium</p>
+<h3 id="r15-lack-of-availability-due-to-cloud-service-provider-outage">R15 Lack of availability due to cloud service provider outage</h3>
+<h4 id="risk-overview_14">Risk overview</h4>
+<p>A major outage occurs to the cloud services causing the inability to provide services to the Agency.</p>
+<h4 id="assets-affected_14">Assets affected</h4>
+<ul>
+<li>Microsoft Azure, and Microsoft Office 365.</li>
+</ul>
+<h4 id="threat-sources_14">Threat sources</h4>
+<ul>
+<li>Environmental – Infrastructure Failure/Outage</li>
+<li>Environmental – Natural or man-made disaster</li>
+</ul>
+<h4 id="threat-events_14">Threat events</h4>
+<ul>
+<li>Network communications outage or contention</li>
+<li>Interruption to cloud services</li>
+<li>Earthquake, fire, flood, hurricane, or tornado</li>
+<li>Force majeure</li>
+</ul>
+<h4 id="inherent-likelihood_14">Inherent likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="inherent-consequence_14">Inherent consequence</h4>
+<p>4 – Major</p>
+<h4 id="inherent-risk-rating_14">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_14">Ongoing and completed treatments</h4>
+<ul>
+<li>Native Microsoft Cloud treatments</li>
+<li>Azure cloud services are available within multiple regions in Australia classified up to PROTECTED</li>
+<li>Office 365 services are available within multiple regions in Australia classified up to PROTECTED. Failover of the Office 365 services will be dependent on Microsoft’s Service Level Agreement (SLA) for Office 365</li>
+<li>HybridSystem treatments</li>
+<li>The services utilised are available within multiple Azure regions (except any third-party solutions utilised, e.g. Agency gateway and GovLink)</li>
+</ul>
+<h4 id="residual-likelihood_14">Residual likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="residual-consequence_14">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_14">Residual risk rating</h4>
+<p>1 – Low</p>
+<h4 id="proposed-treatments_14">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_14">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_14">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_14">Target risk rating</h4>
+<p>1 - Low</p>
+<h3 id="r16-privileged-access-workstations-not-implemented-for-administration">R16 Privileged Access Workstations not implemented for administration</h3>
+<h4 id="risk-overview_15">Risk overview</h4>
+<p>An adversary compromises privileged access mechanisms due to the lack of implementation of Privileged Access Workstations (PAWs) within the design.</p>
+<p>Administration of the system is undertaken by authorised privileged users by connecting from a PROTECTED level endpoint to PROTECTED level services and systems.</p>
+<h4 id="assets-affected_15">Assets affected</h4>
+<ul>
+<li>All infrastructure (Azure AD, Office 365, on-premises servers, and endpoints)</li>
+</ul>
+<h4 id="threat-sources_15">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Trusted Insider, Insider or Privileged Insider</li>
+<li>Accidental – Privileged User/Administrator</li>
+</ul>
+<h4 id="threat-events_15">Threat events</h4>
+<ul>
+<li>Obtain unauthorised access</li>
+</ul>
+<h4 id="inherent-likelihood_15">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_15">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_15">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_15">Ongoing and completed treatments</h4>
+<ul>
+<li>HybridSystem treatments</li>
+<li>Conditional Access only allows access to administrative portals from compliant Windows 10 endpoints</li>
+<li>Hardening of Windows 10 endpoints including application control in accordance with ACSC guidance</li>
+<li>Microsoft Defender for Endpoint is enabled to provide reporting, pre-breach protection, post-breach detection, automation, and response on Windows 10 endpoints</li>
+<li>WDAC provides application control functionality to block unauthorised executables from running</li>
+<li>WDEG ‘exploit protection’ feature is enabled</li>
+<li>Conditional Access enforces MFA for all privileged users</li>
+<li>Azure AD Identity Protection enabled to alert on detected User and Sign-in risks</li>
+<li>Credential Guard is enabled and credential theft is blocked through Microsoft Defender Exploit Guard</li>
+<li>Only one previous logon is cached for the Windows 10 SOE</li>
+<li>PTA is used with Azure AD Connect for authentication</li>
+</ul>
+<h4 id="residual-likelihood_15">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_15">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_15">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_15">Proposed treatments</h4>
+<ul>
+<li>Agency system administrators to have separate administration account from their normal user account for the management of O365 and Azure.</li>
+</ul>
+<h4 id="target-likelihood_15">Target likelihood</h4>
+<p>1 – Rare</p>
+<h4 id="target-consequence_15">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_15">Target risk rating</h4>
+<p>2 - Medium</p>
+<h3 id="r17-mobile-device-compromised">R17 Mobile device compromised</h3>
+<h4 id="risk-overview_16">Risk overview</h4>
+<p>An Apple iOS device used to access Sensitive and or security classified data is compromised. This maybe as a result of the ACSC's <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/security-configuration-guide-apple-ios-14-devices">Security Configuration Guide – Apple iOS 14 Devices</a> (October 2021) guidance not being fully implemented due to the usability impacts, or due to the use traditional threat events as described below.</p>
+<p>Note, the HybridSystem does not include the use of personal iOS devices or devices using the Android operating system.</p>
+<h4 id="assets-affected_16">Assets affected</h4>
+<ul>
+<li>iOS devices</li>
+<li>Sensitive and or security classified data</li>
+</ul>
+<h4 id="threat-sources_16">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+<li>Adversarial – Individual – Outsider</li>
+<li>Adversarial – Group – Established</li>
+<li>Adversarial – Nation State</li>
+<li>Unintentional – General user</li>
+</ul>
+<h4 id="threat-events_16">Threat events</h4>
+<ul>
+<li>Obtain unauthorised access</li>
+<li>Exploit recently discovered vulnerabilities, including local and Over The Air (OTA) attacks</li>
+<li>Theft or loss of device</li>
+</ul>
+<h4 id="inherent-likelihood_16">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_16">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_16">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_16">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Policy governing the use and management of mobile devices used to access classified information</li>
+<li>Awareness training for users with mobile devices</li>
+<li>HybridSystem treatments</li>
+<li>Implementation of the ACSC’s Security Configuration Guide for iOS 14 devices via Intune Mobile Device Management (MDM), including:<ol>
+<li>Supervised mode</li>
+<li>Long and complex alphanumeric device passcode</li>
+<li>Biometric device unlock disabled</li>
+<li>Management of built-in apps (e.g., iOS Camera and Books)</li>
+<li>Implementation of Intune App Protection policies</li>
+<li>Application control via Apple Business Manager Enrollment and the use of Volume Purchasing Program (VPP) tokens</li>
+</ol>
+</li>
+<li>Conditional Access policies require iOS devices to be compliant, using applications with modern authentication and MFA</li>
+<li>Conditional Access policies only allow access from specified countries</li>
+<li>Conditional Access policies block sign-ins that are determined to be high risk</li>
+<li>Intune enforces configuration policies for iOS devices including requirement for unlock code, device encryption (native iOS AES-256 encryption), minimum software version and jailbreak detection</li>
+<li>All information transmitted to and from mobile devices and Office 365 is encrypted</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_16">Residual likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="residual-consequence_16">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_16">Residual risk rating</h4>
+<p>3 – High</p>
+<h4 id="proposed-treatments_16">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_16">Target likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="target-consequence_16">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_16">Target risk rating</h4>
+<p>3 – High</p>
+<h3 id="r18-use-of-un-assessed-cloud-services-creates-exposures">R18 Use of un-assessed cloud services creates exposures</h3>
+<h4 id="risk-overview_17">Risk overview</h4>
+<p>An administrator enables a cloud service - or new feature within an existing cloud service - for use with the HybridSystem that is not currently part of the assessed HybridSystem.</p>
+<h4 id="assets-affected_17">Assets affected</h4>
+<ul>
+<li>All cloud-based infrastructure</li>
+<li>Sensitive and or security classified data</li>
+</ul>
+<h4 id="threat-sources_17">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider </li>
+<li>Accidental – Privileged User/Administrator</li>
+</ul>
+<h4 id="threat-events_17">Threat events</h4>
+<ul>
+<li>Obtain unauthorised access to:</li>
+<li>Deny access to Agency information to authorised users</li>
+<li>Modify Agency information and making the integrity of the information unviable or no longer trustworthy Obfuscate adversary actions</li>
+<li>Obtain information by opportunistically stealing or scavenging information systems/components</li>
+<li>Compromise organisational information systems to facilitate exfiltration of data/information</li>
+<li>Obtain sensitive and or classified information via exfiltration</li>
+</ul>
+<h4 id="inherent-likelihood_17">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_17">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_17">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_17">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Agency IT Security Policy for authorised staff to not enable new cloud services or features</li>
+<li>Approval process to obtain a privileged user account</li>
+<li>Training to Agency nominated system administrators</li>
+<li>As new services become available the Agency will undertake a risk assessment of the service and establish if the risk is within the Agency’s tolerance before engaging the new service offering</li>
+<li>HybridSystem treatments</li>
+<li>Leverages built-in Azure AD / Office 365 Role Groups to implement a robust RBAC model minimising the number of users that can onboard a new service or enable additional features</li>
+<li>Defender for Cloud Apps is configured to log activity by all users including Global Admins providing an audit trail for new services</li>
+<li>Azure AD PIM is enabled and requires Global Admins to provide a reason when requesting elevated privileges </li>
+<li>Azure AD PIM logs the start time and end time of elevated privileges</li>
+<li>Data transfer logs are retained</li>
+</ul>
+<h4 id="residual-likelihood_17">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_17">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_17">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_17">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_17">Target likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="target-consequence_17">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_17">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r19-users-declassifying-emails-without-the-owners-permission">R19 Users declassifying emails without the owner’s permission</h3>
+<h4 id="risk-overview_18">Risk overview</h4>
+<p>Sensitivity labels allow users to apply protective markings to emails to ensure appropriate security controls are applied to information. A user has the ability to change the protective marking without the originators permission but are required to provide a text-based justification.</p>
+<h4 id="assets-affected_18">Assets affected</h4>
+<ul>
+<li>PROTECTED data within emails (including attachments)</li>
+</ul>
+<h4 id="threat-sources_18">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider </li>
+<li>Accidental – User/Administrator</li>
+</ul>
+<h4 id="threat-events_18">Threat events</h4>
+<ul>
+<li>Sensitive and or classified information being:</li>
+<li>stored on the incorrect system</li>
+<li>viewed by personnel not cleared for that security level</li>
+<li>leaked to the general public</li>
+<li>Obtain sensitive and or classified information via exfiltration</li>
+<li>Invalidate the integrity and confidentiality of information</li>
+</ul>
+<h4 id="inherent-likelihood_18">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_18">Inherent consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="inherent-risk-rating_18">Inherent risk rating</h4>
+<p>3 – High</p>
+<h4 id="ongoing-and-completed-treatments_18">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Training to Agency users on the appropriate measures for applying and changing protective markings</li>
+<li>HybridSystem treatments</li>
+<li>The solution has been configured to require users to provide a justification for changing a label</li>
+</ul>
+<h4 id="residual-likelihood_18">Residual likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="residual-consequence_18">Residual consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="residual-risk-rating_18">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_18">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_18">Target likelihood</h4>
+<p>2 – Unlikely</p>
+<h4 id="target-consequence_18">Target consequence</h4>
+<p>3 – Moderate</p>
+<h4 id="target-risk-rating_18">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r20-compromise-of-the-azure-ad-connect-database">R20 Compromise of the Azure AD Connect database</h3>
+<h4 id="risk-overview_19">Risk overview</h4>
+<p>An unauthorised user (malicious) gains access to the database exposing the username and email addresses used by Azure AD Connect.</p>
+<h4 id="assets-affected_19">Assets affected</h4>
+<ul>
+<li>Domain identities (not including passwords/passphrases)</li>
+</ul>
+<h4 id="threat-sources_19">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+</ul>
+<h4 id="threat-events_19">Threat events</h4>
+<ul>
+<li>Adversary could obtain username and email addresses for user/administrator accounts being synchronised to Azure AD</li>
+</ul>
+<h4 id="inherent-likelihood_19">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_19">Inherent consequence</h4>
+<p>2 – Minor</p>
+<h4 id="inherent-risk-rating_19">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_19">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Leverage server-side event logging to monitor login events and network traffic.</li>
+<li>Enable multi-factor authentication on all domain accounts</li>
+<li>Hardening of operating systems, applications and database systems to ACSC recommended practices</li>
+</ul>
+<h4 id="residual-likelihood_19">Residual likelihood</h4>
+<p>4 – Unlikely</p>
+<h4 id="residual-consequence_19">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_19">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_19">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_19">Target likelihood</h4>
+<p>4 – Unlikely</p>
+<h4 id="target-consequence_19">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_19">Target risk rating</h4>
+<p>2 – Medium</p>
+<h3 id="r21-compromise-of-the-sharepoint-database">R21 Compromise of the SharePoint database</h3>
+<h4 id="risk-overview_20">Risk overview</h4>
+<p>An unauthorised user (malicious) gains access to the database exposing configuration settings.</p>
+<h4 id="assets-affected_20">Assets affected</h4>
+<ul>
+<li>SharePoint Configuration settings</li>
+</ul>
+<h4 id="threat-sources_20">Threat sources</h4>
+<ul>
+<li>Adversarial – Individual – Insider, Trusted Insider, Privileged Insider</li>
+</ul>
+<h4 id="threat-events_20">Threat events</h4>
+<ul>
+<li>Adversary could potentially modify or delete the configuration settings.</li>
+</ul>
+<h4 id="inherent-likelihood_20">Inherent likelihood</h4>
+<p>3 – Possible</p>
+<h4 id="inherent-consequence_20">Inherent consequence</h4>
+<p>2 – Minor</p>
+<h4 id="inherent-risk-rating_20">Inherent risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="ongoing-and-completed-treatments_20">Ongoing and completed treatments</h4>
+<ul>
+<li>Agency treatments</li>
+<li>Leverage server-side event logging to monitor login events and network traffic.</li>
+<li>Enable multi-factor authentication on all domain accounts</li>
+<li>Hardening of operating systems, applications and database systems to ACSC recommended practices</li>
+</ul>
+<h4 id="residual-likelihood_20">Residual likelihood</h4>
+<p>4 – Unlikely</p>
+<h4 id="residual-consequence_20">Residual consequence</h4>
+<p>2 – Minor</p>
+<h4 id="residual-risk-rating_20">Residual risk rating</h4>
+<p>2 – Medium</p>
+<h4 id="proposed-treatments_20">Proposed treatments</h4>
+<p>None</p>
+<h4 id="target-likelihood_20">Target likelihood</h4>
+<p>4 – Unlikely</p>
+<h4 id="target-consequence_20">Target consequence</h4>
+<p>2 – Minor</p>
+<h4 id="target-risk-rating_20">Target risk rating</h4>
+<p>2 – Medium</p>
+    
+    
+  
+  
+
+
+  
+                  
+                </article>
+              </div>
+            
+            
+          </div>
+          
+            <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            </a>
+          
+        </main>
+        
+            <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-footer__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+              <img src="../../img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="https://www.oobe.com.au/about/privacy" title="https://www.oobe.com.au/about/privacy" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/privacy" data-md-component="pp">
+                Privacy policy
+              </a>
+              <a href="https://www.oobe.com.au" title="https://www.oobe.com.au" class="md-footer__button link" aria-label="https://www.oobe.com.au" data-md-component="oobe">
+                oobe.com.au
+              </a>
+              <a href="https://www.oobe.com.au/about/contact" title="https://www.oobe.com.au/about/contact" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/contact" data-md-component="contact">
+                Contact Us
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+      </div>
+      <div class="md-dialog" data-md-component="dialog">
+        <div class="md-dialog__inner md-typeset"></div>
+      </div>
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.prune", "toc.follow", "toc.integrate"], "search": "../../js/search.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+      
+      
+        <script src="../../js/bundle.min.js"></script>
+        <script src="../../js/jquery-3.6.3.min.js"></script>
+        
+          <script src="../../js/extra.js"></script>
+        
+      
+    </body>
+  </html>

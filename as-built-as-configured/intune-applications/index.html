@@ -1,0 +1,1525 @@
+  
+  <!doctype html>
+  <html lang="en" class="no-js">
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+        
+          <link rel="canonical" href="https://oobecomau.github.io/theblueprint/as-built-as-configured/intune-applications/">
+        
+        
+          <link rel="prev" href="../hybrid-task-sequence/">
+        
+        
+          <link rel="next" href="../intune-compliance/">
+        
+        <link rel="icon" href="../../img/favicon.ico">
+        <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+      
+      
+        
+          <title>Intune applications - The blueprint</title>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/main.min.css">
+        
+          
+          <link rel="stylesheet" href="../../css/palette.min.css">
+        
+        
+
+      
+      
+      
+        
+          
+          
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+          <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/extra.css">
+      
+      <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      
+        
+
+      
+      
+      
+    </head>
+    
+    <body dir="ltr">
+      
+      
+      <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+      <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+      <label class="md-overlay" for="__drawer"></label>
+      <div data-md-component="skip">
+        
+          
+          <a href="#microsoft-endpoint-manager-intune-applications" class="md-skip">
+            Skip to content
+          </a>
+        
+      </div>
+      <div data-md-component="announce">
+        
+      </div>
+      
+      
+          
+  
+    
+  
+  <header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href="../.." title="The blueprint" class="md-header__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        <img src="../../img/The-blueprint-site-title-White.svg" alt="blueprint">  
+      </a>
+    </nav>
+    
+      
+        
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+         
+            
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+   
+         
+            
+    
+    
+      
+    
+  
+  
+    
+    
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blueprint/" class="md-tabs__link">
+          Blueprint
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          News
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+   
+        
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="md-search-container">
+        <div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form id="search-flex-container" class="md-search__form" name="search">
+        <div class="form-outline">
+          <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+        </div>
+        <div class="form-icon">
+          <label class="md-search__icon md-icon" for="__search">
+            <img src="../../img/The-blueprint-icon-Magnify-glass-Blue.svg" alt="Magnify"> 
+          </label>
+        </div>
+        <nav class="md-search__options" aria-label="Search">
+          
+          <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="md-powered-logo">
+    <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-header__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+      <img src="../../img/oobe-powered-by-White-RGB.svg" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
+      
+    
+  </header>
+      
+      <div class="md-container" data-md-component="container">
+        
+        
+          
+        
+        <main class="md-main" data-md-component="main">
+          <div class="md-main__inner md-grid">
+           
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                      
+  
+    
+  
+  
+    
+  
+  <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a href="../.." title="The blueprint" class="md-nav__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+      </a>
+      The blueprint
+    </label>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+          
+  
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../.." class="md-nav__link">
+          Home
+        </a>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+      
+    
+    
+      
+      <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            As built as configured
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../admin-disable-inactive-users/" class="md-nav__link">
+          Admin disable inactive users
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../conditional-access-policies/" class="md-nav__link">
+          Conditional access policies
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-network-configuration/" class="md-nav__link">
+          Hybrid network configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-task-sequence/" class="md-nav__link">
+          Hybrid task sequence
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+      
+    
+    
+      <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+        
+          
+        
+        
+          <label class="md-nav__link md-nav__link--active" for="__toc">
+            Intune applications
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <a id="active-nav-link" href="./" class="md-nav__link md-nav__link--active">
+          Intune applications
+        </a>
+        
+            
+  
+  <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+    
+    
+      
+    
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Intune applications
+      </label>
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+            <li class="md-nav__item">
+    <a href="#company-portal" class="md-nav__link">
+      Company portal
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-authenticator" class="md-nav__link">
+      Microsoft Authenticator
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-edge" class="md-nav__link">
+      Microsoft Edge
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-edge-for-windows-10" class="md-nav__link">
+      Microsoft Edge for Windows 10
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-excel" class="md-nav__link">
+      Microsoft Excel
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-onedrive" class="md-nav__link">
+      Microsoft OneDrive
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-outlook" class="md-nav__link">
+      Microsoft Outlook
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-teams" class="md-nav__link">
+      Microsoft Teams
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-word" class="md-nav__link">
+      Microsoft Word
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#power-apps" class="md-nav__link">
+      Power Apps
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-whiteboard" class="md-nav__link">
+      Microsoft Whiteboard
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-planner" class="md-nav__link">
+      Microsoft Planner
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-365-apps-for-windows-10" class="md-nav__link">
+      Microsoft 365 Apps for Windows 10
+    </a>
+    
+  </li>
+        
+      </ul>
+    
+  </nav>
+        
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-compliance/" class="md-nav__link">
+          Intune compliance
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-configuration/" class="md-nav__link">
+          Intune configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-enrolment/" class="md-nav__link">
+          Intune enrolment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-software-updates/" class="md-nav__link">
+          Intune software updates
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wdac-policy-creation/" class="md-nav__link">
+          Wdac policy creation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wfw-rules-import/" class="md-nav__link">
+          Wfw rules import
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../blueprint/">Blueprint</a>
+            
+              <label for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+          Abbreviations and acronyms
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+          As built as configured
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/automation/" class="md-nav__link">
+          Automation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/client-devices/" class="md-nav__link">
+          Client devices
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+          Essential eight maturity
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/security/" class="md-nav__link">
+          Security
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/solution-overview/" class="md-nav__link">
+          Solution overview
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../news/">News</a>
+            
+              <label for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+          Enhanced MFA
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+          Introducing The blueprint
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/windows-11-2020-04-23/" class="md-nav__link">
+          Windows 11
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            Security
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+          Cloud assessment and authorisation alignment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/continuous-monitoring-plan/" class="md-nav__link">
+          Continuous monitoring plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-incident-response-plan/" class="md-nav__link">
+          Hybrid incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-security-risk-management-plan/" class="md-nav__link">
+          Hybrid security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-standard-operating-procedures/" class="md-nav__link">
+          Hybrid standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-system-security-plan/" class="md-nav__link">
+          Hybrid system security plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/incident-response-plan/" class="md-nav__link">
+          Incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/security-risk-management-plan/" class="md-nav__link">
+          Security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/standard-operating-procedures/" class="md-nav__link">
+          Standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/system-security-plan/" class="md-nav__link">
+          System security plan
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+           
+            
+              <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                  
+                      
+  
+  
+  
+    <hr />
+<h1 id="microsoft-endpoint-manager-intune-applications">Microsoft Endpoint Manager - Intune applications</h1>
+<p id="date-and-time">9 minutes to read - 30 March 2023</p>
+
+<p>The following Microsoft Endpoint Manager - Intune (Intune) applications can be found in the Azure Portal at <code>Microsoft Endpoint Manager &gt; Apps</code></p>
+<h2 id="company-portal">Company portal</h2>
+<ul>
+<li>Name: <code>Company Portal</code></li>
+<li>Description: -</li>
+<li>Type: <code>Web link</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft</code></li>
+<li>App URL: <code>https://portal.manage.microsoft.com/</code></li>
+<li>Require a managed browser to open this link: <code>No</code></li>
+<li>Category: <code>Business</code></li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: -</li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>rol-Agency-Users</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-authenticator">Microsoft Authenticator</h2>
+<ul>
+<li>Name: <code>Microsoft Authenticator</code></li>
+<li>Description: <code>Sign in is easy, convenient, and secure when you use Microsoft Authenticator. Use your phone, not your password, to log into your Microsoft account. You simply have to enter your username, then approve the notification sent to your phone. Your fingerprint, face ID, or PIN will provide a second layer of security in this two step verification process. After, you'll have access to all your Microsoft products</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Authenticator" src="../../img/abac/microsoft-authenticator.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-edge">Microsoft Edge</h2>
+<ul>
+<li>Name: <code>Microsoft Edge</code></li>
+<li>Description: <code>Introducing the new Microsoft Edge. It’s time to expect more. More privacy. More control. More productivity. More value. Browse anywhere with one continuous experience from your phone to your computer and other signed-in devices. Microsoft Edge gives you the tools to protect your privacy online with features like tracking prevention, AdBlock Plus and InPrivate mode. Organise the web in a way that cuts through the clutter, making it easier to find, view and manage your content on-the-go. With world class compatibility, performance and new features, the new Microsoft Edge is the only browser you’ll ever need.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-edge/id1288723196?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Edge" src="../../img/abac/microsoft-edge.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-edge-for-windows-10">Microsoft Edge for Windows 10</h2>
+<ul>
+<li>Name: <code>Microsoft Edge for Windows 10</code></li>
+<li>Description: <code>Microsoft Edge is the browser for business with modern and legacy web compatibility, new privacy features such as Tracking prevention, and built-in productivity tools such as enterprise-grade PDF support and access to Office and corporate search right from a new tab.</code></li>
+<li>Type: <code>Microsoft Edge (Windows 10)</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft</code></li>
+<li>Category: <code>Productivity</code></li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: <code>https://www.microsoft.com/en-us/windows/microsoft-edge</code></li>
+<li>Privacy URL: <code>https://privacy.microsoft.com/en-US/privacystatement</code></li>
+<li>Developer: <code>Microsoft</code></li>
+<li>Owner: <code>Microsoft</code></li>
+<li>Notes: -</li>
+<li>Channel: <code>Stable</code></li>
+<li>Language: <code>Operating system default</code></li>
+<li>Logo: <img alt="Microsoft Edge for Windows 10" src="../../img/abac/microsoft-edge-for-windows-10.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>grp-agency-windows10-dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-excel">Microsoft Excel</h2>
+<ul>
+<li>Name: <code>Microsoft Excel</code></li>
+<li>Description: <code>Microsoft Excel, the spreadsheet app, lets you create, view, edit, and share your files quickly and easily. Manage spreadsheets, tables and workbooks attached to email messages from your phone with this powerful productivity app from Microsoft.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-excel/id586683407?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Excel" src="../../img/abac/microsoft-excel.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-onedrive">Microsoft OneDrive</h2>
+<ul>
+<li>Name: <code>Microsoft OneDrive</code></li>
+<li>Description: <code>Do more wherever you go with Microsoft OneDrive. Get to and share your documents, photos, and other files from your iOS device, computer (PC or Mac), and any other devices you use. Use the Office mobile apps to stay productive and work together, no matter where you are. The OneDrive app for iOS lets you easily work with your personal and work files when you're on the go.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-onedrive/id477537958?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft OneDrive" src="../../img/abac/microsoft-onedrive.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-outlook">Microsoft Outlook</h2>
+<ul>
+<li>Name: <code>Microsoft Outlook</code></li>
+<li>Description: <code>Outlook lets you bring all your email accounts and calendars in one convenient spot. Whether it's staying on top of your inbox or scheduling the next big thing, we make it easy to be your most productive, organized, and connected self.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-outlook/id951937596?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: <code>Productivity</code></li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Outlook" src="../../img/abac/microsoft-outlook.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-teams">Microsoft Teams</h2>
+<ul>
+<li>Name: <code>Microsoft Teams</code></li>
+<li>Description: <code>Microsoft Teams is your hub for teamwork in Office 365. All your team conversations, files, meetings, and apps live together in a single shared workspace, and you can take it with you on your favourite mobile device. Whether you’re sprinting towards a deadline or sharing your next big idea, Teams can help you achieve more.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-teams/id1113153706?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Teams" src="../../img/abac/microsoft-teams.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-word">Microsoft Word</h2>
+<ul>
+<li>Name: <code>Microsoft Word</code></li>
+<li>Description: <code>The trusted Word app lets you create, edit, view, and share your files with others quickly and easily. Send, view and edit Office docs attached to emails from your phone with this powerful word processing app from Microsoft.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/us/app/microsoft-word/id586447913?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Word" src="../../img/abac/microsoft-word.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="power-apps">Power Apps</h2>
+<ul>
+<li>Name: <code>Power Apps</code></li>
+<li>Description: <code>Get Power Apps to use business apps made for your team and organization. Install Power Apps for iPhone and iPad to: Use custom Power Apps that were shared with you; Get work done from anywhere and on any device; Automate tasks and accomplish more • Access, capture, and share business data.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/au/app/power-apps/id1047318566?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="PowerApps" src="../../img/abac/microsoft-power-apps.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-whiteboard">Microsoft Whiteboard</h2>
+<ul>
+<li>Name: <code>Microsoft Whiteboard</code></li>
+<li>Description: <code>Microsoft Whiteboard provides a freeform intelligent canvas where teams can ideate, create and collaborate visually via the cloud. Designed for pen and touch, it lets you write or draw as smoothly as you would with ink, while automatically recognising and transforming shapes and tables as you draw. It enhances teamwork by allowing all team members to edit and comment directly on the canvas in real time, no matter where they are. And all your work stays safe in the cloud, ready to be picked back up from another location or device.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/au/app/microsoft-whiteboard/id1352499399?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Whiteboard" src="../../img/abac/Whiteboard.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-planner">Microsoft Planner</h2>
+<ul>
+<li>Name: <code>Microsoft Planner</code></li>
+<li>Description: <code>Planner provides a simple, visual way to organize teamwork. Planner makes it easy for your team to create new plans, organize and assign tasks, share files, chat about what you’re working on, and get updates on progress.</code></li>
+<li>Type: <code>iOS Volume-Purchases Program</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft Corporation</code></li>
+<li>Appstore URL: <code>https://apps.apple.com/au/app/microsoft-planner/id1219301037?uo=4</code></li>
+<li>Minimum operating system: <code>iOS 14.0</code></li>
+<li>Applicable device type: <code>iPad</code>, <code>iPhone and iPod</code></li>
+<li>Category: -</li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: -</li>
+<li>Privacy URL: -</li>
+<li>Developer: -</li>
+<li>Owner: -</li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Planner" src="../../img/abac/Planner.png#center" /></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>gpr-iOS-Dynamic</code></li>
+<li>Available for enrolled devices: -</li>
+<li>Available with or without enrollment: -</li>
+<li>Uninstall: -</li>
+</ul>
+<h2 id="microsoft-365-apps-for-windows-10">Microsoft 365 Apps for Windows 10</h2>
+<ul>
+<li>Name: <code>Microsoft 365 Apps for Windows 10</code></li>
+<li>Type: <code>Microsoft 365 Apps for Windows 10</code></li>
+<li>App information</li>
+<li>Publisher: <code>Microsoft</code></li>
+<li>Category: <code>Productivity</code></li>
+<li>Show this as a featured app in the Company Portal: <code>Yes</code></li>
+<li>Information URL: <code>https://products.office.com/en-us/explore-office-for-home</code></li>
+<li>Privacy URL: <code>https://privacy.microsoft.com/en-US/privacystatement</code></li>
+<li>Developer: <code>Microsoft</code></li>
+<li>Owner: <code>Microsoft</code></li>
+<li>Notes: -</li>
+<li>Logo: <img alt="Microsoft Office" src="../../img/abac/microsoft-office.png#center" /></li>
+<li>App suite configuration</li>
+<li>Apps to be installed as part of the suite: <code>Excel, Outlook, PowerPoint, Publisher, Teams, Word</code></li>
+<li>Architecture: <code>64-bit</code></li>
+<li>Update channel: <code>Monthly Enterprise Channel</code></li>
+<li>Remove other versions: <code>Yes</code></li>
+<li>Version to install: <code>Latest</code></li>
+<li>Use shared computer activation: <code>Yes</code></li>
+<li>Accept the Microsoft Software License Terms on behalf of users: <code>Yes</code></li>
+<li>Install background service for Microsoft Search in Bing: <code>No</code></li>
+<li>Languages: <code>No languages selected</code></li>
+<li>Scope tags: <code>Default</code></li>
+<li>Assignments</li>
+<li>Required: <code>grp-agency-windows10-dynamic</code></li>
+<li>Uninstall: -</li>
+</ul>
+    
+    
+  
+  
+
+
+  
+                  
+                </article>
+              </div>
+            
+            
+          </div>
+          
+            <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            </a>
+          
+        </main>
+        
+            <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-footer__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+              <img src="../../img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="https://www.oobe.com.au/about/privacy" title="https://www.oobe.com.au/about/privacy" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/privacy" data-md-component="pp">
+                Privacy policy
+              </a>
+              <a href="https://www.oobe.com.au" title="https://www.oobe.com.au" class="md-footer__button link" aria-label="https://www.oobe.com.au" data-md-component="oobe">
+                oobe.com.au
+              </a>
+              <a href="https://www.oobe.com.au/about/contact" title="https://www.oobe.com.au/about/contact" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/contact" data-md-component="contact">
+                Contact Us
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+      </div>
+      <div class="md-dialog" data-md-component="dialog">
+        <div class="md-dialog__inner md-typeset"></div>
+      </div>
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.prune", "toc.follow", "toc.integrate"], "search": "../../js/search.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+      
+      
+        <script src="../../js/bundle.min.js"></script>
+        <script src="../../js/jquery-3.6.3.min.js"></script>
+        
+          <script src="../../js/extra.js"></script>
+        
+      
+    </body>
+  </html>

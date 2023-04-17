@@ -1,0 +1,1176 @@
+  
+  <!doctype html>
+  <html lang="en" class="no-js">
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+        
+          <link rel="canonical" href="https://oobecomau.github.io/theblueprint/security/cloud-assessment-and-authorisation-alignment/">
+        
+        
+          <link rel="prev" href="../../news/windows-11-2020-04-23/">
+        
+        
+          <link rel="next" href="../continuous-monitoring-plan/">
+        
+        <link rel="icon" href="../../img/favicon.ico">
+        <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+      
+      
+        
+          <title>Cloud assessment and authorisation alignment - The blueprint</title>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/main.min.css">
+        
+          
+          <link rel="stylesheet" href="../../css/palette.min.css">
+        
+        
+
+      
+      
+      
+        
+          
+          
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+          <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/extra.css">
+      
+      <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      
+        
+
+      
+      
+      
+    </head>
+    
+    <body dir="ltr">
+      
+      
+      <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+      <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+      <label class="md-overlay" for="__drawer"></label>
+      <div data-md-component="skip">
+        
+          
+          <a href="#cloud-assessment-and-authorisation-alignment" class="md-skip">
+            Skip to content
+          </a>
+        
+      </div>
+      <div data-md-component="announce">
+        
+      </div>
+      
+      
+          
+  
+    
+  
+  <header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href="../.." title="The blueprint" class="md-header__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        <img src="../../img/The-blueprint-site-title-White.svg" alt="blueprint">  
+      </a>
+    </nav>
+    
+      
+        
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+         
+            
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blueprint/" class="md-tabs__link">
+          Blueprint
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          News
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+      
+    
+  
+  
+    
+    
+    
+   
+        
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="md-search-container">
+        <div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form id="search-flex-container" class="md-search__form" name="search">
+        <div class="form-outline">
+          <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+        </div>
+        <div class="form-icon">
+          <label class="md-search__icon md-icon" for="__search">
+            <img src="../../img/The-blueprint-icon-Magnify-glass-Blue.svg" alt="Magnify"> 
+          </label>
+        </div>
+        <nav class="md-search__options" aria-label="Search">
+          
+          <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="md-powered-logo">
+    <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-header__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+      <img src="../../img/oobe-powered-by-White-RGB.svg" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
+      
+    
+  </header>
+      
+      <div class="md-container" data-md-component="container">
+        
+        
+          
+        
+        <main class="md-main" data-md-component="main">
+          <div class="md-main__inner md-grid">
+           
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                      
+  
+    
+  
+  
+    
+  
+  <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a href="../.." title="The blueprint" class="md-nav__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+      </a>
+      The blueprint
+    </label>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+          
+  
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../.." class="md-nav__link">
+          Home
+        </a>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            As built as configured
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/admin-disable-inactive-users/" class="md-nav__link">
+          Admin disable inactive users
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/conditional-access-policies/" class="md-nav__link">
+          Conditional access policies
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/hybrid-network-configuration/" class="md-nav__link">
+          Hybrid network configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/hybrid-task-sequence/" class="md-nav__link">
+          Hybrid task sequence
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-applications/" class="md-nav__link">
+          Intune applications
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-compliance/" class="md-nav__link">
+          Intune compliance
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-configuration/" class="md-nav__link">
+          Intune configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-enrolment/" class="md-nav__link">
+          Intune enrolment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/intune-software-updates/" class="md-nav__link">
+          Intune software updates
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/wdac-policy-creation/" class="md-nav__link">
+          Wdac policy creation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../as-built-as-configured/wfw-rules-import/" class="md-nav__link">
+          Wfw rules import
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../blueprint/">Blueprint</a>
+            
+              <label for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+          Abbreviations and acronyms
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+          As built as configured
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/automation/" class="md-nav__link">
+          Automation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/client-devices/" class="md-nav__link">
+          Client devices
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+          Essential eight maturity
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/security/" class="md-nav__link">
+          Security
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/solution-overview/" class="md-nav__link">
+          Solution overview
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../news/">News</a>
+            
+              <label for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+          Enhanced MFA
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+          Introducing The blueprint
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/windows-11-2020-04-23/" class="md-nav__link">
+          Windows 11
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+      
+    
+    
+      
+      <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            Security
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+      
+    
+    
+      <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+        
+          
+        
+        
+          <label class="md-nav__link md-nav__link--active" for="__toc">
+            Cloud assessment and authorisation alignment
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <a id="active-nav-link" href="./" class="md-nav__link md-nav__link--active">
+          Cloud assessment and authorisation alignment
+        </a>
+        
+            
+  
+  <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+    
+    
+      
+    
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Cloud assessment and authorisation alignment
+      </label>
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+            <li class="md-nav__item">
+    <a href="#anatomy-of-a-cloud-assessment-and-authorisation" class="md-nav__link">
+      Anatomy of a cloud assessment and authorisation
+    </a>
+    
+      <nav class="md-nav" aria-label="Anatomy of a cloud assessment and authorisation">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#phase-1-csp-security-fundamentals-and-cloud-services-assessment" class="md-nav__link">
+      Phase 1: CSP security fundamentals and cloud services assessment
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#phase-2-cloud-consumer-systems-assessment-authorisation" class="md-nav__link">
+      Phase 2: cloud consumer systems assessment authorisation
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#phase-3-continuous-monitoring-and-assurance" class="md-nav__link">
+      Phase 3: continuous monitoring and assurance
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+      </ul>
+    
+  </nav>
+        
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../continuous-monitoring-plan/" class="md-nav__link">
+          Continuous monitoring plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-incident-response-plan/" class="md-nav__link">
+          Hybrid incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-security-risk-management-plan/" class="md-nav__link">
+          Hybrid security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-standard-operating-procedures/" class="md-nav__link">
+          Hybrid standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-system-security-plan/" class="md-nav__link">
+          Hybrid system security plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../incident-response-plan/" class="md-nav__link">
+          Incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../security-risk-management-plan/" class="md-nav__link">
+          Security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../standard-operating-procedures/" class="md-nav__link">
+          Standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../system-security-plan/" class="md-nav__link">
+          System security plan
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+           
+            
+              <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                  
+                      
+  
+  
+  
+    <hr />
+<h1 id="cloud-assessment-and-authorisation-alignment">Cloud assessment and authorisation alignment</h1>
+<p id="date-and-time">4 minutes to read - 30 March 2023</p>
+
+<p>The purpose of this document is to provide guidance on how the Protected Utility blueprint developed by the Digital Transformation Agency (DTA) aligns with the <a href="https://www.cyber.gov.au/acsc/government/cloud-security-guidance">Cloud Security Guidance</a> issued by the Australian Cyber Security Centre (ACSC).</p>
+<p>The ACSC's Cloud Security Guidance suite of documents provides advice to organisations, including Government agencies, on how to perform an assessment of a Cloud Service Provider and its cloud services. The guidance aims to enable organisations to make risk-informed decisions on cloud solutions and their suitability to safely handle the organisations data.</p>
+<p>This document explains how the three key phases of Cloud Assessment and Authorisation would apply to agencies using the blueprint to introduce a new desktop environment. </p>
+<p><img alt="Figure 1: Three Cloud Assessment and Authorisation phases" src="../../img/security/caa-phases.png#center" /></p>
+<h2 id="anatomy-of-a-cloud-assessment-and-authorisation">Anatomy of a cloud assessment and authorisation</h2>
+<p>The <a href="https://www.protectivesecurity.gov.au/information/robust-ict-systems/Pages/default.aspx">Protective Security Policy Framework (PSPF)</a> requires applicable Federal and State Government agencies to secure their ICT systems by applying the controls within the Information Security Manual (ISM). It also requires that a formal risk assessment and authorisation (process occur when an ICT system is being introduced into service.</p>
+<p>This authorisation process is articulated in the Anatomy of a <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/anatomy-cloud-assessment-and-authorisation">Cloud Assessment and Authorisation</a> document issued by the ACSC, which describes the three (3) phases Cloud Consumers (i.e., the organisation or agency who will be deploying the blueprint), should take to assess and accept a cloud service and solution into service. In the context of the blueprint, Microsoft is the Cloud Service Provider (CSP), with Cloud Services being Microsoft products such as Microsoft 365 and Azure.</p>
+<p>Whilst the DTA has designed the blueprint to meet the ISM requirements for the classification level of PROTECTED, agencies must still assess for themselves whether the blueprint design meets their own particular security needs and requirements.</p>
+<p><img alt="Figure 2: Overview of Cloud System Assessment &amp; Authorisation Process" src="../../img/security/caa-process.png#center" /></p>
+<h3 id="phase-1-csp-security-fundamentals-and-cloud-services-assessment">Phase 1: CSP security fundamentals and cloud services assessment</h3>
+<p>The purpose of Phase 1 is to ensure that security of the CSP and their cloud services are appropriately assessed, and that Cloud Consumers review these assessments to determine if the CSP is appropriate for their security needs and risk tolerances. </p>
+<p>Microsoft and its services used within the blueprint has undergone assessment by an ASD endorsed IRAP assessor. The findings of this assessment are captured within the <a href="https://servicetrust.microsoft.com/ViewPage/Australia">Cloud Security Assessment and IRAP Reports</a> for Microsoft 365 and Azure available from Microsoft.</p>
+<p>Organisations intending to deploy the blueprint are responsible for reviewing these reports to confirm that Microsoft's products and services provide the required level of security. An organisations Authorising Officer (i.e. the individual with the authority to decide if a system can be used within the agency) should formally document this review and eventual decision.</p>
+<p><img alt="Figure 3: Phase 1 - Overview of CSP Security Fundamentals and Cloud Service Assessment" src="../../img/security/cca-phase1.png#center" /></p>
+<h3 id="phase-2-cloud-consumer-systems-assessment-authorisation">Phase 2: cloud consumer systems assessment authorisation</h3>
+<p>During Phase 2, the Cloud Consumer assesses how it has implemented and configured the cloud services assessed in Phase 1 to ensure that it meets the cloud consumer's own security requirements and risk tolerance. </p>
+<p>Phase 2 is when organisations deploying the blueprint must assess whether the design and implementation of the blueprint is acceptable to them. While the blueprint delivers a pre-existing design and supporting documentation which can be leveraged by an agency to efficiently deliver a solution, it is still up to individual organisations to assess and accept that any risks associated with the operation of the blueprint is acceptable.</p>
+<p>Organisations are free to develop their own policy on how assessment and authorisation is to take place. It is recommended that organisations capture the findings from Phase 1 and Phase 2a in a Cloud Authorisation Package which includes:</p>
+<ul>
+<li>The Microsoft cloud security assessment reports;</li>
+<li>Any supplementary, new or updated cloud services report (if required); and</li>
+<li>Cloud systems assessments and other documentation developed for the agency's implementation of the blueprint.</li>
+</ul>
+<p>The conclusion of Phase 2 is formal approval by the Authorising Officer or their delegate, to operate the system that has been built using the blueprint. </p>
+<p><img alt="Figure 4: Phase 2 - Overview of Cloud Consumer Systems Assessment and Authorisation" src="../../img/security/cca-phase1.png#center" /></p>
+<h3 id="phase-3-continuous-monitoring-and-assurance">Phase 3: continuous monitoring and assurance</h3>
+<p>Continuous monitoring provides ongoing situational awareness of evolving information security risks, vulnerabilities, threats, security controls and incidents to provide assessment and assurance of the Cloud Consumer's cloud security posture. This is a responsibility shared between the CSP and cloud consumer.</p>
+<p>The blueprint assumes that organisations using it will take on the following responsibilities, including:</p>
+<ul>
+<li>Performing assurance over any changes that could impact the cloud consumer's systems and data to evaluate any additional or changed risks;</li>
+<li>Processing of Microsoft security advisories and how they relate to the ongoing authorisation processes;</li>
+<li>Monitoring of organisation systems and data for indicators of compromise; and</li>
+<li>Re-evaluating and accepting the cloud service when needed.</li>
+</ul>
+<p>The blueprint provides an example <a href="../../security/continuous-monitoring-plan">Continuous Monitoring Plan</a>, which contains guidance on how organisations can approach conducting continuous monitoring in partnership with Microsoft. It details a number of technology options embedded within the blueprint design that may help facilitate ongoing monitoring.</p>
+<p><img alt="Figure 5: Phase 3 - Overview of Continuous Monitoring and Assurance" src="../../img/security/cca-phase3.png#center" /></p>
+    
+    
+  
+  
+
+
+  
+                  
+                </article>
+              </div>
+            
+            
+          </div>
+          
+            <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            </a>
+          
+        </main>
+        
+            <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-footer__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+              <img src="../../img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="https://www.oobe.com.au/about/privacy" title="https://www.oobe.com.au/about/privacy" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/privacy" data-md-component="pp">
+                Privacy policy
+              </a>
+              <a href="https://www.oobe.com.au" title="https://www.oobe.com.au" class="md-footer__button link" aria-label="https://www.oobe.com.au" data-md-component="oobe">
+                oobe.com.au
+              </a>
+              <a href="https://www.oobe.com.au/about/contact" title="https://www.oobe.com.au/about/contact" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/contact" data-md-component="contact">
+                Contact Us
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+      </div>
+      <div class="md-dialog" data-md-component="dialog">
+        <div class="md-dialog__inner md-typeset"></div>
+      </div>
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.prune", "toc.follow", "toc.integrate"], "search": "../../js/search.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+      
+      
+        <script src="../../js/bundle.min.js"></script>
+        <script src="../../js/jquery-3.6.3.min.js"></script>
+        
+          <script src="../../js/extra.js"></script>
+        
+      
+    </body>
+  </html>

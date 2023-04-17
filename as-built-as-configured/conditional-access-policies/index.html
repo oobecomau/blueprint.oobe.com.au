@@ -1,0 +1,2047 @@
+  
+  <!doctype html>
+  <html lang="en" class="no-js">
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+        
+          <link rel="canonical" href="https://oobecomau.github.io/theblueprint/as-built-as-configured/conditional-access-policies/">
+        
+        
+          <link rel="prev" href="../admin-disable-inactive-users/">
+        
+        
+          <link rel="next" href="../hybrid-network-configuration/">
+        
+        <link rel="icon" href="../../img/favicon.ico">
+        <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+      
+      
+        
+          <title>Conditional access policies - The blueprint</title>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/main.min.css">
+        
+          
+          <link rel="stylesheet" href="../../css/palette.min.css">
+        
+        
+
+      
+      
+      
+        
+          
+          
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+          <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/extra.css">
+      
+      <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      
+        
+
+      
+      
+      
+    </head>
+    
+    <body dir="ltr">
+      
+      
+      <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+      <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+      <label class="md-overlay" for="__drawer"></label>
+      <div data-md-component="skip">
+        
+          
+          <a href="#conditional-access-policies" class="md-skip">
+            Skip to content
+          </a>
+        
+      </div>
+      <div data-md-component="announce">
+        
+      </div>
+      
+      
+          
+  
+    
+  
+  <header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href="../.." title="The blueprint" class="md-header__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        <img src="../../img/The-blueprint-site-title-White.svg" alt="blueprint">  
+      </a>
+    </nav>
+    
+      
+        
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+         
+            
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+   
+         
+            
+    
+    
+      
+    
+  
+  
+    
+    
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blueprint/" class="md-tabs__link">
+          Blueprint
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          News
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+   
+        
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="md-search-container">
+        <div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form id="search-flex-container" class="md-search__form" name="search">
+        <div class="form-outline">
+          <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+        </div>
+        <div class="form-icon">
+          <label class="md-search__icon md-icon" for="__search">
+            <img src="../../img/The-blueprint-icon-Magnify-glass-Blue.svg" alt="Magnify"> 
+          </label>
+        </div>
+        <nav class="md-search__options" aria-label="Search">
+          
+          <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="md-powered-logo">
+    <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-header__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+      <img src="../../img/oobe-powered-by-White-RGB.svg" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
+      
+    
+  </header>
+      
+      <div class="md-container" data-md-component="container">
+        
+        
+          
+        
+        <main class="md-main" data-md-component="main">
+          <div class="md-main__inner md-grid">
+           
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                      
+  
+    
+  
+  
+    
+  
+  <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a href="../.." title="The blueprint" class="md-nav__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+      </a>
+      The blueprint
+    </label>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+          
+  
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../.." class="md-nav__link">
+          Home
+        </a>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+      
+    
+    
+      
+      <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            As built as configured
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../admin-disable-inactive-users/" class="md-nav__link">
+          Admin disable inactive users
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+      
+    
+    
+      <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+        
+          
+        
+        
+          <label class="md-nav__link md-nav__link--active" for="__toc">
+            Conditional access policies
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <a id="active-nav-link" href="./" class="md-nav__link md-nav__link--active">
+          Conditional access policies
+        </a>
+        
+            
+  
+  <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+    
+    
+      
+    
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Conditional access policies
+      </label>
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+            <li class="md-nav__item">
+    <a href="#conditional-access-named-locations" class="md-nav__link">
+      Conditional Access - Named locations
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#conditional-access-terms-of-use" class="md-nav__link">
+      Conditional Access - Terms of use
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#conditional-access-policies_1" class="md-nav__link">
+      Conditional Access - Policies
+    </a>
+    
+      <nav class="md-nav" aria-label="Conditional Access - Policies">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#block-countries-not-allowed" class="md-nav__link">
+      BLOCK - Countries Not Allowed
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#block-guest-access" class="md-nav__link">
+      BLOCK - Guest Access
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#block-high-risk-sign-ins" class="md-nav__link">
+      BLOCK - High Risk Sign-Ins
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#block-legacy-authentication" class="md-nav__link">
+      BLOCK - Legacy Authentication
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#block-unapproved-devices" class="md-nav__link">
+      BLOCK - Unapproved Devices
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#grant-guest-access" class="md-nav__link">
+      GRANT - Guest Access
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#grant-intune-enrolment" class="md-nav__link">
+      GRANT - Intune Enrolment
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#grant-ios-device-access" class="md-nav__link">
+      GRANT - iOS Device Access
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#grant-terms-of-use" class="md-nav__link">
+      GRANT - Terms of use
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#grant-windows-device-access" class="md-nav__link">
+      GRANT - Windows Device Access
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#session-admin-sign-in-frequency" class="md-nav__link">
+      SESSION - Admin Sign-in Frequency
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#session-user-sign-in-frequency" class="md-nav__link">
+      SESSION - User Sign-in Frequency
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+      </ul>
+    
+  </nav>
+        
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-network-configuration/" class="md-nav__link">
+          Hybrid network configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-task-sequence/" class="md-nav__link">
+          Hybrid task sequence
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-applications/" class="md-nav__link">
+          Intune applications
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-compliance/" class="md-nav__link">
+          Intune compliance
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-configuration/" class="md-nav__link">
+          Intune configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-enrolment/" class="md-nav__link">
+          Intune enrolment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-software-updates/" class="md-nav__link">
+          Intune software updates
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wdac-policy-creation/" class="md-nav__link">
+          Wdac policy creation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wfw-rules-import/" class="md-nav__link">
+          Wfw rules import
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../blueprint/">Blueprint</a>
+            
+              <label for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+          Abbreviations and acronyms
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+          As built as configured
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/automation/" class="md-nav__link">
+          Automation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/client-devices/" class="md-nav__link">
+          Client devices
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+          Essential eight maturity
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/security/" class="md-nav__link">
+          Security
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/solution-overview/" class="md-nav__link">
+          Solution overview
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../news/">News</a>
+            
+              <label for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+          Enhanced MFA
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+          Introducing The blueprint
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/windows-11-2020-04-23/" class="md-nav__link">
+          Windows 11
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            Security
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+          Cloud assessment and authorisation alignment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/continuous-monitoring-plan/" class="md-nav__link">
+          Continuous monitoring plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-incident-response-plan/" class="md-nav__link">
+          Hybrid incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-security-risk-management-plan/" class="md-nav__link">
+          Hybrid security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-standard-operating-procedures/" class="md-nav__link">
+          Hybrid standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-system-security-plan/" class="md-nav__link">
+          Hybrid system security plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/incident-response-plan/" class="md-nav__link">
+          Incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/security-risk-management-plan/" class="md-nav__link">
+          Security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/standard-operating-procedures/" class="md-nav__link">
+          Standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/system-security-plan/" class="md-nav__link">
+          System security plan
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+           
+            
+              <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                  
+                      
+  
+  
+  
+    <hr />
+<h1 id="conditional-access-policies">Conditional Access policies</h1>
+<p id="date-and-time">14 minutes to read - 30 March 2023</p>
+
+<h2 id="conditional-access-named-locations">Conditional Access - Named locations</h2>
+<p>Conditional Access rules can be assigned according to several variables including named locations. These are the public internet (IP) addresses that Azure Active Directory sees, this is not the Agency's internal private IP addressing scheme. Named locations are Agency defined and are used to authorise logon from:</p>
+<ul>
+<li>Agency approved countries,</li>
+<li>Agency approved network egress or proxy locations (more used in hybrid implementation types),</li>
+<li>Defining Internet Service Provider (ISP) provider addresses when used with bespoke security use-cases,</li>
+<li>Agency Privileged Access Workstation (PAW) or Jump Server network egress locations for administration policy use cases (e.g. allowed admin roles).</li>
+</ul>
+<p>Note, named locations should be avoided for the purposes of suppressing MFA on a corporate LAN setting. Consider the use of <code>Device state</code> for this scenario.</p>
+<p><code>Azure AD Conditional Access &gt; Named locations</code></p>
+<ul>
+<li>Name: <code>Allowed Countries</code></li>
+<li>Location type: <code>Countries</code></li>
+<li>Countries: <code>Australia</code></li>
+<li>Name: <code>&lt;Agency&gt; Internal Network</code></li>
+<li>Location type: <code>IP ranges</code></li>
+<li>Mark as trusted location: <code>Selected</code></li>
+<li>IP ranges: Agency defined</li>
+</ul>
+<h2 id="conditional-access-terms-of-use">Conditional Access - Terms of use</h2>
+<p>The Terms of Use document is a pdf document provided by the department and is uploaded to Azure Active Directory. This is then presented to users during the first logon process prior to agreeing to the terms of use. </p>
+<p>Note, terms of user does not replace the logon banner warning text.</p>
+<p><code>Azure AD Conditional Access &gt; Terms of use</code></p>
+<ul>
+<li>Name: <code>Acceptable Use Policy</code></li>
+<li>Display Name: <code>Acceptable Use Policy</code></li>
+<li>Require users to expand the terms of use: <code>On</code></li>
+<li>Require users to consent on every device: <code>Off</code></li>
+<li>Expire contents: <code>On</code></li>
+<li>Expire starting on: <code>01/07/xxxx</code></li>
+<li>Frequency: <code>Annually</code></li>
+<li>Duration before re-acceptance required (days): <code>N/A</code></li>
+<li>Languages</li>
+<li>English: Agency supplied</li>
+<li>Other languages as required</li>
+</ul>
+<h2 id="conditional-access-policies_1">Conditional Access - Policies</h2>
+<p>The following Conditional Access policies can be found in the Azure Portal at <code>Azure AD Conditional Access | Policies</code>. The polices here are a baseline and should be customised to the Agencies requirements for both hybrid and cloud-only implementations types.</p>
+<p>Agencies should avoid the use of trusted locations for cloud app access and use device state/require enrolment on conditions where possible.</p>
+<h3 id="block-countries-not-allowed">BLOCK - Countries Not Allowed</h3>
+<p>The global policy blocks all connections from countries not in the allowed countries allow list.</p>
+<ul>
+<li>Name: <code>BLOCK – Countries Not Allowed</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>No</code></li>
+<li>Locations:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Include: <code>Any location</code></li>
+<li>Exclude:<ul>
+<li>Select the locations to exempt from the policy: <code>Selected locations</code></li>
+<li>Select: <code>Allowed Countries</code></li>
+</ul>
+</li>
+<li>Client apps</li>
+<li>Configure: <code>No</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>Yes</code></li>
+<li>Grant access: <code>No</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>No</code></li>
+<li>Require one of the selected controls: <code>Yes</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="block-guest-access">BLOCK - Guest Access</h3>
+<ul>
+<li>Name: <code>BLOCK – Guest Access</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All guest and external users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>False</code></li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude</li>
+<li><code>Office 365</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>No</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>True</code></li>
+<li>Other clients: <code>True</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>Yes</code></li>
+<li>Grant access: <code>No</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>No</code></li>
+<li>Require one of the selected controls: <code>Yes</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="block-high-risk-sign-ins">BLOCK - High Risk Sign-Ins</h3>
+<p>This global policy blocks all high-risk authentications (requires Azure AD Premium P2).</p>
+<ul>
+<li>Name: <code>BLOCK – High Risk Sign-Ins</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>Yes</code></li>
+<li>Select the sign-in risk level this policy will apply to: <code>High</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>No</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>True</code></li>
+<li>Other clients: <code>True</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>Yes</code></li>
+<li>Grant access: <code>No</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>No</code></li>
+<li>Require one of the selected controls: <code>Yes</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="block-legacy-authentication">BLOCK - Legacy Authentication</h3>
+<p>This global policy blocks all connections from unsecure legacy protocols like ActiveSync, IMAP, POP3, etc.</p>
+<ul>
+<li>Name: <code>BLOCK - Legacy Authentication</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include</li>
+<li>Select users and groups: <code>All users</code></li>
+<li>Exclude</li>
+<li>Excluded users and groups: <code>None</code></li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All Cloud Apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms</li>
+<li>Configure: <code>No</code></li>
+<li>Locations</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>False</code></li>
+<li>Mobile apps and desktop clients: <code>False</code></li>
+<li>Exchange ActiveSync clients: <code>True</code></li>
+<li>Other clients: <code>True</code></li>
+<li>Device state</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>Yes</code></li>
+<li>Grant access: <code>No</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>No</code></li>
+<li>Require one of the selected controls: <code>Yes</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="block-unapproved-devices">BLOCK - Unapproved Devices</h3>
+<p>This global policy blocks all connections from device types that are not included in the blueprint.</p>
+<ul>
+<li>Name: <code>BLOCK - Unapproved Devices</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include</li>
+<li>Select users and groups: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All Cloud Apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms</li>
+<li>Configure: <code>Yes</code></li>
+<li>Android: <code>True</code></li>
+<li>iOS: <code>False</code></li>
+<li>Windows Phone: <code>True</code></li>
+<li>Windows: <code>False</code></li>
+<li>macOS: <code>True</code></li>
+<li>Locations</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>No</code></li>
+<li>Device state</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>Yes</code></li>
+<li>Grant access: <code>No</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>No</code></li>
+<li>Require one of the selected controls: <code>Yes</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="grant-guest-access">GRANT - Guest Access</h3>
+<p>Approved apps that guest users can access (requires MFA).</p>
+<ul>
+<li>Name: <code>GRANT – Guest Access</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All guest and external users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>False</code></li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>Select apps</code></li>
+<li><code>Office 365</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Android: <code>False</code></li>
+<li>iOS: <code>False</code></li>
+<li>Windows Phone: <code>False</code></li>
+<li>Windows: <code>True</code></li>
+<li>macOS: <code>False</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Other clients: <code>False</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="grant-intune-enrolment">GRANT - Intune Enrolment</h3>
+<p>Devices are allowed to authenticate to Microsoft Endpoint Manager - Intune (Intune) for enrolment.</p>
+<ul>
+<li>Name: <code>GRANT – Intune Enrolment</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>Select apps</code></li>
+<li><code>Microsoft Intune</code></li>
+<li><code>Microsoft Intune Enrolment</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Android: <code>False</code></li>
+<li>iOS: <code>True</code></li>
+<li>Windows Phone: <code>False</code></li>
+<li>Windows: <code>True</code></li>
+<li>macOS: <code>False</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>No</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="grant-ios-device-access">GRANT - iOS Device Access</h3>
+<p>Grants access to managed iOS devices that are enrolled and compliant in Intune. An approved Microsoft app is required.</p>
+<ul>
+<li>Name: <code>GRANT – iOS Device Access</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>Select apps</code></li>
+<li><code>Office 365</code></li>
+<li>Exclude:  <code>Select apps</code></li>
+<li><code>Microsoft Intune</code></li>
+<li><code>Microsoft Intune Enrolment</code> </li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Include: <code>Select device platforms</code><ul>
+<li><code>iOS</code></li>
+</ul>
+</li>
+<li>Exclude: <code>None</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Other clients: <code>False</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>True</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>True</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="grant-terms-of-use">GRANT - Terms of use</h3>
+<p>This global policy forces Terms of Use on all authentications.</p>
+<ul>
+<li>Name: <code>GRANT – Terms of Use</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>No</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Other clients: <code>False</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>False</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>True</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="grant-windows-device-access">GRANT - Windows Device Access</h3>
+<p>Grants access to managed Windows devices that are enrolled and compliant.</p>
+<ul>
+<li>Name: <code>GRANT – Windows Device Access</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>True</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: </li>
+<li><code>Microsoft Intune</code></li>
+<li><code>Microsoft Intune Enrollment</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>User risk:</li>
+<li>Configure: <code>No</code></li>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms:</li>
+<li>Configure: <code>Yes</code></li>
+<li>Include: <code>Select device platforms</code><ul>
+<li><code>Windows</code></li>
+</ul>
+</li>
+<li>Exclude: <code>None</code></li>
+<li>Locations:</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Other clients: <code>False</code></li>
+<li>Device state:</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>True</code></li>
+<li>Require Hybrid Azure AD joined device: <code>True (hybrid implementations only)</code> </li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Require password change: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session</li>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>False</code></li>
+<li>Persistent browser session: <code>False</code></li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="session-admin-sign-in-frequency">SESSION - Admin Sign-in Frequency</h3>
+<p>Enforces a sign-in frequency to ensure administrators sessions do not remain active for longer than 4 hours. </p>
+<ul>
+<li>Name: <code>SESSION - Admin Sign-in Frequency</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>Select users and groups</code></li>
+<li>Directory roles: <code>Select all directory roles</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+</ul>
+</li>
+<li>Users and groups: <code>True</code><ul>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms</li>
+<li>Configure: <code>No</code></li>
+<li>Locations</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Apply policy only to supported platforms: <code>False</code></li>
+<li>Other clients: <code>True</code></li>
+<li>Device state</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>4 hours</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+<h3 id="session-user-sign-in-frequency">SESSION - User Sign-in Frequency</h3>
+<p>Enforces a sign-in frequency to ensure non-privileged users are required to complete an MFA prompt daily.</p>
+<ul>
+<li>Name: <code>SESSION - User Sign-in Frequency</code></li>
+<li>Assignments</li>
+<li>Users and groups<ul>
+<li>Include: <code>All users</code></li>
+<li>Exclude</li>
+<li>All guest and external users: <code>False</code></li>
+<li>Directory roles: <code>False</code></li>
+<li>Users and groups: <code>False</code></li>
+</ul>
+</li>
+<li>Users and groups: <code>True</code><ul>
+<li>Users and groups: <code>True</code><ul>
+<li>Excluded users and groups: <code>grp-Conditional_Access_Exclude</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Cloud apps or actions<ul>
+<li>Select what policy this applies to: <code>Cloud apps</code></li>
+<li>Include: <code>All cloud apps</code></li>
+<li>Exclude: <code>None</code></li>
+</ul>
+</li>
+<li>Conditions<ul>
+<li>Sign-in risk</li>
+<li>Configure: <code>No</code></li>
+<li>Device platforms</li>
+<li>Configure: <code>No</code></li>
+<li>Locations</li>
+<li>Configure: <code>No</code></li>
+<li>Client apps</li>
+<li>Configure: <code>Yes</code></li>
+<li>Browser: <code>True</code></li>
+<li>Mobile apps and desktop clients: <code>True</code></li>
+<li>Exchange ActiveSync clients: <code>False</code></li>
+<li>Apply policy only to supported platforms: <code>False</code></li>
+<li>Other clients: <code>True</code></li>
+<li>Device state</li>
+<li>Configure: <code>No</code></li>
+</ul>
+</li>
+<li>Access controls</li>
+<li>Grant<ul>
+<li>Block access: <code>No</code></li>
+<li>Grant access: <code>Yes</code></li>
+<li>Require multi-factor authentication: <code>True</code></li>
+<li>Require device to be marked as compliant: <code>False</code></li>
+<li>Require Hybrid Azure AD joined device: <code>False</code></li>
+<li>Require approved client app: <code>False</code></li>
+<li>Require app protection policy: <code>False</code></li>
+<li>Terms of Use: <code>False</code></li>
+<li>Require all the selected controls: <code>Yes</code></li>
+<li>Require one of the selected controls: <code>No</code></li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Use app enforced restrictions: <code>N/A</code></li>
+<li>Use Conditional Access App Control: <code>False</code></li>
+<li>Sign-in frequency: <code>12 hours</code></li>
+<li>Persistent browser session: <code>False</code></li>
+</ul>
+</li>
+<li>Enable policy: <code>On</code></li>
+</ul>
+    
+    
+  
+  
+
+
+  
+                  
+                </article>
+              </div>
+            
+            
+          </div>
+          
+            <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            </a>
+          
+        </main>
+        
+            <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-footer__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+              <img src="../../img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="https://www.oobe.com.au/about/privacy" title="https://www.oobe.com.au/about/privacy" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/privacy" data-md-component="pp">
+                Privacy policy
+              </a>
+              <a href="https://www.oobe.com.au" title="https://www.oobe.com.au" class="md-footer__button link" aria-label="https://www.oobe.com.au" data-md-component="oobe">
+                oobe.com.au
+              </a>
+              <a href="https://www.oobe.com.au/about/contact" title="https://www.oobe.com.au/about/contact" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/contact" data-md-component="contact">
+                Contact Us
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+      </div>
+      <div class="md-dialog" data-md-component="dialog">
+        <div class="md-dialog__inner md-typeset"></div>
+      </div>
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.prune", "toc.follow", "toc.integrate"], "search": "../../js/search.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+      
+      
+        <script src="../../js/bundle.min.js"></script>
+        <script src="../../js/jquery-3.6.3.min.js"></script>
+        
+          <script src="../../js/extra.js"></script>
+        
+      
+    </body>
+  </html>

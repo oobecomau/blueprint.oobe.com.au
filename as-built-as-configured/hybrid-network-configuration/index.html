@@ -1,0 +1,2145 @@
+  
+  <!doctype html>
+  <html lang="en" class="no-js">
+    <head>
+      
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        
+        
+          <link rel="canonical" href="https://oobecomau.github.io/theblueprint/as-built-as-configured/hybrid-network-configuration/">
+        
+        
+          <link rel="prev" href="../conditional-access-policies/">
+        
+        
+          <link rel="next" href="../hybrid-task-sequence/">
+        
+        <link rel="icon" href="../../img/favicon.ico">
+        <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.12">
+      
+      
+        
+          <title>Hybrid network configuration - The blueprint</title>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/main.min.css">
+        
+          
+          <link rel="stylesheet" href="../../css/palette.min.css">
+        
+        
+
+      
+      
+      
+        
+          
+          
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+          <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        
+      
+      
+        <link rel="stylesheet" href="../../css/extra.css">
+      
+      <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+      
+        
+
+      
+      
+      
+    </head>
+    
+    <body dir="ltr">
+      
+      
+      <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+      <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+      <label class="md-overlay" for="__drawer"></label>
+      <div data-md-component="skip">
+        
+          
+          <a href="#hybrid-network-configuration" class="md-skip">
+            Skip to content
+          </a>
+        
+      </div>
+      <div data-md-component="announce">
+        
+      </div>
+      
+      
+          
+  
+    
+  
+  <header class="md-header md-header--lifted" data-md-component="header">
+    <nav class="md-header__inner md-grid" aria-label="Header">
+      <a href="../.." title="The blueprint" class="md-header__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        <img src="../../img/The-blueprint-site-title-White.svg" alt="blueprint">  
+      </a>
+    </nav>
+    
+      
+        
+<div class="flex-container">
+  <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+    <div class="md-grid">
+      <ul class="md-tabs__list">
+         
+            
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    </li>
+   
+         
+            
+    
+    
+      
+    
+  
+  
+    
+    
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blueprint/" class="md-tabs__link">
+          Blueprint
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../news/" class="md-tabs__link">
+          News
+        </a>
+      </li>
+    
+   
+         
+            
+    
+    
+  
+  
+    
+    
+    
+   
+        
+      </ul>
+    </div>
+  </nav>
+   
+  <div class="md-search-container">
+        <div class="md-search" data-md-component="search" role="dialog">
+    <label class="md-search__overlay" for="__search"></label>
+    <div class="md-search__inner" role="search">
+      <form id="search-flex-container" class="md-search__form" name="search">
+        <div class="form-outline">
+          <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+        </div>
+        <div class="form-icon">
+          <label class="md-search__icon md-icon" for="__search">
+            <img src="../../img/The-blueprint-icon-Magnify-glass-Blue.svg" alt="Magnify"> 
+          </label>
+        </div>
+        <nav class="md-search__options" aria-label="Search">
+          
+          <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          </button>
+        </nav>
+        
+      </form>
+      <div class="md-search__output">
+        <div class="md-search__scrollwrap" data-md-scrollfix>
+          <div class="md-search-result" data-md-component="search-result">
+            <div class="md-search-result__meta">
+              Initializing search
+            </div>
+            <ol class="md-search-result__list" role="presentation"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+  
+  <div class="md-powered-logo">
+    <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-header__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+      <img src="../../img/oobe-powered-by-White-RGB.svg" alt="powered by oobe">                       
+    </a>
+  </div>
+</div>
+      
+    
+  </header>
+      
+      <div class="md-container" data-md-component="container">
+        
+        
+          
+        
+        <main class="md-main" data-md-component="main">
+          <div class="md-main__inner md-grid">
+           
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                      
+  
+    
+  
+  
+    
+  
+  <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+    <label class="md-nav__title" for="__drawer">
+      <a href="../.." title="The blueprint" class="md-nav__button md-logo" aria-label="The blueprint" data-md-component="logo">
+        
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+      </a>
+      The blueprint
+    </label>
+    
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        
+        
+          
+  
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../.." class="md-nav__link">
+          Home
+        </a>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+      
+    
+    
+      
+      <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            As built as configured
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            As built as configured
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../admin-disable-inactive-users/" class="md-nav__link">
+          Admin disable inactive users
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../conditional-access-policies/" class="md-nav__link">
+          Conditional access policies
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+      
+    
+    
+      <li class="md-nav__item md-nav__item--active">
+        
+        <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        
+        
+          
+        
+        
+          <label class="md-nav__link md-nav__link--active" for="__toc">
+            Hybrid network configuration
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <a id="active-nav-link" href="./" class="md-nav__link md-nav__link--active">
+          Hybrid network configuration
+        </a>
+        
+            
+  
+  <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+    
+    
+    
+      
+    
+    
+      <label class="md-nav__title" for="__toc">
+        <span class="md-nav__icon md-icon"></span>
+        Hybrid network configuration
+      </label>
+      <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+        
+            <li class="md-nav__item">
+    <a href="#reference-table" class="md-nav__link">
+      Reference table
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-advanced-threat-protection-atp" class="md-nav__link">
+      Microsoft Advanced Threat Protection (ATP)
+    </a>
+    
+      <nav class="md-nav" aria-label="Microsoft Advanced Threat Protection (ATP)">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#microsoft-cloud-app-security-mcas" class="md-nav__link">
+      Microsoft Cloud App Security (MCAS)
+    </a>
+    
+      <nav class="md-nav" aria-label="Microsoft Cloud App Security (MCAS)">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist_1" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion_1" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#mail-server" class="md-nav__link">
+      Mail server
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#office-365-common-and-office-online" class="md-nav__link">
+      Office 365 – Common and Office Online
+    </a>
+    
+      <nav class="md-nav" aria-label="Office 365 – Common and Office Online">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist_2" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion_2" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#office-365-exchange-online" class="md-nav__link">
+      Office 365 – Exchange Online
+    </a>
+    
+      <nav class="md-nav" aria-label="Office 365 – Exchange Online">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist_3" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion_3" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#office-365-skype-for-business-and-microsoft-teams" class="md-nav__link">
+      Office 365 – Skype for Business and Microsoft Teams
+    </a>
+    
+      <nav class="md-nav" aria-label="Office 365 – Skype for Business and Microsoft Teams">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist_4" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion_4" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#office-365-sharepoint-online-and-onedrive-for-business" class="md-nav__link">
+      Office 365 – SharePoint Online and OneDrive for Business
+    </a>
+    
+      <nav class="md-nav" aria-label="Office 365 – SharePoint Online and OneDrive for Business">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#proxy-whitelist_5" class="md-nav__link">
+      Proxy whitelist
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#direct-firewall-exclusion_5" class="md-nav__link">
+      Direct firewall exclusion
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#office-365-email-protective-markings-with-mip-technology" class="md-nav__link">
+      Office 365 – email protective markings with MIP technology
+    </a>
+    
+      <nav class="md-nav" aria-label="Office 365 – email protective markings with MIP technology">
+        <ul class="md-nav__list">
+          
+              <li class="md-nav__item">
+    <a href="#outbound-protective-marking" class="md-nav__link">
+      Outbound protective marking
+    </a>
+    
+  </li>
+          
+              <li class="md-nav__item">
+    <a href="#inbound-protective-marking" class="md-nav__link">
+      Inbound protective marking
+    </a>
+    
+  </li>
+          
+        </ul>
+      </nav>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#azure-advanced-threat-protection-azure-atp" class="md-nav__link">
+      Azure Advanced Threat Protection (Azure ATP)
+    </a>
+    
+  </li>
+        
+            <li class="md-nav__item">
+    <a href="#azure-active-directory-connect" class="md-nav__link">
+      Azure Active Directory Connect
+    </a>
+    
+  </li>
+        
+      </ul>
+    
+  </nav>
+        
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../hybrid-task-sequence/" class="md-nav__link">
+          Hybrid task sequence
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-applications/" class="md-nav__link">
+          Intune applications
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-compliance/" class="md-nav__link">
+          Intune compliance
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-configuration/" class="md-nav__link">
+          Intune configuration
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-enrolment/" class="md-nav__link">
+          Intune enrolment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../intune-software-updates/" class="md-nav__link">
+          Intune software updates
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wdac-policy-creation/" class="md-nav__link">
+          Wdac policy creation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../wfw-rules-import/" class="md-nav__link">
+          Wfw rules import
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../blueprint/">Blueprint</a>
+            
+              <label for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Blueprint
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/abbreviations-and-acronyms/" class="md-nav__link">
+          Abbreviations and acronyms
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/as-built-as-configured/" class="md-nav__link">
+          As built as configured
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/automation/" class="md-nav__link">
+          Automation
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/client-devices/" class="md-nav__link">
+          Client devices
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/essential-eight-maturity/" class="md-nav__link">
+          Essential eight maturity
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/office-365/" class="md-nav__link">
+          Office 365
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/platform/" class="md-nav__link">
+          Platform
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/security/" class="md-nav__link">
+          Security
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../blueprint/solution-overview/" class="md-nav__link">
+          Solution overview
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+        
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          
+          
+          <div class="md-nav__link md-nav__link--index ">
+            <a href="../../news/">News</a>
+            
+              <label for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            News
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/enhanced-mfa-2023-01-16/" class="md-nav__link">
+          Enhanced MFA
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/intro-the-blueprint-2023-04-23/" class="md-nav__link">
+          Introducing The blueprint
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../news/windows-11-2020-04-23/" class="md-nav__link">
+          Windows 11
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+        
+        
+          
+  
+    
+    
+    
+      
+      <li class="md-nav__item md-nav__item--nested">
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            Security
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Security
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/cloud-assessment-and-authorisation-alignment/" class="md-nav__link">
+          Cloud assessment and authorisation alignment
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/continuous-monitoring-plan/" class="md-nav__link">
+          Continuous monitoring plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-incident-response-plan/" class="md-nav__link">
+          Hybrid incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-security-risk-management-plan/" class="md-nav__link">
+          Hybrid security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-standard-operating-procedures/" class="md-nav__link">
+          Hybrid standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/hybrid-system-security-plan/" class="md-nav__link">
+          Hybrid system security plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/incident-response-plan/" class="md-nav__link">
+          Incident response plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/security-risk-management-plan/" class="md-nav__link">
+          Security risk management plan
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/standard-operating-procedures/" class="md-nav__link">
+          Standard operating procedures
+        </a>
+      </li>
+    
+  
+              
+            
+              
+                
+    
+    
+    
+      <li class="md-nav__item">
+        <a id="nav-link" href="../../security/system-security-plan/" class="md-nav__link">
+          System security plan
+        </a>
+      </li>
+    
+  
+              
+            
+          </ul>
+        </nav>
+      </li>
+    
+  
+      
+    </ul>
+  </nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+           
+            
+              <div class="md-content" data-md-component="content">
+                <article class="md-content__inner md-typeset">
+                  
+                      
+  
+  
+  
+    <hr />
+<h1 id="hybrid-network-configuration">Hybrid - network configuration</h1>
+<p id="date-and-time">12 minutes to read - 30 March 2023</p>
+
+<h2 id="reference-table">Reference table</h2>
+<p>The following table lists the reference table for products requiring whitelisting and firewall configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Reference Number</th>
+<th>Reference URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet">https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-proxy-internet</a></td>
+</tr>
+<tr>
+<td>R02</td>
+<td><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/production-deployment">https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/production-deployment</a></td>
+</tr>
+<tr>
+<td>R03</td>
+<td><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-splunk">https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/configure-splunk</a></td>
+</tr>
+<tr>
+<td>R04</td>
+<td><a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/enable-siem-integration">https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/enable-siem-integration</a></td>
+</tr>
+<tr>
+<td>R05</td>
+<td><a href="https://docs.microsoft.com/en-us/cloud-app-security/network-requirements">https://docs.microsoft.com/en-us/cloud-app-security/network-requirements</a></td>
+</tr>
+<tr>
+<td>R06</td>
+<td><a href="https://docs.microsoft.com/en-au/office365/enterprise/urls-and-ip-address-ranges?redirectSourcePath=%252farticle%252fOffice-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2">https://docs.microsoft.com/en-au/office365/enterprise/urls-and-ip-address-ranges?redirectSourcePath=%252farticle%252fOffice-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2</a></td>
+</tr>
+<tr>
+<td>R07</td>
+<td><a href="https://docs.microsoft.com/en-au/office365/enterprise/additional-office365-ip-addresses-and-urls">https://docs.microsoft.com/en-au/office365/enterprise/additional-office365-ip-addresses-and-urls</a></td>
+</tr>
+<tr>
+<td>R08</td>
+<td><a href="https://docs.microsoft.com/en-us/defender-for-identity/prerequisites#-network-name-resolution-nnr-requirements">https://docs.microsoft.com/en-us/defender-for-identity/prerequisites#-network-name-resolution-nnr-requirements</a></td>
+</tr>
+<tr>
+<td>R09</td>
+<td><a href="https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-ports">https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-ports</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="microsoft-advanced-threat-protection-atp">Microsoft Advanced Threat Protection (ATP)</h2>
+<h3 id="proxy-whitelist">Proxy whitelist</h3>
+<p>The following describes the Microsoft Advanced Threat Protection Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01, R02</td>
+<td>ATP Common URLs for all locations</td>
+<td>All ATP Clients</td>
+<td>crl.microsoft.com<br>ctldl.windowsupdate.com<br>events.data.microsoft.com<br>notify.windows.com<br>settings-win.data.microsoft.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R01, R02</td>
+<td>ATP URLs for US Region</td>
+<td>All ATP Clients</td>
+<td>us.vortex-win.data.microsoft.com<br>ussus1eastprod.blob.core.windows.net<br>ussus1westprod.blob.core.windows.net<br>ussus2eastprod.blob.core.windows.net<br>ussus2westprod.blob.core.windows.net<br>ussus3eastprod.blob.core.windows.net<br>ussus3westprod.blob.core.windows.net<br>ussus4eastprod.blob.core.windows.net<br>ussus4westprod.blob.core.windows.net<br>us-v20.events.data.microsoft.com<br>winatp-gw-cus.microsoft.com<br>winatp-gw-eus.microsoft.com<br>wsus1eastprod.blob.core.windows.net<br>wsus1westprod.blob.core.windows.net<br>wsus2eastprod.blob.core.windows.net<br>wsus2westprod.blob.core.windows.net</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R01, R02</td>
+<td>ATP US machine proxy and Internet connectivity settings</td>
+<td>All ATP Clients</td>
+<td>automatedirstrprdcus.blob.core.windows.net</td>
+<td></td>
+</tr>
+<tr>
+<td>R03, R04</td>
+<td>ATP Splunk Integration</td>
+<td>Splunk Servers</td>
+<td>wdatp-alertexporter-us.securitycenter.windows.com<br>graph.windows.net</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion">Direct firewall exclusion</h3>
+<p>No firewall exclusions required.</p>
+<h2 id="microsoft-cloud-app-security-mcas">Microsoft Cloud App Security (MCAS)</h2>
+<h3 id="proxy-whitelist_1">Proxy whitelist</h3>
+<p>The following table describes the Microsoft Cloud App Security Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R05</td>
+<td>MCAS Portal Access</td>
+<td></td>
+<td><em>.us3.portal.cloudappsecurity.com<br>portal.cloudappsecurity.com<br></em>.portal.cloudappsecurity.com<br>cdn.cloudappsecurity.com<br>adaproddiscovery.azureedge.net<br><em>.s-microsoft.com<br></em>.msecnd.net<br>dev.virtualearth.net<br><em>.cloudappsecurity.com<br>flow.microsoft.com<br>static2.sharepointonline.com<br>dc.services.visualstudio.com<br></em>.blob.core.windows.net<br><em>.us3.cas.ms<br></em>.us3.access-control.cas.ms<br>*.us3.saml.cas.ms</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>MCAS SIEM Agent Connection</td>
+<td>Splunk Servers</td>
+<td>ocsp.digicert.com<br>ocsp.msocsp.com</td>
+<td>TCP 80</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion_1">Direct firewall exclusion</h3>
+<p>The following table describes the Microsoft Cloud App Security direct firewall exclusion settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R05</td>
+<td>MCAS Portal Access</td>
+<td></td>
+<td>13.80.125.22<br>40.74.1.235<br>40.74.6.204<br>40.90.218.196<br>40.90.218.198<br>51.143.58.207<br>52.137.89.147<br>52.183.75.62</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>MCAS SIEM Agent Connection</td>
+<td>Agency SIEM Servers</td>
+<td>13.80.125.22<br>40.74.1.235<br>40.74.6.204<br>40.90.218.196<br>40.90.218.198<br>51.143.58.207<br>52.137.89.147<br>52.183.75.62</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>MCAS Access and Session Controls</td>
+<td></td>
+<td>40.81.62.224<br>40.81.62.220<br>40.82.186.168<br>40.82.186.169<br>52.155.180.210<br>52.155.179.84<br>40.66.59.196<br>40.66.60.224<br>40.65.170.80<br>40.65.170.83<br>40.81.127.229<br>40.81.121.66<br>104.45.170.191<br>104.45.170.183<br>40.91.114.40<br>40.91.114.42<br>40.81.62.179<br>40.81.62.223<br>20.40.162.86<br>20.40.162.200<br>40.82.186.182<br>40.82.186.177<br>52.139.21.70<br>52.139.16.105<br>52.155.177.13<br>52.155.180.208<br>52.155.164.131<br>52.155.167.231<br>40.66.60.226<br>40.66.59.193<br>40.66.61.193<br>40.66.61.158<br>40.65.170.113<br>40.65.170.82<br>52.139.245.1<br>52.139.245.21<br>40.81.120.192<br>40.81.127.239<br>51.137.136.34<br>51.137.137.69<br>104.45.170.70<br>104.45.170.180<br>52.224.190.225<br>52.224.191.62<br>40.91.114.41<br>40.91.78.105<br>52.148.161.45<br>52.148.161.53<br>40.81.62.193<br>40.81.62.162<br>40.82.186.166<br>40.82.186.176<br>52.155.180.209<br>52.155.178.247<br>40.66.59.246<br>40.66.59.195<br>40.65.170.81<br>40.65.170.112<br>40.81.120.191<br>40.81.123.157<br>104.45.170.186<br>104.45.170.178<br>40.91.114.43<br>40.91.74.37<br>20.40.161.160<br>20.40.161.161<br>52.139.2.0<br>52.139.1.156<br>52.155.180.211<br>52.155.182.138<br>40.66.62.7<br>40.66.62.9<br>20.184.63.158<br>20.184.61.253<br>20.40.106.51<br>20.40.107.84<br>52.224.202.86<br>52.224.202.91<br>51.143.122.59<br>51.143.122.60<br>40.82.186.168<br>40.82.186.169<br>52.139.2.0<br>52.139.1.156<br>40.82.186.182<br>40.82.186.177<br>52.139.21.70<br>52.139.16.105<br>52.139.9.176<br>52.139.9.198</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mail-server">Mail server</h3>
+<p>Table 6 describes the Microsoft Cloud App Security Mail Server settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R05</td>
+<td>Mail Relay SPAM Exception</td>
+<td>Agency Mail Relays</td>
+<td>65.55.234.192/26<br>207.46.200.0/27<br>65.55.52.224/27<br>94.245.112.0/27<br>111.221.26.0/27<br>207.46.50.192/26</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-365-common-and-office-online">Office 365 – Common and Office Online</h2>
+<h3 id="proxy-whitelist_2">Proxy whitelist</h3>
+<p>The following table describes the Office 365 Common and Office Online Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>Microsoft 365 Common and Office Online</td>
+<td></td>
+<td>*.cdn.office.net <br>contentstorage.osi.office.net<br>*.onenote.com<br>*cdn.onenote.net<br>ajax.aspnetcdn.com<br>apis.live.net<br>cdn.optimizely.com<br>officeapps.live.com<br>www.onedrive.com<br>apc.delve.office.com<br>aus.delve.office.com<br>can.delve.office.com<br>delve.office.com<br>delve-gcc.office.com<br>eur.delve.office.com<br>gbr.delve.office.com<br>ind.delve.office.com<br>jpn.delve.office.com<br>kor.delve.office.com<br>lam.delve.office.com<br>nam.delve.office.com<br>suite.office.net<br>webshell.suite.office.com<br>*.aria.microsoft.com<br>*.events.data.microsoft.com<br>*.o365weve.com<br>amp.azure.net<br>appsforoffice.microsoft.com<br>assets.onestore.ms<br>auth.gfx.ms<br>az826701.vo.msecnd.net<br>c1.microsoft.com<br>client.hip.live.com<br>contentstorage.osi.office.net<br>dgps.support.microsoft.com<br>docs.microsoft.com<br>msdn.microsoft.com<br>platform.linkedin.com<br>prod.msocdn.com<br>products.office.com<br>r1.res.office365.com<br>r4.res.office365.com<br>res.delve.office.com<br>shellprod.msocdn.com<br>support.content.office.net<br>support.microsoft.com<br>support.office.com<br>technet.microsoft.com<br>templates.office.com<br>videocontent.osi.office.net<br>videoplayercdn.osi.office.net<br>*.office365.com<br>*.aadrm.com<br>*.azurerms.com<br>*.informationprotection.azure.com<br>ecn.dev.virtualearth.net<br>informationprotection.hosting.portal.azure.net<br>o15.officeredir.microsoft.com<br>ocsredir.officeapps.live.com<br>officepreviewredir.microsoft.com<br>officeredir.microsoft.com<br>r.office.microsoft.com<br>ocws.officeapps.live.com<br>odc.officeapps.live.com<br>roaming.officeapps.live.com<br>activation.sls.microsoft.com<br>crl.microsoft.com<br>ols.officeapps.live.com<br>office15client.microsoft.com<br>officeclient.microsoft.com<br>ocsa.officeapps.live.com<br>insertmedia.bing.office.net<br>go.microsoft.com<br>support.office.com<br>mrodevicemgr.officeapps.live.com<br>ajax.aspnetcdn.com<br>cdn.odc.officeapps.live.com<br>officecdn.microsoft.com<br>officecdn.microsoft.com.edgesuite.net<br>*.entrust.net<br>*.geotrust.com<br>*.omniroot.com<br>*.public-trust.com<br>*.symcb.com<br>*.symcd.com<br>*.verisign.com<br>*.verisign.net<br>aia.entrust.net<br>apps.identrust.com<br>cacert.a.omniroot.com<br>cacert.omniroot.com<br>cacerts.digicert.com<br>cdp1.public-trust.com<br>cert.int-x3.letsencrypt.org<br>crl.entrust.net<br>crl.globalsign.com<br>crl.globalsign.net<br>crl.identrust.com<br>crl.microsoft.com<br>crl3.digicert.com<br>crl4.digicert.com<br>evintl-aia.verisign.com<br>evintl-crl.verisign.com<br>evintl-ocsp.verisign.com<br>evsecure-aia.verisign.com<br>evsecure-crl.verisign.com<br>evsecure-ocsp.verisign.com<br>isrg.trustid.ocsp.identrust.com<br>mscrl.microsoft.com<br>ocsp.digicert.com<br>ocsp.entrust.net<br>ocsp.globalsign.com<br>ocsp.int-x3.letsencrypt.org<br>ocsp.msocsp.com<br>ocsp.omniroot.com<br>ocsp2.globalsign.com<br>ocspx.digicert.com<br>s1.symcb.com<br>s2.symcb.com<br>sa.symcb.com<br>sd.symcb.com<br>secure.globalsign.com<br>sr.symcb.com<br>sr.symcd.com<br>su.symcb.com<br>su.symcd.com<br>vassg142.crl.omniroot.com<br>vassg142.ocsp.omniroot.com<br>www.digicert.com<br>www.microsoft.com<br>*.loki.delve.office.com<br>loki.delve.office.com<br>loki.delve-gcc.office.com<br>lpcres.delve.office.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Microsoft 365 Common and Office Online</td>
+<td></td>
+<td>ccs.login.microsoftonline.com<br>*.microsoftonline.com<br>*.microsoftonline-p.com<br>*.msauth.net<br>*.msauthimages.net<br>*.msecnd.net<br>*.msftauth.net<br>*.msftauthimages.net<br>*.phonefactor.net<br>enterpriseregistration.windows.net<br>management.azure.com<br>policykeyservice.dc.ad.msft.net<br>secure.aadcdn.microsoftonline-p.com<br>o15.officeredir.microsoft.com<br>ocsredir.officeapps.live.com<br>officepreviewredir.microsoft.com<br>officeredir.microsoft.com<br>r.office.microsoft.com<br>ocws.officeapps.live.com<br>odc.officeapps.live.com<br>roaming.officeapps.live.com<br>activation.sls.microsoft.com<br>crl.microsoft.com<br>ols.officeapps.live.com<br>office15client.microsoft.com<br>officeclient.microsoft.com<br>ocsa.officeapps.live.com<br>insertmedia.bing.office.net<br>go.microsoft.com<br>support.office.com<br>ajax.aspnetcdn.com<br>cdn.odc.officeapps.live.com<br>officecdn.microsoft.com<br>officecdn.microsoft.com.edgesuite.net<br>*.entrust.net<br>*.geotrust.com<br>*.omniroot.com<br>*.public-trust.com<br>*.symcb.com<br>*.symcd.com<br>*.verisign.com<br>*.verisign.net<br>aia.entrust.net<br>apps.identrust.com<br>cacert.a.omniroot.com<br>cacert.omniroot.com<br>cacerts.digicert.com<br>cdp1.public-trust.com<br>cert.int-x3.letsencrypt.org<br>crl.entrust.net<br>crl.globalsign.com<br>crl.globalsign.net<br>crl.identrust.com<br>crl.microsoft.com<br>crl3.digicert.com<br>crl4.digicert.com<br>evintl-aia.verisign.com<br>evintl-crl.verisign.com<br>evintl-ocsp.verisign.com<br>evsecure-aia.verisign.com<br>evsecure-crl.verisign.com<br>evsecure-ocsp.verisign.com<br>isrg.trustid.ocsp.identrust.com<br>mscrl.microsoft.com<br>ocsp.digicert.com<br>ocsp.entrust.net<br>ocsp.globalsign.com<br>ocsp.int-x3.letsencrypt.org<br>ocsp.msocsp.com<br>ocsp.omniroot.com<br>ocsp2.globalsign.com<br>ocspx.digicert.com<br>s1.symcb.com<br>s2.symcb.com<br>sa.symcb.com<br>sd.symcb.com<br>secure.globalsign.com<br>sr.symcb.com<br>sr.symcd.com<br>su.symcb.com<br>su.symcd.com<br>vassg142.crl.omniroot.com<br>vassg142.ocsp.omniroot.com<br>www.digicert.com<br>www.microsoft.com<br>*.loki.delve.office.com<br>loki.delve.office.com<br>loki.delve-gcc.office.com<br>lpcres.delve.office.com<br>*.office.com<br>cdnprod.myanalytics.microsoft.com<br>myanalytics.microsoft.com<br>myanalytics-gcc.microsoft.com<br>workplaceanalytics.cdn.office.net<br>workplaceanalytics.office.com</td>
+<td>TCP 80, 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion_2">Direct firewall exclusion</h3>
+<p>The following table describes the Office 365 Common and Office Online Direct Firewall Exclusion settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>Microsoft 365 Common and Office Online</td>
+<td></td>
+<td>20.190.128.0/18<br>40.126.0.0/18<br>13.80.125.22/32<br>13.91.91.243/32<br>13.107.6.156/31<br>13.107.7.190/31<br>13.107.9.156/31<br>40.81.156.154/32<br>40.90.218.198/32<br>52.108.0.0/14<br>52.174.56.180/32<br>52.183.75.62/32<br>52.184.165.82/32<br>104.42.230.91/32<br>157.55.145.0/25<br>157.55.155.0/25<br>157.55.227.192/26<br>13.80.125.22/32<br>13.91.91.243/32<br>13.107.6.156/31<br>13.107.7.190/31<br>13.107.9.156/31<br>40.81.156.154/32<br>40.90.218.198/32<br>52.108.0.0/14<br>52.174.56.180/32<br>52.183.75.62/32<br>52.184.165.82/32<br>104.42.230.91/32<br>157.55.145.0/25<br>157.55.155.0/25<br>157.55.227.192/26</td>
+<td>TCP 80, 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Microsoft 365 Common and Office Online</td>
+<td></td>
+<td>13.107.6.171/32<br>13.107.140.6/32<br>52.108.0.0/14<br>52.238.106.116/32<br>52.244.37.168/32<br>52.244.203.72/32<br>52.244.207.172/32<br>52.244.223.198/32<br>52.247.150.191/32<br>20.190.128.0/18<br>40.126.0.0/18<br>13.80.125.22/32<br>13.91.91.243/32<br>13.107.6.156/31<br>13.107.7.190/31<br>13.107.9.156/31<br>40.81.156.154/32<br>40.90.218.198/32<br>52.108.0.0/14<br>52.174.56.180/32<br>52.183.75.62/32<br>52.184.165.82/32<br>104.42.230.91/32<br>157.55.145.0/25<br>157.55.155.0/25<br>157.55.227.192/26<br>13.80.125.22/32<br>13.91.91.243/32<br>13.107.6.156/31<br>13.107.7.190/31<br>13.107.9.156/31<br>40.81.156.154/32<br>40.90.218.198/32<br>52.108.0.0/14<br>52.174.56.180/32<br>52.183.75.62/32<br>52.184.165.82/32<br>104.42.230.91/32<br>157.55.145.0/25<br>157.55.155.0/25<br>157.55.227.192/26<br>13.107.6.171/32<br>13.107.140.6/32<br>52.108.0.0/14<br>52.238.106.116/32<br>52.244.37.168/32<br>52.244.203.72/32<br>52.244.207.172/32<br>52.244.223.198/32<br>52.247.150.191/32</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-365-exchange-online">Office 365 – Exchange Online</h2>
+<h3 id="proxy-whitelist_3">Proxy whitelist</h3>
+<p>The following table describes the Office 365 Exchange Online Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R07</td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>*.store.core.windows.net<br>asl.configure.office.com<br>mshrcstorageprod.blob.core.windows.net<br>tds.configure.office.com<br>mshybridservice.trafficmanager.net<br>domains.live.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td></td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>r1.res.office365.com<br>r3.res.office365.com<br>r4.res.office365.com<br><em>.outlook.com<br></em>.outlook.office.com<br>attachments.office.net</td>
+<td>TCP 80, 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion_3">Direct firewall exclusion</h3>
+<p>The following table describes the Office 365 Exchange Online Direct Firewall Exclusion settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>13.107.6.152/31<br>13.107.18.10/31<br>13.107.128.0/22<br>23.103.160.0/20<br>40.96.0.0/13<br>40.104.0.0/15<br>52.96.0.0/14<br>131.253.33.215/32<br>132.245.0.0/16<br>150.171.32.0/22<br>191.234.140.0/22<br>204.79.197.215/32</td>
+<td>TCP 587</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>40.92.0.0/15<br>40.107.0.0/16<br>52.100.0.0/14<br>52.238.78.88/32<br>104.47.0.0/17</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>40.92.0.0/15<br>40.107.0.0/16<br>52.100.0.0/14<br>104.47.0.0/17</td>
+<td>TCP 25</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Exchange Online</td>
+<td>Exchange Servers</td>
+<td>13.107.6.152/31<br>13.107.18.10/31<br>13.107.128.0/22<br>23.103.160.0/20<br>40.96.0.0/13<br>40.104.0.0/15<br>52.96.0.0/14<br>131.253.33.215/32<br>132.245.0.0/16<br>150.171.32.0/22<br>191.234.140.0/22<br>204.79.197.215/32</td>
+<td>TCP 80, 443</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-365-skype-for-business-and-microsoft-teams">Office 365 – Skype for Business and Microsoft Teams</h2>
+<h3 id="proxy-whitelist_4">Proxy whitelist</h3>
+<p>The following table describes the Office 365 Skype for Business and Microsoft Teams Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>Skype for Business Online and Microsoft Teams</td>
+<td></td>
+<td><em>.sfbassets.com<br></em>.urlp.sfbassets.com<br>skypemaprdsitus.trafficmanager.net<br><em>.keydelivery.mediaservices.windows.net<br></em>.msecnd.net<br><em>.streaming.mediaservices.windows.net<br>ajax.aspnetcdn.com<br>mlccdn.blob.core.windows.net<br>aka.ms<br>amp.azure.net<br></em>.msedge.net<br>compass-ssl.microsoft.com<br><em>.mstea.ms<br></em>.secure.skypeassets.com<br>mlccdnprod.azureedge.net<br>videoplayercdn.osi.office.net<br>*.skype.com</td>
+<td>TCP 80, 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Skype for Business Online and Microsoft Teams</td>
+<td></td>
+<td>quicktips.skypeforbusiness.com<br><em>.sfbassets.com<br></em>.urlp.sfbassets.com<br>skypemaprdsitus.trafficmanager.net<br><em>.keydelivery.mediaservices.windows.net<br></em>.msecnd.net<br><em>.streaming.mediaservices.windows.net<br>ajax.aspnetcdn.com<br>mlccdn.blob.core.windows.net<br>aka.ms<br>amp.azure.net<br></em>.msedge.net<br>compass-ssl.microsoft.com<br><em>.mstea.ms<br></em>.secure.skypeassets.com<br>mlccdnprod.azureedge.net<br>videoplayercdn.osi.office.net<br>*.skype.com<br>statics.teams.microsoft.com</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion_4">Direct firewall exclusion</h3>
+<p>The following table describes the Office 365 Skype for Business and Teams Direct Firewall Exclusion settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>Skype for Business Online and Microsoft Teams</td>
+<td></td>
+<td>13.70.151.216/32<br>13.71.127.197/32<br>13.72.245.115/32<br>13.73.1.120/32<br>13.75.126.169/32<br>13.89.240.113/32<br>13.107.3.0/24<br>13.107.64.0/18<br>51.140.155.234/32<br>51.140.203.190/32<br>51.141.51.76/32<br>52.112.0.0/14<br>52.120.0.0/14<br>52.163.126.215/32<br>52.170.21.67/32<br>52.172.185.18/32<br>52.178.94.2/32<br>52.178.161.139/32<br>52.228.25.96/32<br>52.238.119.141/32<br>52.242.23.189/32<br>52.244.160.207/32<br>104.215.11.144/32<br>104.215.62.195/32<br>138.91.237.237/32</td>
+<td>TCP 80, 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Skype for Business Online and Microsoft Teams</td>
+<td></td>
+<td>13.70.151.216/32<br>13.71.127.197/32<br>13.72.245.115/32<br>13.73.1.120/32<br>13.75.126.169/32<br>13.89.240.113/32<br>13.107.3.0/24<br>13.107.64.0/18<br>51.140.155.234/32<br>51.140.203.190/32<br>51.141.51.76/32<br>52.112.0.0/14<br>52.120.0.0/14<br>52.163.126.215/32<br>52.170.21.67/32<br>52.172.185.18/32<br>52.178.94.2/32<br>52.178.161.139/32<br>52.228.25.96/32<br>52.238.119.141/32<br>52.242.23.189/32<br>52.244.160.207/32<br>104.215.11.144/32<br>104.215.62.195/32<br>138.91.237.237/32</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>Skype for Business Online and Microsoft Teams</td>
+<td></td>
+<td>13.107.64.0/18<br>52.112.0.0/14<br>52.120.0.0/14</td>
+<td>UDP 3478, 3479, 3480, 3481</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-365-sharepoint-online-and-onedrive-for-business">Office 365 – SharePoint Online and OneDrive for Business</h2>
+<h3 id="proxy-whitelist_5">Proxy whitelist</h3>
+<p>The following table describes the Office 365 SharePoint Online and OneDrive for Business Proxy Whitelist settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>SharePoint Online and OneDrive for Business</td>
+<td></td>
+<td><em>.wns.windows.com<br>admin.onedrive.com<br>officeclient.microsoft.com<br>g.live.com<br>oneclient.sfx.ms<br></em>.sharepointonline.com<br>cdn.sharepointonline.com<br>privatecdn.sharepointonline.com<br>publiccdn.sharepointonline.com<br>spoprod-a.akamaihd.net<br>static.sharepointonline.com<br>*.svc.ms<br><Agency Name>Dev-files.sharepoint.com<br><Agency Name>Dev-myfiles.sharepoint.com</td>
+<td>TCP 80, 443</td>
+</tr>
+</tbody>
+</table>
+<h3 id="direct-firewall-exclusion_5">Direct firewall exclusion</h3>
+<p>The following table describes the Office 365 SharePoint Online and OneDrive for Business Direct Firewall Exclusion settings.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R06</td>
+<td>SharePoint Online and OneDrive for Business</td>
+<td></td>
+<td>13.107.136.0/22<br>40.108.128.0/17<br>52.104.0.0/14<br>104.146.128.0/17<br>150.171.40.0/22</td>
+<td>TCP 80, 443</td>
+</tr>
+</tbody>
+</table>
+<h2 id="office-365-email-protective-markings-with-mip-technology">Office 365 – email protective markings with MIP technology</h2>
+<p>For organisations that send PROTECTED emails through a GovLink mail gateway, the labelling product, as well as the gateway itself, must support the inspection of the email headers. At the time of writing, Microsoft Information Protection labelling does not natively offer a method to format email headers in a manner consistent with the requirements of the PSPF and as such, additional configuration is needed. This section provides a method of modifying the email headers in a mail gateway to ensure compliance with the PSPF.</p>
+<h3 id="outbound-protective-marking">Outbound protective marking</h3>
+<p>Below describes the Office 365 Cisco ESA Rules for Office 365 Outbound Protective Marking settings.</p>
+<pre><code>office365_outboundprotectivemarkings:
+if ((mail-from == '@&lt;Agency Acronym&gt;\\.gov\\.au$') and (sendergroup == &quot;RELAYLIST&quot;)) {
+    if header(&quot;Subject&quot;) == &quot;SEC=PROTECTED&quot; {
+        edit-header-text(&quot;Subject&quot;, &quot;\\[SEC=PROTECTED\\]*&quot;, &quot;&quot;);
+    }
+    if header(&quot;Subject&quot;) == &quot;SEC=OFFICIAL:Sensitive&quot; {
+        edit-header-text(&quot;Subject&quot;, &quot;\\[SEC=OFFICIAL:Sensitive\\]*&quot;, &quot;&quot;);
+    }
+    if header(&quot;Subject&quot;) == &quot;SEC=UNOFFICIAL&quot; {
+        edit-header-text(&quot;Subject&quot;, &quot;\\[SEC=UNOFFICIAL\\]*&quot;, &quot;&quot;);
+    }
+    if header(&quot;Subject&quot;) == &quot;SEC=OFFICIAL&quot; {
+        edit-header-text(&quot;Subject&quot;, &quot;\\[SEC=OFFICIAL\\]*&quot;, &quot;&quot;);
+    }
+    if (header(&quot;msip_labels&quot;) == &quot;PROTECTED&quot;) AND (sendergroup == &quot;RELAYLIST&quot;) {
+        insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=PROTECTED, ORIGIN=$EnvelopeFrom&quot;);
+        edit-header-text(&quot;Subject&quot;, &quot;(.*)&quot;, &quot;\\1 [SEC=PROTECTED]&quot;);
+    } else {
+        if (header(&quot;msip_labels&quot;) == &quot;Sensitive&quot;) AND (sendergroup == &quot;RELAYLIST&quot;) {
+            insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=OFFICIAL:Sensitive, ORIGIN=$EnvelopeFrom&quot;);
+            edit-header-text(&quot;Subject&quot;, &quot;(.*)&quot;, &quot;\\1 [SEC=OFFICIAL:Sensitive]&quot;);
+        } else {
+            if (header(&quot;msip_labels&quot;) == &quot;UNOFFICIAL&quot;) AND (sendergroup == &quot;RELAYLIST&quot;) {
+                insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=UNOFFICIAL, ORIGIN=$EnvelopeFrom&quot;);
+                edit-header-text(&quot;Subject&quot;, &quot;(.*)&quot;, &quot;\\1 [SEC=UNOFFICIAL]&quot;);
+            } else {
+                if (header(&quot;msip_labels&quot;) == &quot;OFFICIAL&quot;) AND (sendergroup == &quot;RELAYLIST&quot;) {
+                    insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=OFFICIAL, ORIGIN=$EnvelopeFrom&quot;);
+                    edit-header-text(&quot;Subject&quot;, &quot;(.*)&quot;, &quot;\\1 [SEC=OFFICIAL]&quot;);
+                } else {
+                    quarantine(&quot;Policy&quot;);
+                }
+            }
+        }
+    }
+} else {                                       
+    no-op();
+}
+</code></pre>
+<h3 id="inbound-protective-marking">Inbound protective marking</h3>
+<p>Note: Please do not copy the below rule directly into the Agency environment for Inbound Protective Marking as it will not produce the desired results. This is an example rule which requires modification prior to implementation. The rule contains Globally Unique Identifiers (GUIDs) related to instances of sensitivity labels in a specific tenant.</p>
+<pre><code>office365_inboundprotectivemarkings: 
+if (rcpt-to == '@&lt;Agency Acronym&gt;\\.gov\\.au$') {
+    if (header(&quot;Subject&quot;) == &quot;SEC=PROTECTED&quot;) AND (header(&quot;Subject&quot;) == &quot;SEC&quot;) {
+        insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=PROTECTED, ORIGIN=$EnvelopeFrom&quot;);
+        insert-header(&quot;msip_labels&quot;, &quot;MSIP_Label_12dcf2ca-f80e-4ac2-861b-4b6557faeea3_Enabled=True;MSIP_Label_12dcf2ca-f80e-4ac2-861b-4b6557faeea3_SiteId=158b7f91-36cd-420e-8730-3dbec75e20a9;MSIP_Label_12dcf2ca-f80e-4ac2-861b-4b6557faeea3_Name=PROTECTED;MSIP_Label_12dcf2ca-f80e-4ac2-861b-4b6557faeea3_ContentBits=0;MSIP_Label_12dcf2ca-f80e-4ac2-861b-4b6557faeea3_Method=Privileged;&quot;);
+    } else {
+        if (header(&quot;Subject&quot;) == &quot;SEC=OFFICIAL:Sensitive&quot;) AND (header(&quot;Subject&quot;) == &quot;SEC&quot;) {
+            insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au,SEC=OFFICIAL:Sensitive, ORIGIN=$EnvelopeFrom&quot;);
+            insert-header(&quot;msip_labels&quot;, &quot;MSIP_Label_42227f60-6734-42bf-b4e6-da15ab730981_Enabled=True;MSIP_Label_42227f60-6734-42bf-b4e6-da15ab730981_SiteId=158b7f91-36cd-420e-8730-3dbec75e20a9;MSIP_Label_42227f60-6734-42bf-b4e6-da15ab730981_Name=OFFICIAL Sensitive;MSIP_Label_42227f60-6734-42bf-b4e6-da15ab730981_ContentBits=0;MSIP_Label_42227f60-6734-42bf-b4e6-da15ab730981_Method=Privileged;&quot;);
+        } else {
+            if (header(&quot;Subject&quot;) == &quot;SEC=UNOFFICIAL&quot;) AND (header(&quot;Subject&quot;) == &quot;SEC&quot;) {
+                insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=UNOFFICIAL,ORIGIN=$EnvelopeFrom&quot;);
+                insert-header(&quot;msip_labels&quot;, &quot;MSIP_Label_217258b3-6022-44f0-adb4-d6eca052ad20_Enabled=True;MSIP_Label_217258b3-6022-44f0-adb4-d6eca052ad20_SiteId=158b7f91-36cd-420e-8730-3dbec75e20a9;MSIP_Label_217258b3-6022-44f0-adb4-d6eca052ad20_Name=UNOFFICIAL;MSIP_Label_217258b3-6022-44f0-adb4-d6eca052ad20_ContentBits=0;MSIP_Label_217258b3-6022-44f0-adb4-d6eca052ad20_Method=Privileged;&quot;);
+            } else {
+                if (header(&quot;Subject&quot;) == &quot;SEC=OFFICIAL&quot;) AND (header(&quot;Subject&quot;) == &quot;SEC&quot;) {
+                    insert-header(&quot;X-Protective-marking&quot;, &quot;VER=2018.1, NS=gov.au, SEC=OFFICIAL,ORIGIN=$EnvelopeFrom&quot;);
+                    insert-header(&quot;msip_labels&quot;, &quot;MSIP_Label_8260affa-0595-45d6-a83e-a3b79a9c02c4_Enabled=True;MSIP_Label_8260affa-0595-45d6-a83e-a3b79a9c02c4_SiteId=158b7f91-36cd-420e-8730-3dbec75e20a9;MSIP_Label_8260affa-0595-45d6-a83e-a3b79a9c02c4_Name=OFFICIAL;MSIP_Label_8260affa-0595-45d6-a83e-a3b79a9c02c4_ContentBits=0;MSIP_Label_8260affa-0595-45d6-a83e-a3b79a9c02c4_Method=Privileged;&quot;);
+                } else {
+                    no-op();
+                }
+            }
+        }
+    }
+} else  {
+    no-op();
+}
+</code></pre>
+<h2 id="azure-advanced-threat-protection-azure-atp">Azure Advanced Threat Protection (Azure ATP)</h2>
+<p>The following tables below describe the Azure Advanced Threat Protection service URLs Whitelist settings.</p>
+<p>Direct and correct service location access to the agency Azure ATP instance name (Option 1)</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R08</td>
+<td>Azure ATP portal</td>
+<td></td>
+<td><code>agency-instance-name</code>.atp.azure.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Azure ATP senor</td>
+<td></td>
+<td><code>agency-instance-name</code>.sensorapi.atp.azure.com</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<p>Granular control to service location access for Azure ATP (Option 2)</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R08</td>
+<td>Service location: US</td>
+<td></td>
+<td>triprd1wcusw1sensorapi.atp.azure.com<br>triprd1wcuswb1sensorapi.atp.azure.com<br>triprd1wcuse1sensorapi.atp.azure.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Service location: Europe</td>
+<td></td>
+<td>triprd1wceun1sensorapi.atp.azure.com<br>triprd1wceuw1sensorapi.atp.azure.com</td>
+<td>TCP 443</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Service location: Asia</td>
+<td></td>
+<td>triprd1wcasse1sensorapi.atp.azure.com</td>
+<td>TCP 443</td>
+</tr>
+</tbody>
+</table>
+<p>Azure Advanced Threat Protection Sensor (Domain Controller) Proxy Whitelist settings</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R08</td>
+<td>Internet ports</td>
+<td>Domain Controllers</td>
+<td>SSL (*.atp.azure.com)</td>
+<td>TCP 443 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internet ports</td>
+<td>Localhost</td>
+<td>SSL (localhost)</td>
+<td>TCP 444 / Both direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>All devices on network</td>
+<td>TCP/UDP 445 / Outbound</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports (Optional)</td>
+<td>Domain Controllers</td>
+<td>SIEM Server</td>
+<td>TCP/UDP 514, depending on configuration / Inbound</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>RADIUS</td>
+<td>UDP 1813 / Inbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>DNS servers</td>
+<td>TCP &amp; UDP 53 / outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>All devices on network</td>
+<td>TCP 135 / Inbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>All devices on network</td>
+<td>UDP 137 / Inbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>All devices on network</td>
+<td>TCP 3389 / Inbound direction</td>
+</tr>
+</tbody>
+</table>
+<p>Azure Advanced Threat Protection Sensor (Standalone Server) Proxy Whitelist settings</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R08</td>
+<td>Internet ports</td>
+<td>Standalone Server</td>
+<td>SSL (*.atp.azure.com)</td>
+<td>TCP 443 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>TCP &amp; UDP 389 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>TCP 636 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>TCP 3268 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>TCP 3269 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>TCP &amp; UDP 88 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>All devices on network</td>
+<td>TCP/UDP 445 / Outbound</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>Domain Controllers</td>
+<td>UDP 123 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Standalone Server</td>
+<td>DNS servers</td>
+<td>TCP &amp; UDP 53 / Outbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports (Optional)</td>
+<td>Standalone Server</td>
+<td>SIEM Server</td>
+<td>TCP/UDP 514, depending on configuration / Inbound direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>Internal ports</td>
+<td>Domain Controllers</td>
+<td>RADIUS</td>
+<td>UDP 1813 / Inbound direction</td>
+</tr>
+</tbody>
+</table>
+<h2 id="azure-active-directory-connect">Azure Active Directory Connect</h2>
+<p>The following table describes the AAD Connect ports and protocols required for communication between the AAD Connect server and on-premises Active Directory.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R09</td>
+<td>DNS (DNS lookups on the destination forest)</td>
+<td>AAD Connect server</td>
+<td>DNS server</td>
+<td>53 (TCP/UDP) / Both direction</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>Kerberos (Authentication to the AD forest)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>88 (TCP/UDP) / Both direction</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>MS-RPC (Used during the initial configuration of the Azure AD Connect wizard when it binds to the AD forest, and also during password synchronisation)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>135 (TCP/UDP) / Both direction</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>LDAP (Used for data import from AD. Data is encrypted with Kerberos Sign &amp; Seal)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>389 (TCP/UDP) / Both direction</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>SMB (used by Seamless SSO to create computer account in AD forest)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>445 (TCP/UDP) / Both direction</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>LDAP/SSL (used for data import from AD. The data transfer is signed and encrypted. Only used if you are using TLS)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>636 (TCP/UDP)</td>
+</tr>
+<tr>
+<td>R08</td>
+<td>RPC (Used during the initial configuration of the Azure AD Connect wizard when it binds to the AD forest, and also during password synchronisation)</td>
+<td>AAD Connect server</td>
+<td>Domain Controllers</td>
+<td>49152 – 65535 (Random high RPC port) (TCP)</td>
+</tr>
+</tbody>
+</table>
+<p>The following table describes the AAD Connect ports and protocols required for communication between the AAD Connect server and Azure AD.</p>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Purpose</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R09</td>
+<td>HTTP (used to download Certificate Revocation Lists to verify SSL certificates)</td>
+<td>AAD Connect server</td>
+<td>Agency Azure AD Tenant</td>
+<td>80 (TCP) / outbound direction</td>
+</tr>
+<tr>
+<td>R09</td>
+<td>HTTPS (used to synchronise with Azure AD, including communication with the AAD Connect Health agents)</td>
+<td>AAD Connect server</td>
+<td>Agency Azure AD Tenant</td>
+<td>443 (TCP) / outbound direction</td>
+</tr>
+</tbody>
+</table>
+    
+    
+  
+  
+
+
+  
+                  
+                </article>
+              </div>
+            
+            
+          </div>
+          
+            <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            </a>
+          
+        </main>
+        
+            <footer class="md-footer">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid"> 
+        <div class="footer-container">
+          <div class="footer-logo">
+            <a href="https://www.oobe.com.au" title="oobe a Fujitsu company" class="md-footer__button md-logo" aria-label="oobe a Fujitsu company" data-md-component="logo">
+              <img src="../../img/oobe-a-Fujitsu-company-Secondary-Logo-White-RGB.svg" alt="powered by oobe">                       
+            </a>
+          </div>
+          <div class="footer-inner-border">
+              <a href="https://www.oobe.com.au/about/privacy" title="https://www.oobe.com.au/about/privacy" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/privacy" data-md-component="pp">
+                Privacy policy
+              </a>
+              <a href="https://www.oobe.com.au" title="https://www.oobe.com.au" class="md-footer__button link" aria-label="https://www.oobe.com.au" data-md-component="oobe">
+                oobe.com.au
+              </a>
+              <a href="https://www.oobe.com.au/about/contact" title="https://www.oobe.com.au/about/contact" class="md-footer__button link" aria-label="https://www.oobe.com.au/about/contact" data-md-component="contact">
+                Contact Us
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+        
+      </div>
+      <div class="md-dialog" data-md-component="dialog">
+        <div class="md-dialog__inner md-typeset"></div>
+      </div>
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.top", "navigation.instant", "navigation.tracking", "navigation.sections", "navigation.indexes", "navigation.prune", "toc.follow", "toc.integrate"], "search": "../../js/search.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+      
+      
+        <script src="../../js/bundle.min.js"></script>
+        <script src="../../js/jquery-3.6.3.min.js"></script>
+        
+          <script src="../../js/extra.js"></script>
+        
+      
+    </body>
+  </html>
