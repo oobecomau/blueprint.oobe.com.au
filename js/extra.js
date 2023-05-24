@@ -56,4 +56,107 @@
         $("#cs-span").fadeIn(4000);
     });
 
-    
+    // Last Modified
+    function readDate() {
+        let mod_date = document.lastModified;
+        var date = new Date(mod_date);
+        var day = date.getDate();
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        switch(month) {
+            case 0: m = "January";
+                break;   
+            case 1: m = "February";
+                break; 
+            case 2: m = "March";
+                break;   
+            case 3: m = "April";
+                break;  
+            case 4: m = "May";
+                break;   
+            case 5: m = "June";
+                break; 
+            case 6: m = "July";
+                break;   
+            case 7: m = "August";
+                break; 
+            case 8: m = "September";
+                break;   
+            case 9: m = "October";
+                break; 
+            case 10: m = "November";
+                break;   
+            case 11: m = "December";
+                break;             
+        }
+        let text = day + " " + m + " " + year;
+        var lastMod = document.getElementById("lastModified");
+        if (lastMod) {
+            lastMod.innerHTML = text;
+        }
+    }
+    readDate();
+      
+    // Calculate Reading Time 
+    function readTime() {
+        const text = document.querySelector("article").innerText;
+        const wpm = 200;
+        const words = text.trim().split(/\s+/).length;
+        const time = Math.ceil(words / wpm);
+        var rtime = document.getElementById("time");
+        if (rtime) {
+            rtime.innerText = time;
+        }
+    }
+    readTime();
+     
+    /** Place HTML in Markdown to generate Date and Time **/
+    // <p id="date-and-time"><span id="time"></span> minutes to read - <span id="lastModified"></span></p> 
+
+
+    /* Mobile navbar toggle */
+    function mobileToggle() {
+        var btn = document.getElementById("mobile-navbar-collapse");
+        if ( btn.style.display === "block" ) {
+            btn.style.display = "none";
+            $("#mobile-container-collapse").hide();
+            $("#menuToggle .bar:first-child").css("top","0");
+            $("#menuToggle .bar:first-child").css("transform","rotate(0deg)");
+            $("#menuToggle .bar:nth-child(2)").css("top","10px");
+            $("#menuToggle .bar:nth-child(2)").css("opacity","1");
+            $("#menuToggle .bar:nth-child(2)").css("right","0");
+            $("#menuToggle .bar:last-child").css("transform","rotate(0deg)");
+            $("#menuToggle .bar:last-child").css("top","20px");
+            $("#menuToggle .bar:last-child").css("margin","0");
+            $("#mobile-search").show();
+            $(".md-typeset table:not([class])").css("background-color","var(--md-default-bg-color)")
+            $(".md-top.md-icon").show();
+        } else {
+            btn.style.display = "block";
+            $("#mobile-container-collapse").show();
+            $("#menuToggle .bar:first-child").css("transform","rotate(135deg)");
+            $("#menuToggle .bar:first-child").css("top","10px");
+            $("#menuToggle .bar:nth-child(2)").css("opacity","0");
+            $("#menuToggle .bar:nth-child(2)").css("right","-10px");
+            $("#menuToggle .bar:last-child").css("transform","rotate(-135deg)");
+            $("#menuToggle .bar:last-child").css("top","10px");
+            $("#menuToggle .bar:last-child").css("margin","0");
+            $("#mobile-search").hide();
+            $(".md-typeset table:not([class])").css("background-color","transparent");
+            $(".md-top.md-icon").hide();
+        }
+    } 
+    $("#mobile-navbar-collapse li a").on("click", function(){
+        $("#mobile-navbar-collapse").hide();
+        $("#mobile-container-collapse").hide();
+        $("#menuToggle .bar:first-child").css("top","0");
+        $("#menuToggle .bar:first-child").css("transform","rotate(0deg)");
+        $("#menuToggle .bar:nth-child(2)").css("top","10px");
+        $("#menuToggle .bar:nth-child(2)").css("opacity","1");
+        $("#menuToggle .bar:nth-child(2)").css("right","0");
+        $("#menuToggle .bar:last-child").css("transform","rotate(0deg)");
+        $("#menuToggle .bar:last-child").css("top","20px");
+        $("#menuToggle .bar:last-child").css("margin","0");
+        $("#mobile-search").show();
+        $(".md-top.md-icon").show();
+    }); 
