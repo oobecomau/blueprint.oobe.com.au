@@ -277,10 +277,12 @@
     <div class="md-search__inner" role="search">
       <form id="search-flex-container" class="md-search__form" name="search">
         <div id="mobile-back-btn">
-          <button type="button" onclick="window.history.back()" id="mobileBackSearch" class="mobile-search-toggler">
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
+          <label id="mobile-search" class="md-search__icon md-icon" for="__search">
+            <button type="button" id="mobileBackSearch" class="mobile-search-toggler">
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </label>
         </div>
         <div class="form-outline">
           <input type="text" class="md-search__input" name="query" aria-label="Search the blueprint" placeholder="Search the blueprint" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>

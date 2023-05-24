@@ -725,6 +725,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         height: 48px;
         width: 50px;
         z-index: 99;
+        cursor: pointer;
     }
     #mobileBackSearch {
         display: inline-block !important;
@@ -754,11 +755,11 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         box-sizing: border-box;
     }
     #mobileBackSearch .bar:first-child { 
-        top: 18px; 
+        top: 16px; 
         transform: rotate(135deg);
     }
     #mobileBackSearch .bar:nth-child(2) { 
-        top: 30px; 
+        top: 29px; 
         transform: rotate(-135deg);
     }
     .row .card-list {
@@ -813,17 +814,19 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         font-size: 1.7em;
     }
     .md-header .md-header__inner { 
-        flex: 50%;
+        flex: 85%;
     }
-    .mobile-tabs {
-        flex: 50%;
+    .mobile-tabs:nth-child(2) {
+        flex: 15%;
         margin-top: 33px;
         margin-left: auto;
-        order: 2;
     }
     .md-header__inner.md-grid {
         margin-left: 0;
         margin-right: auto;
+    }
+    .md-search__icon.md-icon  {
+        top: 0;
     }
 }
 
