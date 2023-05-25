@@ -103,7 +103,8 @@
 
 
 <div id="mobile-navbar-collapse" class="mobile-navbar-collapse-custom collapse">
-    <div class="md-grid">
+    <nav class="md-tabs-mobile" aria-label="Tabs" data-md-component="tabs">
+      <div class="md-grid">
         <ul class="md-tabs__list">
            
               
@@ -169,7 +170,8 @@
    
           
         </ul>
-    </div>
+      </div>
+    </nav>
 </div>
 
    
@@ -277,11 +279,11 @@
     <div class="md-search__inner" role="search">
       <form id="search-flex-container" class="md-search__form" name="search">
         <div id="mobile-back-btn">
-          <label id="mobile-search" class="md-search__icon md-icon" for="__search">
-            <button type="button" id="mobileBackSearch" class="mobile-search-toggler">
+          <label id="mobile-btn" class="md-search__icon md-icon" for="__search">
+            <div id="mobileBackSearch" class="mobile-search-toggler">
               <span class="bar"></span>
               <span class="bar"></span>
-            </button>
+            </div>
           </label>
         </div>
         <div class="form-outline">

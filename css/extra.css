@@ -371,13 +371,9 @@ img[src*='#center'] {
 .news1-link, .news2-link, .news3-link {
     position: absolute;
     z-index: 5;
+    height: 100%;
+    width: 100%;
 }
-@media (min-width: 992px) {
-    .news1-link, .news2-link, .news3-link {
-        height: 255px;
-        width: 450px;
-    }
-}  
 
 /* Home Page - Products  */
 #ms, #p365, #cs {
@@ -689,14 +685,15 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         left: 15px;
         top: 95px;
     }
-    #mobile-navbar-collapse .md-tabs__item {
-        font-size: 30px;
+    #mobile-navbar-collapse * .md-tabs__item {
+        font-size: 4em;
         font-weight: 500;
         color:#041e42;
         opacity: 1;
         margin-top: 1.8rem;
+        display: list-item;
     }
-    #mobile-navbar-collapse .md-tabs__item a { background-color: transparent; }
+    #mobile-navbar-collapse * .md-tabs__item a { background-color: transparent; }
     #mobile-container-collapse { 
         display: none;
         background-color: #48d597;
@@ -710,15 +707,32 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         transition-delay: 5s;
         -webkit-transition-delay: 5s;
      }
-     #mobile-navbar-collapse .md-grid .md-tabs__list .md-tabs__item {
+     #mobile-navbar-collapse .md-tabs .md-grid .md-tabs__list .md-tabs__item {
         display: list-item;
      }
-     #mobile-navbar-collapse .md-grid .md-tabs__list .md-tabs__item .md-header {
+     #mobile-navbar-collapse .md-tabs .md-grid .md-tabs__list .md-tabs__item .md-header {
         font-size: 1.5em;
      }
     [data-md-toggle=search]:checked~.md-header .md-search__form {
         border-radius: 0 0 0 0 !important;
     }
+
+    .md-tabs-mobile {
+        color: var(--md-primary-bg-color);
+        display: block;
+        line-height: 1.3;
+        overflow: auto;
+        width: 100%;
+        z-index: 3;
+    }
+
+    
+
+
+
+
+
+
 
     #mobile-back-btn {
         position: fixed;
@@ -726,6 +740,11 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         width: 50px;
         z-index: 99;
         cursor: pointer;
+    }
+    #mobile-back-btn label {
+        height: inherit;
+        width: inherit;
+        top: inherit;
     }
     #mobileBackSearch {
         display: inline-block !important;
@@ -829,7 +848,10 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         top: 0;
     }
 }
-
+@media screen and (max-width: 31.25em) {
+    #mobile-back-btn { width: 70px; }
+    #mobileBackSearch { margin-left: 40px; }
+}
 
 
 
