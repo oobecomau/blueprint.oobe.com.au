@@ -403,9 +403,9 @@ img[src*='#center'] {
         margin-top: 3rem;
     }
 }
-#ms-img, #p365-img {
-    object-fit: scale-down !important;        
-}
+/* #ms-img, #p365-img {
+    object-fit: scale-down;        
+} */
 #cs span {
     color: #041e42;
     font-size: 26px;
@@ -857,7 +857,14 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
     #mobile-back-btn { width: 70px; }
     #mobileBackSearch { margin-left: 30px; }
 }
-
+@media screen and (max-width: 23.5em) {
+    #ms .triangle, #p365 .triangle, #cs .triangle {
+        transform: translate(calc(100% - 75px), calc(100% - 25px));
+    }
+    .triangle img {
+        transform: translate(calc(100% + 30px), calc(100% - 100px));
+    }
+}
 
 
 
