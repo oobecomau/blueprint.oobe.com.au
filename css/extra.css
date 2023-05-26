@@ -879,9 +879,9 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 /* For portrait layouts only */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation:portrait) {   
     .ms__img, .p365__img {
-        object-fit: scale-down;
+        object-fit: cover;
         height: auto;
-        width: 100%;
+        width: 40%;
     }
 }
 /* For landscape layouts only */
