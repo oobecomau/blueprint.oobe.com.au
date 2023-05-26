@@ -403,9 +403,10 @@ img[src*='#center'] {
         margin-top: 3rem;
     }
 }
-/* #ms-img, #p365-img {
-    object-fit: scale-down;        
-} */
+#ms-img, #p365-img {
+    object-fit: scale-down !important; 
+    display: none;       
+}
 #cs span {
     color: #041e42;
     font-size: 26px;
