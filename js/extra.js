@@ -42,8 +42,8 @@
     $(".products-container").html(function(){
         $("#ms").css("background-image", "url(img/oobe-Textured-1920x1080_Energy_Blue03.jpg)");
         $("#p365").css("background-image", "url(img/oobe-Textured-1920x1080_Energy_Blue07.jpg)");
-        $("#ms-img").fadeIn(2000);
-        $("#p365-img").fadeIn(2000);       
+        $(".ms__img").fadeIn(2000);
+        $(".p365__img").fadeIn(2000);       
         $("#ms .triangle").fadeIn(2000);
         $("#ms .triangle img").fadeIn(1000);        
         $("#p365 .triangle").fadeIn(2000);

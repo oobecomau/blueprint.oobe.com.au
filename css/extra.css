@@ -403,7 +403,7 @@ img[src*='#center'] {
         margin-top: 3rem;
     }
 }
-#ms-img, #p365-img {
+.ms__img, .p365__img {
     object-fit: scale-down; 
     display: none;       
 }
@@ -878,7 +878,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 /******* iPad Screen Sizing *******/
 /* For portrait layouts only */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation:portrait) {   
-    #ms-img, #p365-img {
+    .ms__img, .p365__img {
         object-fit: scale-down;
         height: auto;
         width: 100%;
@@ -886,7 +886,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 }
 /* For landscape layouts only */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1180px) and (orientation:landscape) {
-    #ms-img, #p365-img {
+    .ms__img, .p365__img {
         object-fit: scale-down;
         max-width: 80%;
     }
