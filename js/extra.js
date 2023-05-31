@@ -160,3 +160,12 @@
         $("#mobile-search").show();
         $(".md-top.md-icon").show();
     }); 
+
+
+    $(".mobile-welcome").html(function(){
+        $(".mw-flex-container").css("display","flex").fadeIn(5000);
+        $(".mw-loader").fadeOut(1000);
+    });
+    $("#mobileScreen").on("click", function() {
+        $(".mobile-welcome").hide(1000);
+    });
