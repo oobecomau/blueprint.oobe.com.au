@@ -165,25 +165,19 @@
     var n = localStorage.getItem('on_load_counter');
     if ( n === null ) { 
         n = 1;
-        $(".mobile-welcome").html(function(){
-            $(".mw-flex-container").css("display","flex").fadeIn(5000);
-            $(".mw-loader").fadeOut(1000);
-            $("html").css("overflow-y","hidden");
-        });
-    } else if ( n > 70 ) { 
+        $(".mw-flex-container").css("display","flex").show();
+        $(".mw-loader").fadeOut(1000);
+        $("html").css("overflow-y","hidden");
+    } else if ( n > 10 ) { 
         n = 1; 
-        $(".mobile-welcome").html(function(){
-            $(".mw-flex-container").css("display","flex").fadeIn(5000);
-            $(".mw-loader").fadeOut(1000);
-            $("html").css("overflow-y","hidden");
-        });
+        $(".mw-flex-container").css("display","flex").show();
+        $(".mw-loader").fadeOut(1000);
+        $("html").css("overflow-y","hidden");
     } else if ( n < 4 ) {
         n++;
-        $(".mobile-welcome").html(function(){
-            $(".mw-flex-container").css("display","flex").fadeIn(5000);
-            $(".mw-loader").fadeOut(1000);
-            $("html").css("overflow-y","hidden");
-        });
+        $(".mw-flex-container").css("display","flex").show();
+        $(".mw-loader").fadeOut(1000);
+        $("html").css("overflow-y","hidden");
     } else {
         n++;
         $(".mobile-welcome").hide();

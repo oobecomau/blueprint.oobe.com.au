@@ -899,14 +899,16 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
     .md-footer { margin-top: 0 !important; }    
 }
 
-/******* Mobile Screen Welcome *******/
+/******** Mobile Screen Welcome ***********************************************/
 @media only screen and (min-device-width: 1180px) {
+    .mobile-welcome { display: none; }
+}
+@media only screen and (max-device-width: 1180px) and (orientation:landscape) {
     .mobile-welcome { display: none; }
 }
 @media only screen and (max-device-width: 1180px) and (orientation:portrait) { 
     .mobile-welcome {
         display: block;
-        background-image: url('../img/The-blueprint_Mobile_Texture-background.jpg');
         position: fixed;
         height: 100%;
         width: 100%;
@@ -921,6 +923,16 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         display: none;
         flex-direction: column;
         align-items: center;
+    }
+    .mw-flex-container::before {
+        content: '';
+        background-image: url('../img/The-blueprint_Mobile_Texture-background.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vh;
+        z-index: -1;
     }
     .mw-flex-container div { 
         text-align: center;
