@@ -162,33 +162,37 @@
     }); 
 
     /* Mobile Screen Welcome */
-    var n = undefined;
-    n = localStorage.getItem('on_load_counter');
+    var n = localStorage.getItem('on_load_counter');
     if ( n === null ) { 
         n = 1;
         $(".mobile-welcome").html(function(){
             $(".mw-flex-container").css("display","flex").fadeIn(5000);
             $(".mw-loader").fadeOut(1000);
+            $("html").css("overflow-y","hidden");
         });
-    } else if ( n > 50 ) { 
+    } else if ( n > 5 ) { 
         n = 1; 
         $(".mobile-welcome").html(function(){
             $(".mw-flex-container").css("display","flex").fadeIn(5000);
             $(".mw-loader").fadeOut(1000);
+            $("html").css("overflow-y","hidden");
         });
     } else if ( n < 4 ) {
         n++;
         $(".mobile-welcome").html(function(){
             $(".mw-flex-container").css("display","flex").fadeIn(5000);
             $(".mw-loader").fadeOut(1000);
+            $("html").css("overflow-y","hidden");
         });
     } else {
         n++;
         $(".mobile-welcome").hide();
+        $("html").css("overflow-y","scroll");
     }
     localStorage.setItem('on_load_counter', n);
     document.getElementById('counter').innerHTML = n;
     $("#mobileScreen").on("click", function() {
         $(".mobile-welcome").hide(1000);
+        $("html").css("overflow-y","scroll");
     });
 
