@@ -170,7 +170,7 @@
             $(".mw-loader").fadeOut(1000);
             $("html").css("overflow-y","hidden");
         });
-    } else if ( n > 5 ) { 
+    } else if ( n > 70 ) { 
         n = 1; 
         $(".mobile-welcome").html(function(){
             $(".mw-flex-container").css("display","flex").fadeIn(5000);
