@@ -161,11 +161,34 @@
         $(".md-top.md-icon").show();
     }); 
 
-
-    $(".mobile-welcome").html(function(){
-        $(".mw-flex-container").css("display","flex").fadeIn(5000);
-        $(".mw-loader").fadeOut(1000);
-    });
+    /* Mobile Screen Welcome */
+    var n = undefined;
+    n = localStorage.getItem('on_load_counter');
+    if ( n === null ) { 
+        n = 1;
+        $(".mobile-welcome").html(function(){
+            $(".mw-flex-container").css("display","flex").fadeIn(5000);
+            $(".mw-loader").fadeOut(1000);
+        });
+    } else if ( n > 50 ) { 
+        n = 1; 
+        $(".mobile-welcome").html(function(){
+            $(".mw-flex-container").css("display","flex").fadeIn(5000);
+            $(".mw-loader").fadeOut(1000);
+        });
+    } else if ( n < 4 ) {
+        n++;
+        $(".mobile-welcome").html(function(){
+            $(".mw-flex-container").css("display","flex").fadeIn(5000);
+            $(".mw-loader").fadeOut(1000);
+        });
+    } else {
+        n++;
+        $(".mobile-welcome").hide();
+    }
+    localStorage.setItem('on_load_counter', n);
+    document.getElementById('counter').innerHTML = n;
     $("#mobileScreen").on("click", function() {
         $(".mobile-welcome").hide(1000);
     });
+

@@ -905,6 +905,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 }
 @media only screen and (max-device-width: 1180px) and (orientation:portrait) { 
     .mobile-welcome {
+        display: block;
         background-image: url('../img/The-blueprint_Mobile_Texture-background.jpg');
         position: fixed;
         height: 100%;
@@ -959,12 +960,22 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         width: 60%;
         height: auto; 
     }
+    .mobile-welcome * button { padding: 10px; }
     .mobile-welcome * h3 { font-size: x-large; }
 }
 @media only screen and (max-device-width: 375px) and (orientation:portrait) {
     .mw-flex-container div { margin: 0 0 0 0; }
+    #bp-stacked {
+        width: 80%;
+        height: auto;
+    }
+    #bp-desktop { 
+        width: 45%;
+        height: auto; 
+    }
     .mobile-welcome * button span { font-size: x-large; }
 }
+.mobile-welcome #counter { display: none; }
 .mw-loader {
     position: fixed;
     height: 100%;
@@ -994,7 +1005,10 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
+/* hide Hest Hub Size */
+@media only screen and (width: 1024px) and (height: 600px) {
+    .mobile-welcome { display: none; }
+}
 
 
 
