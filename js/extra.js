@@ -168,7 +168,7 @@
         $(".mw-flex-container").css("display","flex").show();
         $(".mw-loader").fadeOut(1000);
         $("html").css("overflow-y","hidden");
-    } else if ( n > 10 ) { 
+    } else if ( n > 100 ) { 
         n = 1; 
         $(".mw-flex-container").css("display","flex").show();
         $(".mw-loader").fadeOut(1000);
