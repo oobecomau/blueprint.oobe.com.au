@@ -934,8 +934,9 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
         width: 100vh;
         z-index: -1;
     }
-    .mw-flex-container div { 
+    .mw-flex-container div {
         text-align: center;
+        display: none;
     }
     .mobile-welcome * h3, 
     .mobile-welcome * button span { color: #FFF; } 
@@ -947,7 +948,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
     }
     #mw1 { transform: translate(27%, 5%); }
     #bp-powered {
-        width: 35%;
+        width: 30%;
         height: auto;
     }
     #mw2 { transform: translateX(-25%); }
@@ -977,7 +978,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 }
 @media only screen and (max-device-width: 375px) and (orientation:portrait) {
     #bp-powered {
-        width: 30%;
+        width: 25%;
         height: auto;
     }
     .mw-flex-container div { margin: 0 0 0 0; }
@@ -994,14 +995,11 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 }
 .mobile-welcome #counter { display: none; }
 .mw-loader {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    transition: width 0ms, height 0ms, opacity 1; 
+    position: absolute;
     opacity: 1;
-    left: 50%;
+    right: 50%;
     top: 50%;
-    transform: translate(-10%,-10%);
+    transform: translate(50%,-50%);
     z-index: 99;
 }
 .mw-loader div {
@@ -1026,6 +1024,6 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
 @media only screen and (width: 1024px) and (height: 600px) {
     .mobile-welcome { display: none; }
 }
-
+/************************************************************************/
 
 
