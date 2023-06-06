@@ -645,7 +645,7 @@ nav[data-md-level="1"] .md-nav__list .md-nav__item .md-nav__link.md-nav__link--a
     #cs span { font-size: 20px; }
 }
 @media screen and (min-width: 60em) { 
-    .mobile-tabs { display: none; }
+    .mobile-tabs { display: none !important; }
     #mobile-back-btn { display: none; }
 }
 @media screen and (max-width: 60em) {
