@@ -101,7 +101,7 @@ img[src*='#center'] {
         height: 2rem;
         border-radius: 0 50px 50px 0;
     }
-    #mobile-search { display: none; }
+    #mobile-search { display: none !important; }
 }
 @media screen and (max-width: 60em){
     /* #mag-desktop { display: none; } */
@@ -165,7 +165,6 @@ img[src*='#center'] {
     font-weight: 500;
 }
 /* Icon Search */
-#mobile-search #mag-mobile,
 .md-search__icon.md-icon {
     position: relative;
     display: block;
@@ -173,7 +172,16 @@ img[src*='#center'] {
     height: 1.3rem;
     width: 1.3rem;
 }
-#mobile-search #mag-mobile { top: 0 !important; }
+@media screen and (max-width: 60em) {
+    #mobile-search #mag-mobile {
+        position: relative;
+        display: block;
+        margin: auto; 
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+    #mobile-search #mag-mobile { top: 0 !important; }
+}
 .md-search__icon.md-icon { top: .4rem; }
 
 
