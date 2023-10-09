@@ -1576,11 +1576,11 @@
 <p>The following ABAC settings outlines the Azure Active Directory configuration for all implementation types.</p>
 <p><code>Azure Active Directory &gt; Properties</code></p>
 <ul>
-<li>Name: <code>&lt;Agency Name&gt;</code></li>
+<li>Name: <code>&lt;Organisation Name&gt;</code></li>
 <li>Country or Region: <code>Australia</code></li>
 <li>Location: <code>Australian datacenters</code></li>
 <li>Notification language: <code>English</code></li>
-<li>Technical Contact: <code>&lt;username&gt;@&lt;Agency&gt;.gov.au</code></li>
+<li>Technical Contact: <code>&lt;username&gt;@organisation.com.au</code></li>
 <li>Global privacy contact: <code>Not configured</code></li>
 <li>Privacy Statement URL: <code>Not configured</code></li>
 <li>Access management for Azure Resources: <code>No</code></li>
@@ -1622,7 +1622,7 @@
 <li>Collaboration restrictions</li>
 <li>Allow invitations only to the specified domains (most restrictive): <code>Selected</code></li>
 <li>Target domains:<ul>
-<li><code>&lt;Agency&gt;.gov.au</code></li>
+<li><code>organisation.com.au</code></li>
 </ul>
 </li>
 </ul>
@@ -1644,7 +1644,7 @@
 <p><code>Azure Active Directory &gt; Groups &gt; Expiration</code></p>
 <ul>
 <li>Group lifetime (in days): <code>365</code></li>
-<li>Email contact for groups with no owners: <code>Office365_Group_Expiration@&lt;Agency&gt;.gov.au</code></li>
+<li>Email contact for groups with no owners: <code>Office365_Group_Expiration@organisation.com.au</code></li>
 <li>Enable expiration for these Microsoft 365 groups: <code>All</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Groups &gt; Naming policy</code></p>
@@ -1653,16 +1653,16 @@
 </ul>
 <p><code>Azure Active Directory &gt; Custom domain names</code></p>
 <ul>
-<li><code>&lt;Agency&gt;.gov.au (Primary)</code></li>
-<li><code>&lt;Agency&gt;.onmicrosoft.com</code></li>
+<li><code>organisation.com.au (Primary)</code></li>
+<li><code>organisation.onmicrosoft.com</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Company branding</code></p>
 <ul>
 <li>Locale: <code>Default</code></li>
 <li>Sign-in Page background image (1920x1080px):    Generic Australian Government Background</li>
 <li>Banner logo (280x60px): Generic Australian Government Logo</li>
-<li>Username hint: <code>user@agency.gov.au</code></li>
-<li>Sign-in page text: <code>&lt;insert agency logon banner/disclaimer warning message&gt;</code>
+<li>Username hint: <code>user@Organisation.gov.au</code></li>
+<li>Sign-in page text: <code>&lt;insert Organisation logon banner/disclaimer warning message&gt;</code>
     Note: User terms are configured using Conditional Access Policies.</li>
 <li>Sign-in page background color: -</li>
 <li>Square logo image (240x240px): Generic Australian Government Logo</li>
@@ -1684,7 +1684,7 @@
 <p><code>Azure Active Directory &gt; Password reset &gt; Properties</code></p>
 <ul>
 <li>Self-service password reset enabled: <code>Selected</code></li>
-<li>Select group: <code>rol-Agency-Users</code></li>
+<li>Select group: <code>rol-Organisation-Users</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Password reset &gt; Authentication methods</code></p>
 <ul>
@@ -1728,52 +1728,52 @@
 </ul>
 <p><code>Azure Active Directory &gt; Groups &gt; Naming policy</code></p>
 <ul>
-<li>Group naming policy: <code>Agency to define</code></li>
+<li>Group naming policy: <code>Organisation to define</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Groups &gt; Expiration</code></p>
 <ul>
 <li>Group lifetime (in days): <code>365</code></li>
-<li>Email contact for groups with no owners: <code>Office365_Group_Expiration@&lt;Agency&gt;.gov.au</code></li>
+<li>Email contact for groups with no owners: <code>Office365_Group_Expiration@organisation.com.au</code></li>
 <li>Enable expiration for these Microsoft 365 groups: <code>All</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Groups</code></p>
 <ul>
-<li>Group Name: <code>grp-&lt;Agency Acronym&gt;O365-Outlook</code></li>
+<li>Group Name: <code>grp-&lt;Organisation Acronym&gt;O365-Outlook</code></li>
 <li>Implementation types: <code>all</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Office</code></li>
-<li>Email: <code>grp-&lt;Agency Acronym&gt;o365-outlook@&lt;Agency&gt;.gov.au</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
-<li>Owners: <code>&lt;Agency User&gt;</code></li>
+<li>Email: <code>grp-&lt;Organisation Acronym&gt;o365-outlook@organisation.com.au</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
+<li>Owners: <code>&lt;Organisation User&gt;</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>None</code></li>
 <li>Azure role assignment: <code>None</code></li>
-<li>Group Name: <code>grp-&lt;Agency Acronym&gt;o365-Teams</code></li>
+<li>Group Name: <code>grp-&lt;Organisation Acronym&gt;o365-Teams</code></li>
 <li>Implementation types: <code>all</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Office</code></li>
-<li>Email: <code>grp-&lt;Agency Acronym&gt;o365-teams@&lt;Agency&gt;.gov.au</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
-<li>Owners: <code>&lt;Agency User&gt;</code></li>
+<li>Email: <code>grp-&lt;Organisation Acronym&gt;o365-teams@organisation.com.au</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
+<li>Owners: <code>&lt;Organisation User&gt;</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>None</code></li>
 <li>Azure role assignment: <code>None</code></li>
-<li>Group Name: <code>rol-Agency-administrators</code></li>
+<li>Group Name: <code>rol-Organisation-administrators</code></li>
 <li>Implementation types: <code>all</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Security</code></li>
 <li>Members: <code>None admin accounts</code></li>
-<li>Owners: <code>&lt;Agency Owner&gt; (Admin)</code></li>
+<li>Owners: <code>&lt;Organisation Owner&gt; (Admin)</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>Microsoft 365 E5</code></li>
 <li>Azure role assignment: <code>None</code></li>
-<li>Group Name: <code>rol-Agency-users</code></li>
+<li>Group Name: <code>rol-Organisation-users</code></li>
 <li>Implementation types: <code>Hybrid</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Windows server AD</code> </li>
@@ -1784,7 +1784,7 @@
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>Microsoft 365 E5</code></li>
 <li>Azure role assignment: <code>None</code></li>
-<li>Group Name: <code>rol-Agency-users</code></li>
+<li>Group Name: <code>rol-Organisation-users</code></li>
 <li>Implementation types: <code>Cloud</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code> </li>
@@ -1830,11 +1830,11 @@
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>None</code></li>
 <li>Azure role assignment: `None</li>
-<li>Group Name: <code>rol-AgencyName-o365groupcreators</code></li>
+<li>Group Name: <code>rol-OrganisationName-o365groupcreators</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Security</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
 <li>Owners: <code>None</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
@@ -1844,7 +1844,7 @@
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Security</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
 <li>Owners: <code>None</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
@@ -1854,17 +1854,17 @@
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Security</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
 <li>Owners: <code>None</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
 <li>Licenses: <code>None</code></li>
 <li>Azure role assignment: <code>None</code></li>
-<li>Group Name: <code>rol-Agency-log-admin</code></li>
+<li>Group Name: <code>rol-Organisation-log-admin</code></li>
 <li>Membership type: <code>Assigned</code></li>
 <li>Source: <code>Cloud</code></li>
 <li>Type: <code>Security</code></li>
-<li>Members: <code>&lt;Agency User&gt;</code></li>
+<li>Members: <code>&lt;Organisation User&gt;</code></li>
 <li>Owners: <code>None</code></li>
 <li>Group membership: <code>None</code></li>
 <li>Applications: <code>None</code></li>
@@ -1873,7 +1873,7 @@
 </ul>
 <h3 id="delegate-office-365-group-creation">Delegate Office 365 Group Creation</h3>
 <p>Delegation of 365 Group creation is set through <a href="https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0">Azure AD (preview module) PowerShell for Graph</a>. For reference see <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups?view=o365-worldwide">manage creation of groups</a>.</p>
-<pre><code class="language-powershell">$GroupName = &quot;rol-&lt;AgencyName&gt;-o365groupcreators&quot;
+<pre><code class="language-powershell">$GroupName = &quot;rol-&lt;OrganisationName&gt;-o365groupcreators&quot;
 $AllowGroupCreation = $False
 
 Connect-AzureAD
@@ -1915,12 +1915,12 @@ Set-AzureADDirectorySetting -Id $settingsObjectID -DirectorySetting $settingsCop
 </ul>
 <p><code>Azure Active Directory &gt; Users &gt; Break Glass &gt; Groups</code></p>
 <ul>
-<li>Name: <code>Excluded from CA</code>, <code>rol-Agency-administrators</code>, <code>&lt;Agency Name&gt;</code>, <code>All Users</code></li>
+<li>Name: <code>Excluded from CA</code>, <code>rol-Organisation-administrators</code>, <code>&lt;Organisation Name&gt;</code>, <code>All Users</code></li>
 </ul>
 <p><code>Azure Active Directory &gt; Users &gt; Break Glass &gt; Licenses</code></p>
 <ul>
 <li>Products: <code>None</code></li>
-<li>Assignment Paths: <code>Inherited (rol-Agency-administrators)</code></li>
+<li>Assignment Paths: <code>Inherited (rol-Organisation-administrators)</code></li>
 </ul>
 <h3 id="azure-active-directory-identity-protection">Azure Active Directory Identity Protection</h3>
 <p>The following ABAC settings outlines the Identity Protection configuration for all implementation types.</p>
@@ -1957,11 +1957,11 @@ Set-AzureADDirectorySetting -Id $settingsObjectID -DirectorySetting $settingsCop
 <tbody>
 <tr>
 <td>Cloud-native</td>
-<td><code>break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com</code><br><code>break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com</code></td>
+<td><code>break.glass_priv1@organisation.onmicrosoft.com</code><br><code>break.glass_priv2@organisation.onmicrosoft.com</code></td>
 </tr>
 <tr>
 <td>Hybrid</td>
-<td><code>break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com</code><br><code>break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com</code><br><code>Sync_&lt;account_1&gt;_&lt;account guid&gt;@&lt;Agency&gt;.onmicrosoft.com</code><br><code>Sync_&lt;account_2&gt;_&lt;account guid&gt;@&lt;Agency&gt;.onmicrosoft.com</code></td>
+<td><code>break.glass_priv1@organisation.onmicrosoft.com</code><br><code>break.glass_priv2@organisation.onmicrosoft.com</code><br><code>Sync_&lt;account_1&gt;_&lt;account guid&gt;@organisation.onmicrosoft.com</code><br><code>Sync_&lt;account_2&gt;_&lt;account guid&gt;@organisation.onmicrosoft.com</code></td>
 </tr>
 </tbody>
 </table>
@@ -1989,11 +1989,11 @@ Set-AzureADDirectorySetting -Id $settingsObjectID -DirectorySetting $settingsCop
 <tbody>
 <tr>
 <td>Cloud-native</td>
-<td><code>break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com</code><br><code>break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com</code></td>
+<td><code>break.glass_priv1@organisation.onmicrosoft.com</code><br><code>break.glass_priv2@organisation.onmicrosoft.com</code></td>
 </tr>
 <tr>
 <td>Hybrid</td>
-<td><code>break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com</code><br><code>break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com</code><br><code>Sync_&lt;account_1&gt;_&lt;account guid&gt;@&lt;Agency&gt;.onmicrosoft.com</code><br><code>Sync_&lt;account_2&gt;_&lt;account guid&gt;@&lt;Agency&gt;.onmicrosoft.com</code></td>
+<td><code>break.glass_priv1@organisation.onmicrosoft.com</code><br><code>break.glass_priv2@organisation.onmicrosoft.com</code><br><code>Sync_&lt;account_1&gt;_&lt;account guid&gt;@organisation.onmicrosoft.com</code><br><code>Sync_&lt;account_2&gt;_&lt;account guid&gt;@organisation.onmicrosoft.com</code></td>
 </tr>
 </tbody>
 </table>
@@ -2017,81 +2017,54 @@ Set-AzureADDirectorySetting -Id $settingsObjectID -DirectorySetting $settingsCop
 <li>Automatically block users who report fraud: <code>On</code></li>
 <li>Code to report fraud during initial greeting: <code>0</code></li>
 </ul>
+<p><code>Azure Active Directory &gt; Security &gt; Authentication methods</code></p>
+<ul>
+<li>FIDO2 security key: <code>Not configured</code></li>
+<li>Microsoft Authentication: <code>Enabled</code></li>
+<li>SMS (preview): <code>Not configured</code></li>
+<li>Temporary Access Pass: <code>Not configured</code></li>
+<li>Third-party software OATH tokens (preview): <code>Not configured</code></li>
+<li>Voice call (preview): <code>Not configured</code></li>
+<li>Email OTP (preview): <code>Not configured</code></li>
+<li>Certificate-based authentication: <code>Not configured</code></li>
+</ul>
+<p><code>Azure Active Directory &gt; Security &gt; Authentication methods &gt; Microsoft Authentication</code></p>
+<ul>
+<li>Enable and Target: <code>Enable</code></li>
+<li>Include: <code>All users</code></li>
+<li>Authentication mode: <code>Push</code></li>
+<li>Allow use of Microsoft Authenticator OTP: <code>Yes</code></li>
+<li>Require number matching for push notifications: <code>Enabled, All users</code></li>
+<li>Show application name in push and passwordless notifications: <code>Enabled, All users</code></li>
+<li>Show geographic location in push and passwordless notifications: <code>Enabled, All users</code> </li>
+</ul>
 <h3 id="hybrid-identity-azure-ad-connect-hybrid-implementation-types-only">Hybrid Identity - Azure AD Connect (hybrid implementation types only)</h3>
 <p>The following ABAC settings outlines the Azure AD connect configuration for hybrid implementation types only.</p>
 <p>Primary Azure AD Connect settings</p>
 <ul>
 <li>Installation Mode: <code>Custom</code></li>
 <li>SQL Mode: <code>Local DB</code></li>
-<li>Directory to connect to: <code>&lt;Agency&gt;.gov.au</code></li>
-<li>Source of truth for account information: <code>On-Premises Active Directory (&lt;Agency&gt;.gov.au)</code></li>
+<li>Directory to connect to: <code>organisation.com.au</code></li>
+<li>Source of truth for account information: <code>On-Premises Active Directory (organisation.com.au)</code></li>
 <li>User sign-in method</li>
 </ul>
-<pre><code>Selected - Pass-through authentication
-Not selected – Password Hash Synchronization
-Not selected – Federation with AD FS
-Not selected – Federation with PingFederate
+<pre><code>  Selected - Pass-through authentication
+  Not selected – Password Hash Synchronization
+  Not selected – Federation with AD FS
+  Not selected – Federation with PingFederate
 </code></pre>
 <ul>
 <li>Enable Single Sign-on: <code>Enabled</code></li>
 <li>Directory Type: <code>Active Directory</code></li>
-<li>Forest for Configured Directories: <code>&lt;agency_forest_name&gt;.local</code></li>
-<li>Active Directory UPN Suffix: <code>&lt;Agency&gt;.gov.au</code></li>
+<li>Forest for Configured Directories: <code>&lt;Organisation_forest_name&gt;.local</code></li>
+<li>Active Directory UPN Suffix: <code>organisation.com.au</code></li>
 <li>Azure AD Domain: <code>Verified</code></li>
 <li>Attribute used for login: <code>userPrincipalName   (User ID)</code></li>
 <li>Domain and OU filtering</li>
-<li>Directory: <code>&lt;agency_forest_name&gt;.local</code></li>
-<li>Sync selected domains and OUs:
-  <code>Department
-    . Groups
-    .  . Admin
-    .  . Security Access
-    . Users
-    .  . Admin
-    .  . General
-    .  . Service Accounts
-    . Computers</code></li>
-<li>How users should be identified in your on-premises directories: <code>Users are represented only once across all directories</code></li>
-<li>How users should be identified with Azure AD: <code>ms-DS-Consistency-Guid</code></li>
-<li>Filter users and devices: <code>Synchronize all users and devices</code></li>
-<li>Optional Features</li>
-<li>Exchange hybrid deployment: <code>Enabled</code></li>
-<li>Exchange Mail Public Folders: <code>Disabled</code></li>
-<li>Password hash synchronization: <code>Disabled</code></li>
-<li>Password writeback: <code>Disabled</code></li>
-<li>Group writeback: <code>Disabled</code></li>
-<li>Azure AD app and attribute filtering: <code>Enabled</code></li>
-<li>Azure AD Apps: The following applications are enabled:
-  <code>Office 365 ProPlus
-  Exchange Online
-  SharePoint Online
-  Lync Online
-  Azure RMS
-  Intune
-  Dynamics CRM
-  3rd party application</code></li>
+<li>Directory: <code>&lt;Organisation_forest_name&gt;.local</code></li>
+<li>Sync selected domains and OUs:</li>
 </ul>
-<p>Standby Azure AD Connect settings:</p>
-<ul>
-<li>Source of truth for account information: <code>On-Premises Active Directory (&lt;Agency&gt;.gov.au)</code></li>
-<li>User sign-in method</li>
-</ul>
-<pre><code>Selected - Pass-through authentication
-Not selected – Password Hash Synchronization
-Not selected – Federation with AD FS
-Not selected – Federation with PingFederate
-</code></pre>
-<ul>
-<li>Enable Single Sign-on: <code>Enabled</code></li>
-<li>Directory Type: <code>Active Directory</code></li>
-<li>Forest for Configured Directories: <code>&lt;agency_forest_name&gt;.local</code></li>
-<li>Active Directory UPN Suffix: <code>&lt;Agency&gt;.gov.au</code></li>
-<li>Azure AD Domain: <code>Verified</code></li>
-<li>Attribute used for login: <code>userPrincipleName   (User ID)</code></li>
-<li>Domain and OU filtering</li>
-<li>Directory | <code>&lt;agency_forest_name&gt;.local</code></li>
-<li>Sync selected domains and OUs
-  <code>Department
+<pre><code>  Department
       . Groups
       .  . Admin
       .  . Security Access
@@ -2099,7 +2072,9 @@ Not selected – Federation with PingFederate
       .  . Admin
       .  . General
       .  . Service Accounts
-      . Computers</code></li>
+      . Computers
+</code></pre>
+<ul>
 <li>How users should be identified in your on-premises directories: <code>Users are represented only once across all directories</code></li>
 <li>How users should be identified with Azure AD: <code>ms-DS-Consistency-Guid</code></li>
 <li>Filter users and devices: <code>Synchronize all users and devices</code></li>
@@ -2112,14 +2087,67 @@ Not selected – Federation with PingFederate
 <li>Azure AD app and attribute filtering: <code>Enabled</code></li>
 <li>Azure AD Apps: The following applications are enabled:</li>
 </ul>
-<pre><code>Office 365 ProPlus
-Exchange Online
-SharePoint Online
-Lync Online
-Azure RMS
-Intune
-Dynamics CRM
-3rd party application
+<pre><code>  Office 365 ProPlus
+  Exchange Online
+  SharePoint Online
+  Lync Online
+  Azure RMS
+  Intune
+  Dynamics CRM
+  3rd party application
+</code></pre>
+<p>Standby Azure AD Connect settings:</p>
+<ul>
+<li>Source of truth for account information: <code>On-Premises Active Directory (organisation.com.au)</code></li>
+<li>User sign-in method</li>
+</ul>
+<pre><code>  Selected - Pass-through authentication
+  Not selected – Password Hash Synchronization
+  Not selected – Federation with AD FS
+  Not selected – Federation with PingFederate
+</code></pre>
+<ul>
+<li>Enable Single Sign-on: <code>Enabled</code></li>
+<li>Directory Type: <code>Active Directory</code></li>
+<li>Forest for Configured Directories: <code>&lt;Organisation_forest_name&gt;.local</code></li>
+<li>Active Directory UPN Suffix: <code>organisation.com.au</code></li>
+<li>Azure AD Domain: <code>Verified</code></li>
+<li>Attribute used for login: <code>userPrincipleName   (User ID)</code></li>
+<li>Domain and OU filtering</li>
+<li>Directory | <code>&lt;Organisation_forest_name&gt;.local</code></li>
+<li>Sync selected domains and OUs</li>
+</ul>
+<pre><code>  Department
+      . Groups
+      .  . Admin
+      .  . Security Access
+      . Users
+      .  . Admin
+      .  . General
+      .  . Service Accounts
+      . Computers
+</code></pre>
+<ul>
+<li>How users should be identified in your on-premises directories: <code>Users are represented only once across all directories</code></li>
+<li>How users should be identified with Azure AD: <code>ms-DS-Consistency-Guid</code></li>
+<li>Filter users and devices: <code>Synchronize all users and devices</code></li>
+<li>Optional Features</li>
+<li>Exchange hybrid deployment: <code>Enabled</code></li>
+<li>Exchange Mail Public Folders: <code>Disabled</code></li>
+<li>Password hash synchronization: <code>Disabled</code></li>
+<li>Password writeback: <code>Disabled</code></li>
+<li>Group writeback: <code>Disabled</code></li>
+<li>Azure AD app and attribute filtering: <code>Enabled</code></li>
+<li>Azure AD Apps: The following applications are enabled:</li>
+</ul>
+<pre><code>  Office 365 ProPlus
+  Exchange Online
+  SharePoint Online
+  Lync Online
+  Azure RMS
+  Intune
+  Dynamics CRM
+  3rd party application
 </code></pre>
 <p>The following table describes the Azure AD attributes being synchronized via Azure AD Connect.</p>
 <table>
@@ -2916,7 +2944,7 @@ Dynamics CRM
 <p>./RegisterConnector.ps1 -modulePath "C:\Program Files\Microsoft Azure AD Connect Authentication Agent\Modules\" -moduleName "PassthroughAuthPSModule" -Authenticationmode Credentials -Usercredentials $cred -Feature PassthroughAuthentication
   ```</p>
 <h2 id="privileged-identity-management">Privileged identity management</h2>
-<p>The ABAC settings for the Agency Privileged Identity Management for all implementations types can be found below. This includes Authentication Administrator, Azure Information Protection Administrator, Global Administrator, Exchange Administrator, Helpdesk Administrator, Intune Administrator, Office Apps Administrator, Power BI Administrator, Power Platform, Privileged Role Administrator, Security Administrator, Security Operator, SharePoint Administrator, Teams Communications Administrator, Teams Communications Support Engineer, Teams Communications Support Specialist, Teams Service Administrator and User Administrator settings. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+<p>The ABAC settings for the Organisation Privileged Identity Management for all implementations types can be found below. This includes Authentication Administrator, Azure Information Protection Administrator, Global Administrator, Exchange Administrator, Helpdesk Administrator, Intune Administrator, Office Apps Administrator, Power BI Administrator, Power Platform, Privileged Role Administrator, Security Administrator, Security Operator, SharePoint Administrator, Teams Communications Administrator, Teams Communications Support Engineer, Teams Communications Support Specialist, Teams Service Administrator and User Administrator settings. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
 <h3 id="authentication-administrator">Authentication administrator</h3>
 <p><code>Azure AD Privileged Identity Management &gt; Azure AD roles &gt; Roles &gt; Authentication Administrator &gt; Role settings</code></p>
 <ul>
@@ -4160,7 +4188,7 @@ Dynamics CRM
 </li>
 </ul>
 <h3 id="licensing">Licensing</h3>
-<p>The following table describes the user (<code>rol-Agency-users</code>) licensing settings for all implementation types that are configured within the tenant available at <code>Azure Active Directory &gt; Groups &gt; All groups &gt; rol-Agency-users &gt; Licenses &gt; Microsoft 365 E5</code></p>
+<p>The following table describes the user (<code>rol-Organisation-users</code>) licensing settings for all implementation types that are configured within the tenant available at <code>Azure Active Directory &gt; Groups &gt; All groups &gt; rol-Organisation-users &gt; Licenses &gt; Microsoft 365 E5</code></p>
 <table>
 <thead>
 <tr>
@@ -4435,8 +4463,8 @@ Dynamics CRM
 </tr>
 </tbody>
 </table>
-<p>The following table describes the admin (<code>rol-Agency-administrators</code>) licensing settings for all implementation types that are configured within the tenant.</p>
-<p><code>Azure Active Directory | Groups | All groups &gt; rol-Agency-administrators | Licenses &gt; Microsoft 365 E5</code></p>
+<p>The following table describes the admin (<code>rol-Organisation-administrators</code>) licensing settings for all implementation types that are configured within the tenant.</p>
+<p><code>Azure Active Directory | Groups | All groups &gt; rol-Organisation-administrators | Licenses &gt; Microsoft 365 E5</code></p>
 <table>
 <thead>
 <tr>
@@ -4720,43 +4748,64 @@ Dynamics CRM
 <li>Description: <code>Application Protection policies</code></li>
 <li>Enrollment state: <code>With enrollment</code></li>
 <li>Targeted apps</li>
-<li>Protected apps:
-  <code>Office-365-ProPlus-1810-Allowed.xml
-  Recommended-Denied-Office-365-ProPlus-1810.xml
-  MsEdge - WIPMode-Allow - Enterprise AppLocker Policy File.xml
-  Microsoft OneDrive
-  Notepad
-  Microsoft Paint
-  Microsoft Remote Desktop
-  Microsoft Teams
-  Microsoft Azure Information Protection
-  Microsoft Edge
-  Microsoft People
-  Word Mobile
-  Excel Mobile
-  PowerPoint Mobile
-  OneDrive App
-  OneNote
-  Mail and Calendar for Windows 10
-  Microsoft Photos
-  Groove Music
-  Microsoft Movies and TV
-  Microsoft Messaging
-  Company Portal</code></li>
+<li>Protected apps:</li>
+</ul>
+<pre><code>                      Office-365-ProPlus-1810-Allowed.xml
+                      Recommended-Denied-Office-365-ProPlus-1810.xml
+                      MsEdge - WIPMode-Allow - Enterprise AppLocker Policy File.xml
+                      Microsoft OneDrive
+                      Notepad
+                      Microsoft Paint
+                      Microsoft Remote Desktop
+                      Microsoft Teams
+                      Microsoft Azure Information Protection
+                      Microsoft Edge
+                      Microsoft People
+                      Word Mobile
+                      Excel Mobile
+                      PowerPoint Mobile
+                      OneDrive App
+                      OneNote
+                      Mail and Calendar for Windows 10
+                      Microsoft Photos
+                      Groove Music
+                      Microsoft Movies and TV
+                      Microsoft Messaging
+                      Company Portal
+</code></pre>
+<ul>
 <li>Exempt apps: -</li>
 <li>Required settings</li>
 <li>Windows Information Protection mode: <code>Block</code></li>
-<li>Corporate identity: <code>&lt;Agency&gt;.gov.au</code></li>
+<li>Corporate identity: <code>organisation.com.au</code></li>
 <li>Advanced settings</li>
 <li>Network perimeter<ul>
 <li>Type: <code>Cloud resources</code></li>
 <li>Name: <code>Office365</code></li>
-<li>Value:
-<code>Agency.sharepoint.com|Agency-my.sharepoint.com|Agency-files.sharepoint.com|tasks.office.com|protection.office.com|meet.lync.com|teams.microsoft.com|www.yammer.com|yammer.com|persona.yammer.com|outlook.office.com|outlook.office365.com|attachments.office.net|Agency.crm.dynamics.com|Agency.visualstudio.com|Agency.powerbi.com</code></li>
 <li>Enterprise Proxy Servers list is authoritative (do not auto-detect): <code>Off</code></li>
 <li>Enterprise IP Ranges list is authoritative (do not auto-detect): <code>Off</code></li>
+<li>Value:</li>
 </ul>
 </li>
+</ul>
+<pre><code>                Organisation.sharepoint.com
+                Organisation-my.sharepoint.com
+                Organisation-files.sharepoint.com
+                tasks.office.com
+                protection.office.com
+                meet.lync.com
+                teams.microsoft.com
+                www.yammer.com
+                yammer.com
+                persona.yammer.com
+                outlook.office.com
+                outlook.office365.com
+                attachments.office.net
+                Organisation.crm.dynamics.com
+                Organisation.visualstudio.com
+                Organisation.powerbi.com
+</code></pre>
+<ul>
 <li>Data protection<ul>
 <li>Upload a Data Recovery Agent (DRA) certificate to allow recovery of encrypted data: <code>Not configured</code></li>
 <li>Prevent corporate data from being accessed by apps when the device is locked. Applies only to Windows 10 Mobile: <code>Off</code></li>
@@ -4768,7 +4817,7 @@ Dynamics CRM
 </ul>
 </li>
 <li>Assignments</li>
-<li>Included groups: <code>rol-Agency-administrators</code>, <code>rol-Agency-users</code></li>
+<li>Included groups: <code>rol-Organisation-administrators</code>, <code>rol-Organisation-users</code></li>
 <li>Excluded groups: -</li>
 <li>Scope tags: <code>Default</code></li>
 </ul>
@@ -4780,29 +4829,35 @@ Dynamics CRM
 <li>Apps</li>
 <li>Target to apps on all device types: <code>Yes</code></li>
 <li>Device types: -</li>
-<li>Public apps:
-  <code>Adobe Acrobat Reader
-  Microsoft Dynamics 365
-  Microsoft Dynamics 365 for phones
-  Skype for Business
-  Microsoft Excel
-  Microsoft Edge
-  Microsoft Outlook
-  Microsoft PowerPoint
-  Microsoft Word
-  Microsoft OneNote
-  Microsoft Planner
-  Microsoft Power BI
-  Azure Information Protection
-  Microsoft SharePoint
-  Microsoft OneDrive
-  Microsoft Teams
-  Microsoft Stream
-  Microsoft To-Do
-  Microsoft Visio Viewer</code></li>
-<li>Custom apps:
-  <code>com.adobe.acrobatdc.intune
-  com.microsoft.rdc.ios  Microsoft Dynamics 365</code></li>
+<li>Public apps:</li>
+</ul>
+<pre><code>                    Adobe Acrobat Reader
+                    Microsoft Dynamics 365
+                    Microsoft Dynamics 365 for phones
+                    Skype for Business
+                    Microsoft Excel
+                    Microsoft Edge
+                    Microsoft Outlook
+                    Microsoft PowerPoint
+                    Microsoft Word
+                    Microsoft OneNote
+                    Microsoft Planner
+                    Microsoft Power BI
+                    Azure Information Protection
+                    Microsoft SharePoint
+                    Microsoft OneDrive
+                    Microsoft Teams
+                    Microsoft Stream
+                    Microsoft To-Do
+                    Microsoft Visio Viewer
+</code></pre>
+<ul>
+<li>Custom apps:</li>
+</ul>
+<pre><code>                    com.adobe.acrobatdc.intune
+                    com.microsoft.rdc.ios  Microsoft Dynamics 365
+</code></pre>
+<ul>
 <li>Data protection</li>
 <li>Data Transfer<ul>
 <li>Backup org data to iTunes and iCloud backups: <code>Block</code></li>
@@ -4884,7 +4939,7 @@ Dynamics CRM
 </table>
 <ul>
 <li>Assignments</li>
-<li>Included groups: <code>rol-Agency-administrators</code>, <code>rol-Agency-users</code></li>
+<li>Included groups: <code>rol-Organisation-administrators</code>, <code>rol-Organisation-users</code></li>
 <li>Excluded groups: <code>grp-Windows-10-Devices</code></li>
 <li>Scope tags: <code>Default</code></li>
 </ul>
@@ -4949,7 +5004,7 @@ Dynamics CRM
 <ul>
 <li>Roles</li>
 <li>Microsoft Defender for Endpoint administrator (default)<ul>
-<li>Assigned user groups: <code>rol-Agency-security-defenderatp-admins</code></li>
+<li>Assigned user groups: <code>rol-Organisation-security-defenderatp-admins</code></li>
 </ul>
 </li>
 <li>Microsoft Defender for Endpoint Viewer<ul>
@@ -4957,7 +5012,7 @@ Dynamics CRM
 <li>View Data</li>
 <li>Security operations</li>
 <li>Threat and vulnerability management</li>
-<li>Assigned user groups: <code>rol-Agency-security-defenderatp-viewer</code></li>
+<li>Assigned user groups: <code>rol-Organisation-security-defenderatp-viewer</code></li>
 </ul>
 </li>
 <li>Microsoft Defender for Endpoint Remediation<ul>
@@ -4972,7 +5027,7 @@ Dynamics CRM
 <li>Alerts investigation</li>
 <li>Live response capabilities</li>
 <li>Advanced</li>
-<li>Assigned user groups: <code>rol-Agency-security-defenderatp-remediation</code></li>
+<li>Assigned user groups: <code>rol-Organisation-security-defenderatp-remediation</code></li>
 </ul>
 </li>
 <li>Device groups</li>
@@ -4980,19 +5035,19 @@ Dynamics CRM
 <li>Rank: <code>1</code></li>
 <li>Automation level: <code>Full - Remediate threats automatically</code></li>
 <li>Members:
-<code>Name Starts with &lt;Agency 3 characters&gt;
+<code>Name Starts with &lt;Organisation 3 characters&gt;
 And Domain Starts with &lt;Not configured&gt;
 And Tag: Starts with &lt;Not configured&gt;
 And OS In &lt;Not configured&gt;</code></li>
 <li>User access</li>
-<li>Azure AD user groups with access to this machine group: <code>rol-Agency-security-defenderatp-admins</code>, <code>rol-Agency-security-defenderatp-viewer</code>, <code>rol-Agency-security-defenderatp-remediation</code></li>
+<li>Azure AD user groups with access to this machine group: <code>rol-Organisation-security-defenderatp-admins</code>, <code>rol-Organisation-security-defenderatp-viewer</code>, <code>rol-Organisation-security-defenderatp-remediation</code></li>
 </ul>
 </li>
 <li>Device group name: <code>Ungrouped devices (default)</code><ul>
 <li>Rank: <code>Last</code></li>
 <li>Automation level: <code>Full - Remediate threats automatically</code></li>
 <li>User access</li>
-<li>Azure AD user groups with access to this machine group: <code>rol-Agency-security-defenderatp-admins</code>, <code>rol-Agency-security-defenderatp-viewer</code>, <code>rol-Agency-security-defenderatp-remediation</code>  </li>
+<li>Azure AD user groups with access to this machine group: <code>rol-Organisation-security-defenderatp-admins</code>, <code>rol-Organisation-security-defenderatp-viewer</code>, <code>rol-Organisation-security-defenderatp-remediation</code>  </li>
 </ul>
 </li>
 </ul>
@@ -5005,7 +5060,7 @@ And OS In &lt;Not configured&gt;</code></li>
 <li>Authorisation server URL: <code>https://login.windows.net/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/oauth2/token</code></li>
 <li>Resource: <code>https://graph.windows.net</code></li>
 <li>Client secret: <code>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></li>
-<li>Choose the SIEM you want to configure and download details to file.: <code>&lt;Agency SIEM&gt;</code></li>
+<li>Choose the SIEM you want to configure and download details to file.: <code>&lt;Organisation SIEM&gt;</code></li>
 </ul>
 </li>
 </ul>
@@ -5072,9 +5127,9 @@ Weapons</code></li>
 <ul>
 <li>System</li>
 <li>Organization details<ul>
-<li>Organizations display name: <code>AGENCY</code></li>
-<li>Environment name: <code>AGENCY ENVIRONMENT NAME</code></li>
-<li>Managed Domains: <code>&lt;Agency&gt;.onmicrosoft.com</code>, <code>&lt;Agency&gt;.gov.au</code></li>
+<li>Organizations display name: <code>Organisation</code></li>
+<li>Environment name: <code>Organisation ENVIRONMENT NAME</code></li>
+<li>Managed Domains: <code>organisation.onmicrosoft.com</code>, <code>organisation.com.au</code></li>
 </ul>
 </li>
 <li>Mail settings<ul>
@@ -5155,7 +5210,7 @@ Active Directory</code></li>
 <li>Azure AD Identity Protection: <code>Checked</code></li>
 <li>App Governance: <code>Not configured</code></li>
 <li>Information Protection</li>
-<li>Admin quarantine folder location: <code>https://&lt;Agency&gt;.sharepoint.com/sites/quarantine</code></li>
+<li>Admin quarantine folder location: <code>https://organisation.sharepoint.com/sites/quarantine</code></li>
 <li>User notification: <code>Not configured</code></li>
 <li>Microsoft Information Protection<ul>
 <li>Automatically scan new files for Microsoft Information Protection classification labels and content inspection warnings: <code>Checked</code></li>
@@ -5176,8 +5231,8 @@ Active Directory</code></li>
 </ul>
 <p><code>Settings (Cog) &gt; Manage admin access</code></p>
 <ul>
-<li>User: <code>&lt;Agency User&gt;</code></li>
-<li>Email: <code>&lt;agency_username&gt;@&lt;Agency&gt;.gov.au</code></li>
+<li>User: <code>&lt;Organisation User&gt;</code></li>
+<li>Email: <code>&lt;Organisation_username&gt;@organisation.com.au</code></li>
 <li>Role: <code>Global Admin</code></li>
 <li>Permission: <code>Full access</code></li>
 </ul>
@@ -5248,8 +5303,8 @@ Active Directory</code></li>
 <li>Policy name: <code>Break Glass Account 1 Activity</code></li>
 <li>Policy severity: <code>Medium</code></li>
 <li>Category: <code>Privileged accounts</code></li>
-<li>Description: <code>This policy monitors break glass account called "break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com" for all logon activity</code></li>
-<li>Account to monitor: <code>break.glass_priv1@&lt;Agency&gt;.onmicrosoft.com</code></li>
+<li>Description: <code>This policy monitors break glass account called "break.glass_priv1@organisation.onmicrosoft.com" for all logon activity</code></li>
+<li>Account to monitor: <code>break.glass_priv1@organisation.onmicrosoft.com</code></li>
 <li>Act on activity: <code>Single activity</code></li>
 <li>Policy Filters<ul>
 <li>Office 365
@@ -5379,8 +5434,8 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <li>Policy name: <code>Break Glass Account 2 Activity</code></li>
 <li>Policy severity: <code>Medium</code></li>
 <li>Category: <code>Privileged accounts</code></li>
-<li>Description: <code>This policy monitors break glass account called "break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com" for all logon activity</code></li>
-<li>Account to monitor: <code>break.glass_priv2@&lt;Agency&gt;.onmicrosoft.com</code></li>
+<li>Description: <code>This policy monitors break glass account called "break.glass_priv2@organisation.onmicrosoft.com" for all logon activity</code></li>
+<li>Account to monitor: <code>break.glass_priv2@organisation.onmicrosoft.com</code></li>
 <li>Act on activity: <code>Single activity</code></li>
 <li>Policy Filters<ul>
 <li>Office 365
@@ -5819,7 +5874,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 </tbody>
 </table>
 <h3 id="log-analytics">Log Analytics</h3>
-<p>The following ABAC settings are required for Log Analytics log aggregation for Azure AD and Endpoint Manager. The Agency requires an Azure subscription to support this configuration.</p>
+<p>The following ABAC settings are required for Log Analytics log aggregation for Azure AD and Endpoint Manager. The Organisation requires an Azure subscription to support this configuration.</p>
 <p><code>https://portal.azure.com/ &gt; Log Analytics workspaces &gt; Create Log Analytics Workspace</code></p>
 <p>The following tables describe the Log Analytics settings that are configured within the Log Analytics Workspace for all implementation types.</p>
 <table>
@@ -5832,11 +5887,11 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <tbody>
 <tr>
 <td>Workspace Name</td>
-<td>agency-log-workspace</td>
+<td>Organisation-log-workspace</td>
 </tr>
 <tr>
 <td>Azure Subscription</td>
-<td>Agency subscription</td>
+<td>Organisation subscription</td>
 </tr>
 <tr>
 <td>Region</td>
@@ -5848,7 +5903,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 </tr>
 <tr>
 <td>Log Analytics Contributor Group</td>
-<td>rol-Agency-log-admin</td>
+<td>rol-Organisation-log-admin</td>
 </tr>
 </tbody>
 </table>
@@ -5872,7 +5927,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 </tr>
 <tr>
 <td>Destination details</td>
-<td>Send to Log Analytics Workspace (agency-log-workspace)</td>
+<td>Send to Log Analytics Workspace (Organisation-log-workspace)</td>
 </tr>
 </tbody>
 </table>
@@ -5896,7 +5951,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 </tr>
 <tr>
 <td>Destination details</td>
-<td>Send to Log Analytics Workspace (agency-log-workspace)</td>
+<td>Send to Log Analytics Workspace (Organisation-log-workspace)</td>
 </tr>
 </tbody>
 </table>
@@ -5954,7 +6009,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <p>The following configuration is required for Intune Co-management is for Hybrid implementations only.</p>
 <p><code>Microsoft Endpoint Manager &gt; Quick Start &gt; Account Details</code></p>
 <ul>
-<li>Account Name: <code>&lt;Agency&gt;.gov.au</code></li>
+<li>Account Name: <code>organisation.com.au</code></li>
 <li>Account status: <code>Active</code></li>
 <li>Account location: <code>Australia 0101</code></li>
 </ul>
@@ -6060,12 +6115,12 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <tr>
 <td>All</td>
 <td>Internet Access Mechanism</td>
-<td>As per agency pattern for Internet access.</td>
+<td>As per Organisation pattern for Internet access.</td>
 </tr>
 <tr>
 <td>All</td>
 <td>Web Proxy  Configuration</td>
-<td>Proxy can be configured in Intune via the NetworkProxyCSP: <code>*./Vendor/MSFT/NetworkProxy</code> or depending on the Agency internet access pattern.</td>
+<td>Proxy can be configured in Intune via the NetworkProxyCSP: <code>*./Vendor/MSFT/NetworkProxy</code> or depending on the Organisation internet access pattern.</td>
 </tr>
 <tr>
 <td>Cloud-native</td>
@@ -6075,17 +6130,17 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <tr>
 <td>Hybrid</td>
 <td>DNS Provider</td>
-<td>As per agency pattern for DNS services.</td>
+<td>As per Organisation pattern for DNS services.</td>
 </tr>
 <tr>
 <td>All</td>
 <td>Office 365 Endpoint connectivity</td>
-<td>As per agency pattern for internet browser connectivity. Optimisation of traffic is required and recommended, see <a href="https://docs.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Office 365 URLs and IP address ranges</a> for which categories are recommended for optimisation, and those that are compatible with ExpressRoute (if applicable).</td>
+<td>As per Organisation pattern for internet browser connectivity. Optimisation of traffic is required and recommended, see <a href="https://docs.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Office 365 URLs and IP address ranges</a> for which categories are recommended for optimisation, and those that are compatible with ExpressRoute (if applicable).</td>
 </tr>
 <tr>
 <td>Cloud-native</td>
 <td>Office 365 Authentication Traffic</td>
-<td>Configured to traverse the web proxy (if part of Agency pattern). Cloud-native implementation types without a proxy that supports SSL inspection will not be able to implement tenancy whitelisting feature.</td>
+<td>Configured to traverse the web proxy (if part of Organisation pattern). Cloud-native implementation types without a proxy that supports SSL inspection will not be able to implement tenancy whitelisting feature.</td>
 </tr>
 <tr>
 <td>Hybrid</td>
@@ -6105,7 +6160,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 </tbody>
 </table>
 <h2 id="application-control">Application control</h2>
-<p>The ABAC settings for the Agency Application Control can be found below. Please note, if a setting is not mentioned below, it should be assumed to have been left at its default setting.</p>
+<p>The ABAC settings for the Organisation Application Control can be found below. Please note, if a setting is not mentioned below, it should be assumed to have been left at its default setting.</p>
 <h3 id="windows-defender-application-control">Windows Defender Application Control</h3>
 <h4 id="mecm-managed-installer-hybrid-implementation-types">MECM managed installer (Hybrid implementation types)</h4>
 <p>The ABAC settings for MECM managed installer are applicable to hybrid implementation types only.</p>
@@ -6123,7 +6178,7 @@ WindowsAuthenticationController:usernamemixed</code></li>
 <li>Use incremental updates for this collection: <code>enabled</code></li>
 <li>Schedule a full update on this collection: <code>enabled</code></li>
 <li>Application Control Policy</li>
-<li>Name: <code>Agency-WDAC-ManagedInstaller</code></li>
+<li>Name: <code>Organisation-WDAC-ManagedInstaller</code></li>
 <li>Description: -</li>
 <li>Enforcement mode: <code>Enforcement enabled - Only allow trusted executables to run</code></li>
 <li>Authorize software that is trusted by the Intelligent Security Graph: <code>Disabled</code></li>

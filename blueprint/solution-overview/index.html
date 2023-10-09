@@ -1363,7 +1363,7 @@
   
     <hr />
 <h1 id="solution-overview">Solution overview</h1>
-<p id="date-and-time">14 minutes to read - 30 March 2023</p>
+<p id="date-and-time">14 minutes to read - 15 September 2023</p>
 
 <p>This overview covers the blueprint's purpose, its components, and design considerations and decisions.</p>
 <h2 id="purpose-of-the-blueprint">Purpose of the blueprint</h2>
@@ -1504,7 +1504,7 @@
 <ul>
 <li><strong>Separate credentials</strong> are provided for non-privileged and privileged duties</li>
 <li><strong>Hardened PAW</strong> (Windows operating system) enrolled into Intune and coupled with conditional access polices to provide a zero trust entry point into the associated cloud apps to administer. Local administrative privileges should be restricted on the PAW, it is used to access the jump server solution or direct access to cloud admin portals</li>
-<li><strong>Web filtering system</strong> to restrict privileged accounts to the set of agency approved admin portals only. This product could be a risk assessed cloud platform or built as an infrastructure as a service server. The web filtering solution should be mandatory on the jump host or PAWs. <a href="https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/tenant-restrictions">Tenant restrictions</a> should be implemented to prevent misuse or data exfiltration to other Microsoft tenancies</li>
+<li><strong>Web filtering system</strong> to restrict privileged accounts to the set of agency approved admin portals only. This product could be a risk assessed cloud platform or built as an infrastructure as a service server. The web filtering solution should be mandatory on the jump host or PAWs. <a href="https://learn.microsoft.com/en-au/azure/active-directory/manage-apps/tenant-restrictions">Tenant restrictions</a> should be implemented to prevent misuse or data exfiltration to other Microsoft tenancies</li>
 <li><strong>Virtual jump host</strong> solution may be built leveraging Azure Virtual Desktop (AVD) session hosts, which seamlessly provides Multifactor Authentication (MFA) through Conditional Access policies. This jump host may be the trusted location where admin portals are used, as well as a secure place to administer other hybrid assets. Network security groups can be used to restrict management traffic flows to these jump hosts only</li>
 <li><strong>Restriction of management traffic flows</strong> limited to only critical assets should be implemented where possible. This could be achieved by utilising the Windows Defender native firewall functionality, web filtering, network security groups on cloud hosted jump hosts, and Conditional Access policies.</li>
 </ul>
@@ -1539,14 +1539,14 @@
 </thead>
 <tbody>
 <tr>
-<td>Azure AD Identity Protection</td>
+<td>Identity Protection</td>
 <td>Configured</td>
-<td>Azure AD Identity Protection is a tool that allows organisations to accomplish 3 key tasks:<br><br>- automate the detection and remediation of identity-based risks.<br>- investigate risks using data in the portal.<br>- export risk detection data to a utility for further analysis.</td>
+<td>Identity Protection is a tool that allows organisations to accomplish 3 key tasks:<br><br><em> automate the detection and remediation of identity-based risks.<br></em> investigate risks using data in the portal.<br>* export risk detection data to a utility for further analysis.</td>
 </tr>
 <tr>
-<td>Azure AD Multi-Factor Authentication (MFA)</td>
+<td>Multi-Factor Authentication (MFA)</td>
 <td>Configured</td>
-<td>Azure AD MFA will be enabled to meet ACSC hardening and Essential Eight compliance. This is discussed in the Platform design artefact.</td>
+<td>MFA will be enabled to meet ACSC hardening and Essential Eight compliance. This is discussed in the Platform design artefact.</td>
 </tr>
 <tr>
 <td>Enterprise collaboration</td>
@@ -1602,8 +1602,8 @@
 <tbody>
 <tr>
 <td>Identity</td>
-<td>Azure Active Directory (Azure AD)</td>
-<td>Azure AD will be the identity source. No on-premises active directory exists.</td>
+<td>Microsoft Entra ID</td>
+<td>Microsoft Entra ID will be the identity source. No on-premises Active Directory exists.</td>
 </tr>
 <tr>
 <td>Device standard operating environment deployment</td>

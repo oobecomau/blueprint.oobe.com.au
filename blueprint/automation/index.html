@@ -1548,7 +1548,7 @@
 <td><a href="../../files/automation/identity_dsc.txt">identity_dsc.ps1</a></td>
 <td>Conditional Access<br>Group Naming Policy<br>Named Locations<br>Group Lifecycle Policy<br>Group Creation<br>Groups Settings<br>Directory Contact Details</td>
 <td>M365DSC</td>
-<td>-trustedip<br>-agency <br>-agencyprefix<br>-globaladminaccount<br>-technicalcontactemail<br>-technicalcontactphone<br></td>
+<td>-trustedip<br>-organisation <br>-organisationprefix<br>-globaladminaccount<br>-technicalcontactemail<br>-technicalcontactphone<br></td>
 </tr>
 <tr>
 <td><a href="../../files/automation/sensitivity-labels_dsc.txt">sensitivity-labels_dsc.ps1</a></td>
@@ -1560,7 +1560,7 @@
 <td><a href="../../files/automation/exo_dsc.txt">exo_dsc.ps1</a></td>
 <td>Anti-spam policies<br/>Anti-malware policies<br/>Anti-phishing policies<br/>Safe-links and Safe attachments<br/>Outlook Web Access policy<br/>CAS mailbox plan</td>
 <td>M365DSC</td>
-<td>-gatewayip<br/>-agency <br/>-globaladminaccount<br/>-technicalcontactemail</td>
+<td>-gatewayip<br/>-organisation <br/>-globaladminaccount<br/>-technicalcontactemail</td>
 </tr>
 </tbody>
 </table>
@@ -1606,15 +1606,15 @@ import-module microsoft365dsc
 </code></pre>
 <ol>
 <li>In PowerShell navigate to the directory containing the blueprint configuration PS1 file and the <code>configurationdata.psd1</code> file. This <code>configurationdata.psd1</code>  file is the same for all other DSC scripts supplied</li>
-<li>In the PowerShell console, initiate the desired blueprint configuration PS1 and supply the required values, this will create the MOF file for the local configuration manager. If the script requires parameters, the required values are located in the <code>param</code> section of the DSC script to be ran. Some DSC scripts may not require parameters, refer to the <code>Blueprint configuration scripts</code> table for an overview. The following is an example for the identity configuration DSC script <code>identity_dsc.ps1</code>. In this example, the required values are: Global Admin credentials; agency name; agency prefix; and trusted IPs (in CIDR format).</li>
+<li>In the PowerShell console, initiate the desired blueprint configuration PS1 and supply the required values, this will create the MOF file for the local configuration manager. If the script requires parameters, the required values are located in the <code>param</code> section of the DSC script to be ran. Some DSC scripts may not require parameters, refer to the <code>Blueprint configuration scripts</code> table for an overview. The following is an example for the identity configuration DSC script <code>identity_dsc.ps1</code>. In this example, the required values are: Global Admin credentials; organisation name; organisation prefix; and trusted IPs (in CIDR format).</li>
 </ol>
 <pre><code class="language-powershell">$pscredential = get-credential
-$agencyname = &quot;AgencyName&quot; # note - agency internet domain name
-$agencyprefix = &quot;AgencyAcronym&quot;
-$technicalcontactemail = &quot;Agency.Helpdesk&quot;  # note - recipient part of address
+$organisationname = &quot;OrganisationName&quot; # note - organisation internet domain name
+$organisationprefix = &quot;OrganisationAcronym&quot;
+$technicalcontactemail = &quot;Organisation.Helpdesk&quot;  # note - recipient part of address
 $technicalcontactphone =&quot;+612111222&quot;
 $trustedIPs = @(&quot;X.X.X.X/X&quot;,&quot;X.X.X.X/X&quot;) # note - for one CIDR range use @(&quot;X.X.X.X/X&quot;)
-.\identity_dsc.ps1 -globaladminaccount $pscredential -trustedip $trustedIPs -agency $agencyname -agencyprefix $agencyprefix -technicalcontactemail $technicalcontactemail -technicalcontactphone $technicalcontactphone 
+.\identity_dsc.ps1 -globaladminaccount $pscredential -trustedip $trustedIPs -organisation $organisationname -organisationprefix $organisationprefix -technicalcontactemail $technicalcontactemail -technicalcontactphone $technicalcontactphone 
 </code></pre>
 <ol>
 <li><strong>This step will enforce the DSC configuration</strong>. Run the following command within the PowerShell console:</li>
@@ -1675,7 +1675,7 @@ $trustedIPs = @(&quot;X.X.X.X/X&quot;,&quot;X.X.X.X/X&quot;) # note - for one CI
 <p>The process to audit a tenant based on the blueprints Microsoft 365 Desired State Configuration (M365DSC) is as follows:</p>
 <ol>
 <li>Download <a href="../../files/automation/baseline.txt">baseline.ps1</a></li>
-<li>Within <code>baseline.ps1</code>, update any agency specific items (e.g. all areas where agency name is specified)</li>
+<li>Within <code>baseline.ps1</code>, update any organisation specific items (e.g. all areas where organisation name is specified)</li>
 <li>Open a PowerShell console as administrator and navigate to the directory containing the <code>baseline.ps1</code> file</li>
 <li>Run the following command in the PowerShell console:</li>
 </ol>
@@ -1690,7 +1690,7 @@ Assert-M365DSCBlueprint -BluePrintUrl .\baseline.ps1 -OutputReportPath $outputlo
 <ul>
 <li><a href="../../files/automation/baseline.txt">baseline.ps1</a></li>
 </ul>
-<p>The above baseline requires updating to include agency specific details prior to use.</p>
+<p>The above baseline requires updating to include organisation specific details prior to use.</p>
     
     
   

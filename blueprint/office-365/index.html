@@ -1823,7 +1823,7 @@
   
     <hr />
 <h1 id="office-365">Office 365</h1>
-<p id="date-and-time">105 minutes to read - 30 March 2023</p>
+<p id="date-and-time">105 minutes to read - 15 September 2023</p>
 
 <p>This document covers the following topics.</p>
 <table>
@@ -1900,9 +1900,9 @@
 </ul>
 <h2 id="office-365-organisation">Office 365 Organisation</h2>
 <h3 id="residency">Residency</h3>
-<p>Office 365 is a global service which is offered in many different physical regions. Choosing a region to store data is required to ensure that the data of the Agency does not get transferred or stored offshore.</p>
-<p>Office 365 tenant residency is critical when setting up the Agency's Office 365 tenant. The region where the Office 365 tenant is set up determines where the data is store. Details of Office 365 data residency can be found from <a href="https://products.office.com/en-au/where-is-your-data-located">Microsoft's site</a>.</p>
-<p>Office 365 tenant data residency consideration is required to ensure the Agency's Office 365 tenant is created and data is stored in Australia.</p>
+<p>Office 365 is a global service which is offered in many different physical regions. Choosing a region to store data is required to ensure that the data of the organisation does not get transferred or stored offshore.</p>
+<p>Office 365 tenant residency is critical when setting up the organisation's Office 365 tenant. The region where the Office 365 tenant is set up determines where the data is store. Details of Office 365 data residency can be found from <a href="https://products.office.com/en-au/where-is-your-data-located">Microsoft's site</a>.</p>
+<p>Office 365 tenant data residency consideration is required to ensure the organisation's Office 365 tenant is created and data is stored in Australia.</p>
 <p>Office 365 Region Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -1928,7 +1928,7 @@
 <li>Microsoft 365 E5 (recommended for this blueprint). Microsoft 365 E5 includes everything inside Microsoft 365 E3 plus additional features and services (largely security and compliance related). In the case of Office 365 E5, the capabilities in Microsoft Defender for Office 365 suite as well as other services such as Office 365 Advanced Compliance are increased.</li>
 <li>Microsoft 365 E3. Microsoft 365 E3 provides access to core products with enhanced features and security features. In the case of Office 365 E3, the Office client suite is included, and the service limits are increased.</li>
 </ul>
-<p>To grant access to the services a licence is assigned to an individual user account. A licence can be assigned by an administrator at the time of the user account is created or through Azure AD group-based licensing. Azure AD group-based licensing allows an Administrator to associate a licence to a group. Any members within the group will be assigned that licence automatically. When a user is removed from the group the licence is removed.</p>
+<p>To grant access to the services a licence is assigned to an individual user account. A licence can be assigned by an administrator at the time of the user account is created or through Microsoft Entra ID group-based licensing. Microsoft Entra ID group-based licensing allows an Administrator to associate a licence to a group. Any members within the group will be assigned that licence automatically. When a user is removed from the group the licence is removed.</p>
 <p>Licensing Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -1947,7 +1947,7 @@
 <tr>
 <td>Licence Allocation Method</td>
 <td>Automated</td>
-<td>Dynamic Security Groups in Azure AD will be used to automatically assign licences and reduce the management overhead associated with licensing.</td>
+<td>Dynamic Security Groups in Microsoft Entra ID will be used to automatically assign licences and reduce the management overhead associated with licensing.</td>
 </tr>
 </tbody>
 </table>
@@ -1963,13 +1963,13 @@
 <tbody>
 <tr>
 <td>Admin Licence Group</td>
-<td><code>rol-AgencyName-Administrator</code></td>
-<td>This is the group that the Agency administrators belong to.</td>
+<td><code>rol-OrganisationName-Administrator</code></td>
+<td>This is the group that the organisation administrators belong to.</td>
 </tr>
 <tr>
 <td>User Licence Groups</td>
-<td><code>rol-AgencyName-Users</code></td>
-<td>This is the group that the Agency non-administrator users belong to.</td>
+<td><code>rol-OrganisationName-Users</code></td>
+<td>This is the group that the organisation non-administrator users belong to.</td>
 </tr>
 </tbody>
 </table>
@@ -2029,7 +2029,7 @@
 </tr>
 </tbody>
 </table>
-<p>Note: Themes will be the responsibility of the Agency and this table contains recommendations and restrictions for the themes.</p>
+<p>Note: Themes will be the responsibility of the organisation and this table contains recommendations and restrictions for the themes.</p>
 <p>Theme Configuration for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -2042,12 +2042,12 @@
 <tbody>
 <tr>
 <td>Logo Image</td>
-<td>Agency logo is recommended</td>
+<td>Organisation logo is recommended</td>
 <td>Under 10 KB, 200 x 30 pixels in JPG, PNG, GIF, or SVG format. SVG is the preferred format.</td>
 </tr>
 <tr>
 <td>Background Image</td>
-<td>Agency logo is recommended</td>
+<td>Organisation logo is recommended</td>
 <td>15 KB or less, 1366 x 50 pixels in JPG, PNG, or GIF format. This is in line with Microsoft best practice.</td>
 </tr>
 <tr>
@@ -2058,17 +2058,17 @@
 <tr>
 <td>Navigation bar colour</td>
 <td>Default</td>
-<td>Based on Agency branding standards. To maintain cadence with corporate standards.</td>
+<td>Based on organisation branding standards. To maintain cadence with corporate standards.</td>
 </tr>
 <tr>
 <td>Text and icon colour</td>
 <td>Default</td>
-<td>Based on Agency branding standards.</td>
+<td>Based on organisation branding standards.</td>
 </tr>
 <tr>
 <td>Accent Colour</td>
 <td>Default</td>
-<td>Based on Agency branding standards.</td>
+<td>Based on organisation branding standards.</td>
 </tr>
 <tr>
 <td>Show the users name on the top navigation bar when the user is signed in</td>
@@ -2079,7 +2079,7 @@
 </table>
 <h3 id="office-365-services-and-add-ins">Office 365 services and add-ins</h3>
 <p>Office 365 centrally manages Office services and add-ins. Office services and add-ins can enhance both the way information is accessed and the way business is conducted. Enabling Services and Add-ins also comes with risks, such as the risk of data being shared with other Microsoft services outside of the tenant boundary, or shared outside of Australian data centre locations. Out of the box, several services and add-ins are configured within the portal.</p>
-<p>The design will take into consideration the services and add-ins that are part of Office 365. The design decision is based on the requirement provided by the Agency and application that is hosted on.</p>
+<p>The design will take into consideration the services and add-ins that are part of Office 365. The design decision is based on the requirement provided by the organisation and application that is hosted on.</p>
 <p>Services and Add-ins Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -2118,7 +2118,7 @@
 <tr>
 <td>‎Microsoft‎ communication to users</td>
 <td>Disabled</td>
-<td>To prevent communication from Microsoft directly rather than via the Agency's IT team.</td>
+<td>To prevent communication from Microsoft directly rather than via the organisation's IT team.</td>
 </tr>
 <tr>
 <td>Microsoft Graph Data Connect</td>
@@ -2224,7 +2224,7 @@
 <li>Security administrator.</li>
 <li>Security reader.</li>
 </ul>
-<p>Note, using PIM for the SharePoint administrator role, the Device administrator role, and roles trying to access the Microsoft Security and Compliance Center might experience delays of up to a few hours after activating the role, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-roles">PIM Roles</a> for further information.</p>
+<p>Note, using PIM for the SharePoint administrator role, the Device administrator role, and roles trying to access the Microsoft Security and Compliance Center might experience delays of up to a few hours after activating the role, see <a href="https://learn.microsoft.com/en-au/azure/active-directory/privileged-identity-management/pim-roles">PIM Roles</a> for further information.</p>
 <p>Role Based and Access Control Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -2243,12 +2243,12 @@
 <tr>
 <td>Office 365 administrative sub-roles</td>
 <td>Not Configured</td>
-<td>Office 365 administrative sub-roles will not be configured in favour of PIM. This ensures Azure is the location to manage Role Base Access Control permission for the Agency tenant.</td>
+<td>Office 365 administrative sub-roles will not be configured in favour of PIM. This ensures Azure is the location to manage Role Base Access Control permission for the organisation tenant.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="customer-lockbox">Customer Lockbox</h3>
-<p>Customer lockbox provides a time-boxed, secure mechanism for Microsoft Support Engineers to assist in customers support query in Office 365. Microsoft Support engineers will have to request authorisation from the Agency to access the underlying data in Office 365 tenant.</p>
+<p>Customer lockbox provides a time-boxed, secure mechanism for Microsoft Support Engineers to assist in customers support query in Office 365. Microsoft Support engineers will have to request authorisation from the organisation to access the underlying data in Office 365 tenant.</p>
 <p>Customer Lockbox address situations where Microsoft Engineers require access to client data within Office 365 to resolve an incident. All access requests are recorded for auditing purpose.</p>
 <p>Customer Lockbox Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -2263,14 +2263,14 @@
 <tr>
 <td>Customer Lockbox</td>
 <td>Enable</td>
-<td>This is to ensure that Microsoft support engineers cannot access the agency's content to perform a service operation without the agency's explicit approval.</td>
+<td>This is to ensure that Microsoft support engineers cannot access the organisation's content to perform a service operation without the organisation's explicit approval.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="office-365-connectivity">Office 365 Connectivity</h2>
-<p>Office 365 is a publicly facing SaaS offering and firewall ports are required to be opened to allow communication between infrastructure and desktops and Office 365. These ports configurations are updated frequently and are available online from <a href="https://docs.microsoft.com/en-au/office365/enterprise/urls-and-ip-address-ranges">Microsoft</a>.</p>
+<p>Office 365 is a publicly facing SaaS offering and firewall ports are required to be opened to allow communication between infrastructure and desktops and Office 365. These ports configurations are updated frequently and are available online from <a href="https://learn.microsoft.com/en-au/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Microsoft</a>.</p>
 <p>It is important to note the traffic between the clients and the Office 365 offering is TLS 1.2 encrypted.</p>
-<p>Configuration will occur on the proxy and external gateway of the Agency as required.</p>
+<p>Configuration will occur on the proxy and external gateway of the organisation as required.</p>
 <p>Further details on the firewall configuration for the solution can be found in the Network Configuration ABAC.</p>
 <h3 id="mail-flow-and-gateway">Mail flow and gateway</h3>
 <p>Mail flow is the path taken by an email from the sender to a receiver. A Mail Gateway acts as the central egress and ingress point for mail traffic into an organisation.</p>
@@ -2283,7 +2283,7 @@
 <p>This will achieve the closest alignment to whole of government policy for <a href="https://www.cyber.gov.au/acsc/view-all-content/programs/irap/asd-certified-gateways">Secure Internet Gateways</a>, guidance of the <a href="https://www.cyber.gov.au/acsc/view-all-content/guidance/email-gateways-and-servers">Information Security Manual</a> and the <a href="https://www.protectivesecurity.gov.au/sites/default/files/2019-11/policy-8-annex-g-email-protective-marking-standard.pdf">Protective Security Policy Framework</a>.</p>
 <p>GovLink enables secure communication between Commonwealth entities across public infrastructure and is required for PROTECTED mail to be securely transferred between government organisations. When a GovLink mail gateway is required, Agencies can either use an existing gateway or a new gateway.</p>
 <p>It is not possible to configure Exchange Online to directly send email via GovLink. Exchange Online must resolve to a public facing IP address, which is not possible across the GovLink network. In this instance a Mail Relay would be required with a public facing interface and a second interface that is able to connect to GovLink. </p>
-<p>DTA is currently working with Microsoft and the Department of Finance to simplify an agency's ability to achieve this, however at the time of writing there is no native solution to allow a direct interface between the Office365/Exchange Online environment and GovLink.</p>
+<p>DTA is currently working with Microsoft and the Department of Finance to simplify an organisation's ability to achieve this, however at the time of writing there is no native solution to allow a direct interface between the Office365/Exchange Online environment and GovLink.</p>
 <p>The following image shows the high-level mail flow for agencies implementing without on-premises infrastructure.</p>
 <p><img alt="Mail Flow for a cloud native implementation" src="../../img/o365-mail-flow.png#center" /></p>
 <p>The figure below shows the high-level mail flow for agencies leveraging on-premises infrastructure in a hybrid configuration. </p>
@@ -2321,14 +2321,14 @@
 </table>
 <p>Note that Exchange Online Protection, a mail gateway may be required to interface with GovLink.</p>
 <h3 id="optimisation">Optimisation</h3>
-<p>Office 365 is a globally distributed service. The user experience with Office 365 involves connectivity through highly distributed service connection points that are scaled over many Microsoft locations worldwide. This section outlines two sets of design decisions, representing advice to achieve the highest level of maturity and adherence to existing Whole of Government policies and advice to maximise optimisation outside and user experience. The below information is to inform agencies, including on how best to maximise optimisation and user experience, however consideration should be given for the risk implications of implementing in such a way. While this approach of optimisation represents the current <a href="https://docs.microsoft.com/en-us/office365/enterprise/network-planning-and-performance">best practice published by Microsoft</a> it is inconsistent with the previously referenced guidance of the ISM and PSPF relating to Secure Internet Gateways. We have provided configuration controls for both scenarios below.</p>
+<p>Office 365 is a globally distributed service. The user experience with Office 365 involves connectivity through highly distributed service connection points that are scaled over many Microsoft locations worldwide. This section outlines two sets of design decisions, representing advice to achieve the highest level of maturity and adherence to existing Whole of Government policies and advice to maximise optimisation outside and user experience. The below information is to inform agencies, including on how best to maximise optimisation and user experience, however consideration should be given for the risk implications of implementing in such a way. While this approach of optimisation represents the current <a href="https://learn.microsoft.com/en-au/microsoft-365/enterprise/network-planning-and-performance?view=o365-worldwide">best practice published by Microsoft</a> it is inconsistent with the previously referenced guidance of the ISM and PSPF relating to Secure Internet Gateways. We have provided configuration controls for both scenarios below.</p>
 <p>To minimise latency, a customer network can route user requests to the closest Office 365 service entry point, rather than connecting to Office 365 through an egress point in a central location or region.</p>
 <p>The following achieves optimal Office 365 connectivity and performance:</p>
 <ul>
 <li>Local DNS resolution and Internet egress - Provision local DNS servers in each location and ensure that Office 365 connections egress to the internet as close as possible to the user's location. This configuration minimises latency and improves connectivity to the closest Office 365 entry point.</li>
-<li>Add regional egress points - If the Agency network has multiple locations but only one egress point, add regional egress points to enable users to connect to the closest Office 365 entry point. This configuration minimises latency and improves connectivity to the closest Office 365 entry point.</li>
+<li>Add regional egress points - If the organisation network has multiple locations but only one egress point, add regional egress points to enable users to connect to the closest Office 365 entry point. This configuration minimises latency and improves connectivity to the closest Office 365 entry point.</li>
 <li>Bypass proxies and inspection devices - Configure browsers to send Office 365 traffic directly to egress points and bypass proxies. Configure edge routers and firewalls to permit Office 365 traffic without inspection. This configuration minimises latency and reduces the load on network devices.</li>
-<li>Enable split tunnelling connection for VPN users - If a VPN solution is required Always on VPN should be integrated into the agency infrastructure. For VPN users, enable Office 365 connections to connect directly from the user's network rather than over the VPN tunnel by implementing split tunnelling. This configuration minimises latency and improves connectivity to the closest Office 365 entry point.</li>
+<li>Enable split tunnelling connection for VPN users - If a VPN solution is required Always on VPN should be integrated into the organisation infrastructure. For VPN users, enable Office 365 connections to connect directly from the user's network rather than over the VPN tunnel by implementing split tunnelling. This configuration minimises latency and improves connectivity to the closest Office 365 entry point.</li>
 </ul>
 <p>Optimisation design considerations and decisions apply to all agencies and implementation types.</p>
 <p>Office 365 Connectivity Optimisation Design Decisions for an increased security posture.</p>
@@ -2401,17 +2401,17 @@
 <tr>
 <td>Enable split tunnelling connection for VPN users</td>
 <td>Configured</td>
-<td>Split tunnelling is configured in this solution to enable workstations to directly connect to Microsoft services. If a VPN solution is required Always on VPN should be integrated into the agency infrastructure.</td>
+<td>Split tunnelling is configured in this solution to enable workstations to directly connect to Microsoft services. If a VPN solution is required Always on VPN should be integrated into the organisation infrastructure.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="exchange-hybrid">Exchange hybrid</h3>
 <p>This section is only relevant for agencies implementing a hybrid solution that leverages an on-premises Exchange Server(s).</p>
 <p>Exchange Online can be used standalone (cloud only) or integrated with an on-premises Exchange Server(s) and Active Directory Domain Services, extending the organisation's messaging farm in a hybrid configuration.</p>
-<p>A Hybrid configuration provides administrators with added flexibility to transition users to the Cloud without isolating them from the on-premises resources. A Hybrid configuration can also assist with transport routing for compliance reasons (e.g. Govlink) when "centralized mail transport" is enabled. The <a href="https://docs.microsoft.com/en-us/exchange/edge-transport-servers">Edge Transport</a> service may be deployed in scenarios where the agency does not wish to expose Hybrid mail servers directly to Exchange Online Protection.</p>
-<p>Agencies wishing to synchronise their existing on-premises Active Directory Domain Services for identity (hybrid identity) must maintain an on-premises Exchange server for recipient management purposes, this is because most of the user attributes cannot be managed from Exchange online due to directory synchronisation rules, for more information see <a href="https://docs.microsoft.com/en-us/exchange/decommission-on-premises-exchange">decommissioning on-premises Exchange servers</a>.</p>
+<p>A Hybrid configuration provides administrators with added flexibility to transition users to the Cloud without isolating them from the on-premises resources. A Hybrid configuration can also assist with transport routing for compliance reasons (e.g. Govlink) when "centralized mail transport" is enabled. The <a href="https://learn.microsoft.com/en-au/exchange/edge-transport-servers">Edge Transport</a> service may be deployed in scenarios where the organisation does not wish to expose Hybrid mail servers directly to Exchange Online Protection.</p>
+<p>Agencies wishing to synchronise their existing on-premises Active Directory Domain Services for identity (hybrid identity) must maintain an on-premises Exchange server for recipient management purposes, this is because most of the user attributes cannot be managed from Exchange online due to directory synchronisation rules, for more information see <a href="https://learn.microsoft.com/en-au/exchange/decommission-on-premises-exchange">decommissioning on-premises Exchange servers</a>.</p>
 <p>Establishing a hybrid deployment requires an Exchange hybrid server that is supported with your existing on-premises Exchange Server. Microsoft recommends the deployment of the newest Exchange Hybrid server for your environment to ensure the best compatibility with Exchange Online. </p>
-<p>Exchange 2010 has reached <a href="https://docs.microsoft.com/en-us/microsoft-365/enterprise/exchange-2010-end-of-support?view=o365-worldwide">end of support</a>, agencies that wish to use retain a Hybrid configuration after the Hybrid migration method should migrate those Exchange server roles to a supported version of Exchange. Microsoft also recommend that agencies still on Exchange 2010 that have not started or completed their Hybrid migration, upgrade from 2010 to 2016 before commencing the hybrid configuration. </p>
+<p>Exchange 2010 has reached <a href="https://learn.microsoft.com/en-au/microsoft-365/enterprise/exchange-2010-end-of-support?view=o365-worldwide">end of support</a>, agencies that wish to use retain a Hybrid configuration after the Hybrid migration method should migrate those Exchange server roles to a supported version of Exchange. Microsoft also recommend that agencies still on Exchange 2010 that have not started or completed their Hybrid migration, upgrade from 2010 to 2016 before commencing the hybrid configuration. </p>
 <p>Exchange Hybrid Server Supported Configurations.</p>
 <table>
 <thead>
@@ -2498,12 +2498,12 @@
 <tr>
 <td>Exchange Hybrid Deployment</td>
 <td>Exchange 2016-based</td>
-<td>The Agency will use their existing Exchange 2016 server to establish the hybrid connection.</td>
+<td>The organisation will use their existing Exchange 2016 server to establish the hybrid connection.</td>
 </tr>
 <tr>
 <td>Edge Transport Server for hybrid mail transport</td>
-<td>Agency decision</td>
-<td>The Agency can choose to leverage an Edge Transport server to prevent the exposure of internal Exchange servers directly to the internet, depending on their risk appetite and gateway environment.</td>
+<td>Organisation decision</td>
+<td>The organisation can choose to leverage an Edge Transport server to prevent the exposure of internal Exchange servers directly to the internet, depending on their risk appetite and gateway environment.</td>
 </tr>
 </tbody>
 </table>
@@ -2523,12 +2523,12 @@
 <tr>
 <td>Authoritative DNS MX Record</td>
 <td><code>&lt;Mail Gateway&gt;</code></td>
-<td>This is the ingress point for the mail for the Agency, the mx records will point to the Agency gateway.</td>
+<td>This is the ingress point for the mail for the organisation, the mx records will point to the organisation gateway.</td>
 </tr>
 <tr>
 <td>Mail Exchanger/s</td>
 <td><code>&lt;Mail Gateway&gt;</code></td>
-<td>This is the ingress point for the mail for the Agency, the mx records will point to the Agency gateway.</td>
+<td>This is the ingress point for the mail for the organisation, the mx records will point to the organisation gateway.</td>
 </tr>
 </tbody>
 </table>
@@ -2545,18 +2545,18 @@
 <tr>
 <td>Authoritative DNS MX Record</td>
 <td>Configured</td>
-<td>If the agency hosts mail for more than one domain a MX record for each is required. These records are listed.</td>
+<td>If the organisation hosts mail for more than one domain a MX record for each is required. These records are listed.</td>
 </tr>
 <tr>
 <td>Mail Exchanger/s</td>
 <td>Configured</td>
-<td>If the Agency requires its on-premises mail gateways to continue to be used, the Virtual IP (VIP) of the gateways is used.</td>
+<td>If the organisation requires its on-premises mail gateways to continue to be used, the Virtual IP (VIP) of the gateways is used.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="mail-connectors">Mail connectors</h3>
 <p>Mail connectors use TLS to secure communication and can customise the way mail flows into and out of the organisation.</p>
-<p>Generally mail connectors are required. An exception may be where an agency does not use a mail gateway and relies on Exchange Online Protection. </p>
+<p>Generally mail connectors are required. An exception may be where an organisation does not use a mail gateway and relies on Exchange Online Protection. </p>
 <p>When the organisation intends to operate at the PROTECTED level, the blueprint assumes that all agencies are implementing the configuration with a Mail Gateway and as such, provides detailed configurations on implementing mail connectors via the relevant gateway.</p>
 <p>Mail Connector design considerations and decisions apply to all agencies and implementation.</p>
 <table>
@@ -2711,7 +2711,7 @@
 <tr>
 <td>Autodiscover externally</td>
 <td>Configured – DNS record</td>
-<td>To ensure autodiscover functions externally to the Agency.</td>
+<td>To ensure autodiscover functions externally to the organisation.</td>
 </tr>
 </tbody>
 </table>
@@ -2723,8 +2723,8 @@
 <li>DKIM - DKIM, unlike SPF is a tool to verify whether the content of the message is trustworthy. This is completed using a public/private key signing process.</li>
 <li>DMARC - DMARC enables both SPF and DKIM using policy. A DMARC policy sets out how to handle messages which do not align to what the receiver knows about the sender. This can include rejecting the message; suggesting the message is quarantined; or allowing the message.</li>
 </ul>
-<p>While DKIM within Office 365 can sign messages, the Agency gateway may also be configured to do this which may cause issues with DMARC verification.</p>
-<p>Note, agencies that enable DKIM signing within Office 365 that also add additional business logic to email at the egress mail gateway, such as adding a default Agency email disclaimer, would fail DKIM authentication as the contents of the email had changed after the email had been sent from Exchange Online. In this scenario consider migrating the business logic from the mail gateway to native Exchange Online transport rules.</p>
+<p>While DKIM within Office 365 can sign messages, the organisation gateway may also be configured to do this which may cause issues with DMARC verification.</p>
+<p>Note, agencies that enable DKIM signing within Office 365 that also add additional business logic to email at the egress mail gateway, such as adding a default organisation email disclaimer, would fail DKIM authentication as the contents of the email had changed after the email had been sent from Exchange Online. In this scenario consider migrating the business logic from the mail gateway to native Exchange Online transport rules.</p>
 <p>SPF, DKIM, &amp; DMARC Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -2738,17 +2738,17 @@
 <tr>
 <td>SPF</td>
 <td>Configured</td>
-<td>Configuration of SPF record(s) are required as a baseline for the deployment and are configured to "hard fail" as per ACSC recommendations. The SPF record(s) are configured for all such authorised senders for that domain, including the Office 365 SPF sender address (spf.protection.outlook.com) if applicable to ensure mail sent from Exchange Online passes SPF. SPF record(s) are to be configured by the DNS provider that that Agency consumes.</td>
+<td>Configuration of SPF record(s) are required as a baseline for the deployment and are configured to "hard fail" as per ACSC recommendations. The SPF record(s) are configured for all such authorised senders for that domain, including the Office 365 SPF sender address (spf.protection.outlook.com) if applicable to ensure mail sent from Exchange Online passes SPF. SPF record(s) are to be configured by the DNS provider that that organisation consumes.</td>
 </tr>
 <tr>
 <td>DKIM</td>
 <td>Configured</td>
-<td>DKIM is a public/private key signing process used to verify the content of an email. DKIM signing is enabled on emails originating from an organisation's domains as per ACSC recommendations. DKIM is either enabled on the Agency mail gateway solution (hybrid) or within Office 365 (cloud native).</td>
+<td>DKIM is a public/private key signing process used to verify the content of an email. DKIM signing is enabled on emails originating from an organisation's domains as per ACSC recommendations. DKIM is either enabled on the organisation mail gateway solution (hybrid) or within Office 365 (cloud native).</td>
 </tr>
 <tr>
 <td>DMARC</td>
 <td>Configured</td>
-<td>One DMARC policy is to be configured per Agency domain as per ACSC recommendations. This is to be configured at the gateway that the Agency consumes. DMARC records are configured for all domains such that emails are rejected if they fail SPF or DKIM checks.</td>
+<td>One DMARC policy is to be configured per organisation domain as per ACSC recommendations. This is to be configured at the gateway that the organisation consumes. DMARC records are configured for all domains such that emails are rejected if they fail SPF or DKIM checks.</td>
 </tr>
 </tbody>
 </table>
@@ -2777,7 +2777,7 @@
 <tr>
 <td>Authoritative Domains</td>
 <td>Configured</td>
-<td>The <code>&lt;tenantname&gt;.onmicrosoft.com</code> authoritative domain is created during the enablement of Office 365 and represents the Exchange Online Organisations SMTP address space. The additional authoritative domains are required as each Agency will have a corresponding authoritative domain.</td>
+<td>The <code>&lt;tenantname&gt;.onmicrosoft.com</code> authoritative domain is created during the enablement of Office 365 and represents the Exchange Online Organisations SMTP address space. The additional authoritative domains are required as each organisation will have a corresponding authoritative domain.</td>
 </tr>
 </tbody>
 </table>
@@ -2893,17 +2893,17 @@
 <tbody>
 <tr>
 <td>Primary shared Simple Mail Transfer Protocol (SMTP) domain</td>
-<td>agency.gov.au</td>
+<td>organisation.com.au</td>
 <td>Subject name</td>
 </tr>
 <tr>
 <td>Autodiscover</td>
-<td>To be determined by the Agency. <br>Label that matches the external Autodiscover FQDN on the Exchange Client Access server, such as Autodiscover.contoso.com</td>
+<td>To be determined by the organisation. <br>Label that matches the external Autodiscover FQDN on the Exchange Client Access server, such as Autodiscover.contoso.com</td>
 <td>Subject alternative name</td>
 </tr>
 <tr>
 <td>Transport</td>
-<td>To be determined by the Agency. <br>Label that matches the external FQDN of the Edge Transport servers, such as edge.contoso.com</td>
+<td>To be determined by the organisation. <br>Label that matches the external FQDN of the Edge Transport servers, such as edge.contoso.com</td>
 <td>Subject alternative name</td>
 </tr>
 </tbody>
@@ -2949,7 +2949,7 @@
 <tr>
 <td>Office 365 Tenant</td>
 <td>Single tenant</td>
-<td>Exchange Online services will be hosted within the Agency's secure Office 365 tenant.</td>
+<td>Exchange Online services will be hosted within the organisation's secure Office 365 tenant.</td>
 </tr>
 </tbody>
 </table>
@@ -2997,7 +2997,7 @@
 <li>Control mail size limits.</li>
 <li>Control the use of mail archives.</li>
 </ul>
-<p>The above configuration can be completed on all new mailboxes using a Client Access Services (CAS) Mailbox Plan. A CAS Mailbox Plan is used to configure settings when a licence is assigned to a new user. If the licence is changed, the CAS Mailbox plan linked to that new licence is applied. CAS Mailbox plans will be inherited from the existing Agency plans.</p>
+<p>The above configuration can be completed on all new mailboxes using a Client Access Services (CAS) Mailbox Plan. A CAS Mailbox Plan is used to configure settings when a licence is assigned to a new user. If the licence is changed, the CAS Mailbox plan linked to that new licence is applied. CAS Mailbox plans will be inherited from the existing organisation plans.</p>
 <p>In addition to the above mailbox configuration, by default, standard user accounts have access to Exchange Online via Exchange Online PowerShell . ACSC guidance to disable unneeded features requires that this feature be disabled.</p>
 <p>User Mailbox Configuration Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -3041,7 +3041,7 @@
 </tr>
 <tr>
 <td>Custom Primary SMTP Addressing</td>
-<td>first.last@agency.gov.au<br>Usernames are recommended to follow the Universal Principal Name (UPN) format of the user, which is <code>first.last@&lt;agency&gt;.gov.au</code></td>
+<td>first.last@organisation.com.au<br>Usernames are recommended to follow the Universal Principal Name (UPN) format of the user, which is <code>first.last@&lt;organisation&gt;.com.au</code></td>
 <td>The primary SMTP address will be changed from <code>first.last@&lt;tenant&gt;.onmicrosoft.com</code> to ensure email continues to function in the same manner.</td>
 </tr>
 <tr>
@@ -3073,12 +3073,12 @@
 <tr>
 <td>Authentication Policy Configuration</td>
 <td>Configured</td>
-<td>Authentication Policy will be deployed to meet the security requirements of the Agency and be deployed in conjunction with the Agency security requirements.</td>
+<td>Authentication Policy will be deployed to meet the security requirements of the organisation and be deployed in conjunction with the organisation security requirements.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="outlook-on-the-web-policies">Outlook on the Web policies</h3>
-<p>Formerly known as Outlook Web App or Outlook Web Access, Outlook on the Web (OWA) policies, are used to control the availability of features and settings in Outlook on the Web. There are no security concerns with enabling OWA however agencies may wish to consider internal agency policies to inform decisions. A decision to disable OWA will not alter an agency's cyber security posture.</p>
+<p>Formerly known as Outlook Web App or Outlook Web Access, Outlook on the Web (OWA) policies, are used to control the availability of features and settings in Outlook on the Web. There are no security concerns with enabling OWA however agencies may wish to consider internal organisation policies to inform decisions. A decision to disable OWA will not alter an organisation's cyber security posture.</p>
 <p>A mailbox can only be assigned one OWA policy and every mailbox must have a policy assigned.</p>
 <p>Features and settings which can be controlled by an OWA policy include:</p>
 <ul>
@@ -3244,7 +3244,7 @@
 <tr>
 <td>Configure Journaling</td>
 <td>Not Configured</td>
-<td>In place of Journaling, Litigation hold and retention policies in conjunction with eDiscovery will be leveraged by the Agency to meet investigation requirements.</td>
+<td>In place of Journaling, Litigation hold and retention policies in conjunction with eDiscovery will be leveraged by the organisation to meet investigation requirements.</td>
 </tr>
 </tbody>
 </table>
@@ -3265,7 +3265,7 @@
 <tr>
 <td>Litigation hold</td>
 <td>Configured as required on selected users</td>
-<td>Litigation hold requirements are unique to each Agency and user.</td>
+<td>Litigation hold requirements are unique to each organisation and user.</td>
 </tr>
 </tbody>
 </table>
@@ -3344,13 +3344,13 @@
 </table>
 <h3 id="distribution-lists">Distribution lists</h3>
 <p>A distribution list is a grouping of mail recipients that is addressed as a single recipient. Distribution lists are used to send e-mail to groups of people without having to enter each recipient's individual address. Distributions lists can be established to receive and distribute internal, external, or internal and external email.</p>
-<p>This saves the sender from needing to enter each individual email address when emailing a group. These groups/lists are generally leveraged for emailing an entire team or project. Only internal agency employees can send emails to the "Agency-all" distribution list.</p>
+<p>This saves the sender from needing to enter each individual email address when emailing a group. These groups/lists are generally leveraged for emailing an entire team or project. Only internal organisation employees can send emails to the "Organisation-all" distribution list.</p>
 <p>Distribution lists are created in different ways depending on the Exchange architecture:</p>
 <ul>
 <li>Cloud Deployments - For cloud only deployments, distribution lists are created within Office 365.</li>
 <li>Hybrid Deployments - For hybrid deployments, distribution lists can be created both within Office 365 and on-premises. On-premises lists are then synchronised to Office 365. The on-premises method has the benefit of living with the user identity source of truth however it does create complexity when it is not managed in the same location as Exchange.</li>
 </ul>
-<p>Hybrid distribution lists cannot be managed directly in the outlook client by the user, if this functionality is required by the agency then it is recommended to re-create those address lists in Exchange Online.</p>
+<p>Hybrid distribution lists cannot be managed directly in the outlook client by the user, if this functionality is required by the organisation then it is recommended to re-create those address lists in Exchange Online.</p>
 <p>Management of Distribution lists can be streamlined through the enforcement of a Naming Policy. A Distribution list Naming Policy allows the enforcement of a consistent naming strategy across Microsoft 365 groups. It consists of two parts:</p>
 <ul>
 <li>Prefix-Suffix Naming Policy – Setting of prefixes or suffixes for groups names. The prefixes/suffixes can be either fixed strings or user attributes.</li>
@@ -3373,7 +3373,7 @@
 </tr>
 <tr>
 <td>Distribution Naming Policy</td>
-<td>Configured<br>The naming convention will be <code>AgencyName-PolicyName</code></td>
+<td>Configured<br>The naming convention will be <code>OrganisationName-PolicyName</code></td>
 <td>Naming policies streamline the management of Distribution lists and allow for groups to be easily sorted.</td>
 </tr>
 </tbody>
@@ -3421,7 +3421,7 @@
 <tr>
 <td>Custom Address Lists</td>
 <td>Configured</td>
-<td>Custom address lists can be configured by Agency administrators, however one initial custom list, <code>AgencyName-All</code>, should be manually created.</td>
+<td>Custom address lists can be configured by organisation administrators, however one initial custom list, <code>OrganisationName-All</code>, should be manually created.</td>
 </tr>
 <tr>
 <td>GAL and OAB</td>
@@ -3432,7 +3432,7 @@
 </table>
 <h3 id="email-transport-security">Email Transport Security</h3>
 <p>Message Transfer Agent - Strict Transport Security (MTA-STS) enables the configuration of domain policies that define whether the receiving domain supports TLS. If the domain doesn't support TLS then the policy can be configured to prevent transmission. Outbound mail flow in Exchange Online supports MTA-STS. Configuration of MTA-STS requires a DNS TXT record and the hosting a of the policy file.</p>
-<p>Opportunistic TLS enables email traffic to be encrypted when both the sender and receiver domains support TLS without the need for an additional port for encrypted traffic. By default, Exchange Online always attempts to encrypt mail traffic using opportunistic TLS. Microsoft always uses TLS 1.2 when transferring mail between <a href="https://docs.microsoft.com/en-au/microsoft-365/compliance/exchange-online-uses-tls-to-secure-email-connections?view=o365-worldwide#how-exchange-online-uses-tls-between-exchange-online-customers">Exchange Online customers</a>. </p>
+<p>Opportunistic TLS enables email traffic to be encrypted when both the sender and receiver domains support TLS without the need for an additional port for encrypted traffic. By default, Exchange Online always attempts to encrypt mail traffic using opportunistic TLS. Microsoft always uses TLS 1.2 when transferring mail between <a href="https://learn.microsoft.com/en-au/purview/exchange-online-uses-tls-to-secure-email-connections?view=o365-worldwide#how-exchange-online-uses-tls-between-exchange-online-customers">Exchange Online customers</a>. </p>
 <p>Email Transport Security Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -3528,9 +3528,9 @@
 </tbody>
 </table>
 <h3 id="application-management">Application management</h3>
-<p>Application management allows the Agency to control who can purchase third party applications for SharePoint Online. These apps can be purchased from <a href="https://appsource.microsoft.com/en-us/marketplace/apps?product=sharepoint">Microsoft App Store</a> and used within SharePoint Online itself.</p>
+<p>Application management allows the organisation to control who can purchase third party applications for SharePoint Online. These apps can be purchased from <a href="https://appsource.microsoft.com/en-us/marketplace/apps?product=sharepoint">Microsoft App Store</a> and used within SharePoint Online itself.</p>
 <p>SharePoint default methods of displaying and sharing of sharing data are available. Third party applications may circumvent controls or auditing and provide other methods of displaying or sharing of SharePoint data. Any third-party applications will need to be validated for compliance.</p>
-<p>The blueprint requires the Office 365 tenant to be rated up to Protected. The Agency must ensure information stays within the tenant to control the follow of information between its devices and Office 365 tenancy.</p>
+<p>The blueprint requires the Office 365 tenant to be rated up to Protected. The organisation must ensure information stays within the tenant to control the follow of information between its devices and Office 365 tenancy.</p>
 <p>Application Management Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -3826,7 +3826,7 @@
 <tr>
 <td>Records Management</td>
 <td>Not configured</td>
-<td>Records Management administrative screen provides configuration settings to route files from a SharePoint Document Library to a centralised SharePoint Records Management site. This is to support the traditional Centralised records management system in SharePoint.<br>Note, this is a separate feature from <a href="https://docs.microsoft.com/en-au/microsoft-365/compliance/records-management">records management in Microsoft 365</a>.</td>
+<td>Records Management administrative screen provides configuration settings to route files from a SharePoint Document Library to a centralised SharePoint Records Management site. This is to support the traditional Centralised records management system in SharePoint.<br>Note, this is a separate feature from <a href="https://learn.microsoft.com/en-au/purview/records-management">records management in Microsoft 365</a>.</td>
 </tr>
 <tr>
 <td>Secure Store Settings</td>
@@ -3845,8 +3845,8 @@
 </tr>
 <tr>
 <td>Term Store</td>
-<td>To be configured based on Agency existing term store to support existing taxonomy if required.</td>
-<td>Term store is configured for the solution if required by Agency. Term store provides a consistent taxonomy and ontology for the Agency. This enables ease of search for information within SharePoint.</td>
+<td>To be configured based on organisation existing term store to support existing taxonomy if required.</td>
+<td>Term store is configured for the solution if required by the organisation. Term store provides a consistent taxonomy and ontology for the organisation. This enables ease of search for information within SharePoint.</td>
 </tr>
 <tr>
 <td>User Profile</td>
@@ -3866,7 +3866,7 @@
 <p>On deletion of a user's account content can be deleted or retained for a specified period.</p>
 <h3 id="sharing">Sharing</h3>
 <p>The OneDrive sharing administration screen provides granular configuration. Controlling OneDrive sharing ensures that data is shared internally and externally in a secure manner.</p>
-<p>OneDrive provides end users the ability to securely store their personal data in Office 365. The design considers that OneDrive is used for personal storage and sharing within the Agency.</p>
+<p>OneDrive provides end users the ability to securely store their personal data in Office 365. The design considers that OneDrive is used for personal storage and sharing within the organisation.</p>
 <p>OneDrive for Business Sharing Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -3902,7 +3902,7 @@
 <tr>
 <td>Default Link Type</td>
 <td>Internal: Only people in your organisation</td>
-<td>No sharing is permitted outside the Agency.</td>
+<td>No sharing is permitted outside the organisation.</td>
 </tr>
 <tr>
 <td><strong>External Sharing</strong></td>
@@ -3969,12 +3969,12 @@
 <tr>
 <td>Synchronisation client</td>
 <td>Configured</td>
-<td>The Agency must use the OneDrive sync client to provide an offline file capability.</td>
+<td>The organisation must use the OneDrive sync client to provide an offline file capability.</td>
 </tr>
 <tr>
 <td>Storage Limitations</td>
 <td>Configured</td>
-<td>To assist the Agency in managing user data specific storage and retention limitations will be configured.</td>
+<td>To assist the organisation in managing user data specific storage and retention limitations will be configured.</td>
 </tr>
 </tbody>
 </table>
@@ -4006,7 +4006,7 @@
 <tr>
 <td>Days to retain files after user account is marked for deletion</td>
 <td>365 days</td>
-<td>Must align with the Agency internal record keeping policies.</td>
+<td>Must align with the organisation internal record keeping policies.</td>
 </tr>
 <tr>
 <td>Limit OneDrive user Capacity</td>
@@ -4086,7 +4086,7 @@
 <li>Network and local file shares – Most users will have a personal drive or a designated location on the network to save work which may not have a function assigned. To free up network storage and extend the ability to access files in the cloud, administrators can move files from a specific network path to the user's OneDrive for Business site.</li>
 </ul>
 <p>If a migration is not required, the deployment is referred to as a greenfield deployment.</p>
-<p>Access to OneDrive can be controlled to ensure Agency data is protected. This includes the configuration of:</p>
+<p>Access to OneDrive can be controlled to ensure organisation data is protected. This includes the configuration of:</p>
 <ul>
 <li>Only allowing access from specific IP address locations.</li>
 <li>Only allowing access from applications that use modern authentication.</li>
@@ -4105,7 +4105,7 @@
 <tbody>
 <tr>
 <td>Deployment Type</td>
-<td>Migration of data is out of scope for the blueprint however Microsoft provides vendor guidance  on possible migration paths for the agency</td>
+<td>Migration of data is out of scope for the blueprint however Microsoft provides vendor guidance  on possible migration paths for the organisation</td>
 <td>Migration method is dependent on the outcome of an assessment of quantity and type of data to be migrated.</td>
 </tr>
 </tbody>
@@ -4115,12 +4115,12 @@
 <p>Microsoft Teams leverages most of the functionality of the Office 365 components. When a Team is created the following artefacts are created out of the box:</p>
 <ul>
 <li>SharePoint Site - A new SharePoint site with the URL format of <code>/sites/&lt;SiteTitle&gt;</code>, with the <code>SiteTitle</code>'s spaces are stripped out.</li>
-<li>Office 365 Group - A new Office 365 Group, which is added into the Azure AD tenant. This is created with the site title as the Group Name.</li>
+<li>Office 365 Group - A new Office 365 Group, which is added into the Microsoft Entra ID tenant. This is created with the site title as the Group Name.</li>
 <li>Teams email – A new email address per channel can be created. The email inbox is managed centrally by the Microsoft Team services. At the time of writing this document, the email address will have a domain of <code>&lt;custom email inbox&gt;@apac.teams.ms</code>. </li>
 </ul>
 <p>Note: This email is not part of Microsoft Exchange Online.</p>
 <h3 id="access">Access</h3>
-<p>Access to a team is controlled using Microsoft 365 groups located in Azure AD.</p>
+<p>Access to a team is controlled using Microsoft 365 groups located in Microsoft Entra ID.</p>
 <p>When a Team is created, an Office 365 group will be created. Owners of the group are delegated to perform administrative actions across the team, while members can participate in the team but not undertake any administrative actions.</p>
 <p>The design considers permissions, roles and responsibility to administer, manage team owners and members within the team.</p>
 <p>Microsoft Teams Access Design Decisions for all agencies and implementation types.</p>
@@ -4135,8 +4135,8 @@
 <tbody>
 <tr>
 <td>Team creation permission</td>
-<td><code>rol-AgencyName-o365groupcreators</code> via restriction of 365 Group creation</td>
-<td>Teams will be created by select administrators or users (via group) to ensure that Teams are created using a documented approval workflow, avoiding Team proliferation.<br>This setting is required as Azure AD group creation is restricted to delegated individuals which only allows administrators or delegated users to create 365 groups, and hence Teams.</td>
+<td><code>rol-OrganisationName-o365groupcreators</code> via restriction of 365 Group creation</td>
+<td>Teams will be created by select administrators or users (via group) to ensure that Teams are created using a documented approval workflow, avoiding Team proliferation.<br>This setting is required as Microsoft Entra ID group creation is restricted to delegated individuals which only allows administrators or delegated users to create 365 groups, and hence Teams.</td>
 </tr>
 <tr>
 <td>Administrative action over Teams after creation</td>
@@ -4151,7 +4151,7 @@
 </tbody>
 </table>
 <h3 id="dynamic-security-group">Dynamic security group</h3>
-<p>Dynamic Security Groups are Azure AD security groups that are populated based on device and/or user attributes.</p>
+<p>Dynamic Security Groups are Microsoft Entra ID security groups that are populated based on device and/or user attributes.</p>
 <p>Dynamic Security groups can be leveraged to control access to locations, services, and features.</p>
 <p>The membership of a Dynamic Security group is updated whenever an attribute of a device or user is modified. If the user/device no longer matches the group rule, then that user/device is removed. Conversely if a user/device now matches the group rule they are added. When a user is added the group can be configured so that the added user receives an email notifying them of the addition.</p>
 <p>Naming of Dynamic Security groups can be streamlined using a Naming Policy. The Naming Policy ensures that the groups within the environment conform to a standard and their purpose can be easily identified.</p>
@@ -4167,8 +4167,8 @@
 <tbody>
 <tr>
 <td>Naming Policy</td>
-<td><code>grp-&lt;Agency&gt;-&lt;GroupName&gt;</code></td>
-<td>Assists in MOGs and standardisation of Agency configuration.</td>
+<td><code>grp-&lt;Organisation&gt;-&lt;GroupName&gt;</code></td>
+<td>Assists in MOGs and standardisation of organisation configuration.</td>
 </tr>
 <tr>
 <td>Welcome Email</td>
@@ -4178,10 +4178,10 @@
 </tbody>
 </table>
 <h3 id="organisation-wide-configuration">Organisation wide configuration</h3>
-<p>Microsoft Teams is a collaboration platform that enable the Agency to work collaboratively with external agencies. This allows Agency users to collaborate internally, with trusted guest users and set up meetings with external users. </p>
+<p>Microsoft Teams is a collaboration platform that enable the organisation to work collaboratively with external agencies. This allows organisation users to collaborate internally, with trusted guest users and set up meetings with external users. </p>
 <p>The design will consider the following configurations:</p>
 <ul>
-<li>External Access - configures allowable domains to connect to the Agency instance of Microsoft Teams. This also configures Skype for Business integration.</li>
+<li>External Access - configures allowable domains to connect to the organisation instance of Microsoft Teams. This also configures Skype for Business integration.</li>
 <li>Guest Access – is when an external user is invited to be a member of the team. Once a team owner has granted someone guest access, they can access that team's resources, share files, and join a group chat with other team members.</li>
 <li>Teams Settings – configures the default behaviour of all users in the Teams application.</li>
 </ul>
@@ -4198,12 +4198,12 @@
 <tr>
 <td>External Access</td>
 <td>Configured:<br>(Example) Allow dta.gov.au</td>
-<td>Allow only dta.gov.au and deny sharing to external users. This will prevent users from setting up meetings with users that are not setup as a Guest of the Agency.</td>
+<td>Allow only dta.gov.au and deny sharing to external users. This will prevent users from setting up meetings with users that are not setup as a Guest of the organisation.</td>
 </tr>
 <tr>
 <td>Guest Access</td>
 <td>Configured:<br>Guest Access: Enabled</td>
-<td>Allows people outside of the agency to access teams and channels.</td>
+<td>Allows people outside of the organisation to access teams and channels.</td>
 </tr>
 <tr>
 <td>Teams Setting</td>
@@ -4220,7 +4220,7 @@
 <li>Meeting Policies – Meeting policies define creations of meetings, audio and video, content sharing, and participant and guest permissions to meetings in Teams.</li>
 <li>Live events Policies – Live events policies is used to globally broadcast departmental meeting via teams.</li>
 <li>Messaging Policies – Messaging policies defines behaviour of messages in Teams. The policy defines user capability in sending, editing, deleting, voice messages, and using giphy, stickers, URL preview and translator.</li>
-<li>Teams App – Teams apps policy defines the list of apps that can be used in Teams. Microsoft Teams provides Microsoft published apps and third-party apps that can be used in Microsoft Teams. Agency can control creation of custom apps in Teams.</li>
+<li>Teams App – Teams apps policy defines the list of apps that can be used in Teams. Microsoft Teams provides Microsoft published apps and third-party apps that can be used in Microsoft Teams. The organisation can control creation of custom apps in Teams.</li>
 </ul>
 <p>Policies and Settings Design Decisions for all agencies and implementation types.</p>
 <table>
@@ -4255,13 +4255,13 @@
 <tr>
 <td>Teams apps</td>
 <td>Configured<br>Global Policy:<br>Allow all Microsoft apps<br>Block all third-party apps<br>Block all custom apps</td>
-<td>All third-party apps are blocked by the blueprint by default. The use of third-party apps should be risk assessed by Agencies individually.<br>Custom apps are custom developed applications created by the Agency. These should be enabled as required.</td>
+<td>All third-party apps are blocked by the blueprint by default. The use of third-party apps should be risk assessed by Agencies individually.<br>Custom apps are custom developed applications created by the organisation. These should be enabled as required.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="unified-communication">Unified communication</h3>
 <p>Teams provides a Unified Communication (UC) capability which allows users to participate in audio-visual conferencing in meetings and on-demand.</p>
-<p>Teams can integrate with third-party UC products and provide configurable levels of functionality when integrated. Third party UC products will be the responsibility of the agency.</p>
+<p>Teams can integrate with third-party UC products and provide configurable levels of functionality when integrated. Third party UC products will be the responsibility of the organisation.</p>
 <p>Microsoft Teams can natively provide the following UC features:</p>
 <ul>
 <li>Individual and group voice calls.</li>
@@ -4297,12 +4297,12 @@
 </table>
 <h3 id="voice-calling">Voice calling</h3>
 <p>Enables agencies to make calls to landlines or mobiles within Microsoft Teams.</p>
-<p>Voice calling can be configured in a number of ways depending on the requirements of the Agency, and whether a telephony system is already in place:</p>
+<p>Voice calling can be configured in a number of ways depending on the requirements of the organisation, and whether a telephony system is already in place:</p>
 <ul>
 <li>VoIP calling: Available within Teams by default without any configuration required. Users can make voice or video calls to each other and collaborate over the internet outside of the PSTN (Public Switched Telephone Network) system. PSTN users outside of Teams can dial in using the provided PSTN dial in conference number to VoIP meetings where this is enabled.</li>
 <li>Operator Connect: Operator Connect enables a simple PSTN connection method which enables Agencies to connect to a PSTN provider of their choice if they participate in the Operator Connect program. The PSTN integration is managed as a service by the chosen operator.</li>
 <li>Calling Plan via Telstra Calling for Office 365: Telstra Calling avoids the complexity of separate collaboration systems and can be enabled within Teams. Similar to Operator Connect, this method provides a fully managed service by Telstra for Teams calling to PSTN systems.</li>
-<li>Direct Routing: Direct Routing enables hybrid Agencies to connect their on-premises telephony infrastructure to Microsoft Teams through a series of supported on-premises Session Border Controllers (SBC). This method provides the Agency a self-managed service for Teams calling to PSTN systems.</li>
+<li>Direct Routing: Direct Routing enables hybrid Agencies to connect their on-premises telephony infrastructure to Microsoft Teams through a series of supported on-premises Session Border Controllers (SBC). This method provides the organisation a self-managed service for Teams calling to PSTN systems.</li>
 </ul>
 <p>The following image describes how connectivity is achieved between Microsoft Teams and Telstra, for the Telstra calling for Office 365 service.</p>
 <p><img alt="Telstra Calling for Office 365" src="../../img/o365-voice.png#center" /></p>
@@ -4318,12 +4318,12 @@
 <tbody>
 <tr>
 <td>Voice Calling solution</td>
-<td>Agency decision</td>
-<td>The Agency should assess their requirements for calling in order to select the right calling solution for Teams.</td>
+<td>Organisation decision</td>
+<td>The organisation should assess their requirements for calling in order to select the right calling solution for Teams.</td>
 </tr>
 <tr>
 <td>Security Assessment</td>
-<td>Agency to risk assess</td>
+<td>Organisation to risk assess</td>
 <td>As the calling options are hosted outside of the M365 system boundary by third party providers they should be risk assessed to determine suitability.</td>
 </tr>
 </tbody>
@@ -4331,7 +4331,7 @@
 <h2 id="power-platform">Power platform</h2>
 <p>Power Platform combines the power of PowerApps, Power BI, and Power Automate (formerly Microsoft Flow) into one business application platform. This enables quick and easy app building and data insights.</p>
 <h3 id="power-apps-and-power-automate">Power Apps and Power Automate</h3>
-<p>Power App and Power Automate are Office 365 tools to develop and create cross platform applications with minimal amount of coding. These tools enable an organisation to create forms, capture information, automate business process and present it in a report to the Agency.</p>
+<p>Power App and Power Automate are Office 365 tools to develop and create cross platform applications with minimal amount of coding. These tools enable an organisation to create forms, capture information, automate business process and present it in a report to the organisation.</p>
 <p>Power Apps and Power Automate is built with an underlying connector that allows application to consume to be displayed and business process to act on this information. These connectors provide ability to consume or leverage on existing business tools. Power Apps and Power Automate connectors can be categorised as:</p>
 <ul>
 <li>Office 365 Connectors – Office 365 Connectors provides data access to Office 365 applications (e.g. SharePoint, Teams).</li>
@@ -4354,7 +4354,7 @@
 <tr>
 <td>Data Policies for Power Automate and Power Apps</td>
 <td>Configured<br>Access only to SharePoint, OneDrive for Business, Office 365 Users, Planner, Outlook for 365, and Teams</td>
-<td>Data Lost Prevention configures the connectors that can be used in Power Apps and Power Automate. <br>The Agency should evaluate the connectors to ensure it fits to the Agency's requirement.</td>
+<td>Data Lost Prevention configures the connectors that can be used in Power Apps and Power Automate. <br>The organisation should evaluate the connectors to ensure it fits to the organisation's requirement.</td>
 </tr>
 <tr>
 <td>Environment Administrator</td>
@@ -4374,7 +4374,7 @@
 <li>Power BI Embedded – Power BI embedded allows organisation to publish Power BI report to be consumed in a public website.</li>
 </ul>
 <p>Inside the Power BI Service, the creation of workspaces, content packs, custom visualisations, and data flows can be controlled both on an enterprise level and a group level. This simplifies management of the service.</p>
-<p>Power BI also allows administrators to control the sharing of datasets, content, report publishing, and template apps. This ensures that the sharing of the Agency information is controlled.</p>
+<p>Power BI also allows administrators to control the sharing of datasets, content, report publishing, and template apps. This ensures that the sharing of the organisation information is controlled.</p>
 <p>Power BI Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -4403,7 +4403,7 @@
 <tr>
 <td>Third Party integration</td>
 <td>Disable</td>
-<td>Disable third party integration, such as ArcGIS. This should be evaluated by the Agency to ensure that the data stays within Australia.</td>
+<td>Disable third party integration, such as ArcGIS. This should be evaluated by the organisation to ensure that the data stays within Australia.</td>
 </tr>
 </tbody>
 </table>
@@ -4469,7 +4469,7 @@
 <p>The following MIP methods can be used to assist with PSPF compliance:</p>
 <ul>
 <li>For calendar invites, advise users to add the classification to the body, and use transport rules or DLP to add the required subject and header values.</li>
-<li>Update the <code>X-Protective-Marking</code> header associated with the MIP label at the email gateway with the <code>ORIGIN=user@agency.gov.au</code> property. Note, internal emails inside the Agency wouldn't be tagged using this method.</li>
+<li>Update the <code>X-Protective-Marking</code> header associated with the MIP label at the email gateway with the <code>ORIGIN=user@organisation.com.au</code> property. Note, internal emails inside the organisation wouldn't be tagged using this method.</li>
 </ul>
 <p>Example email gateway rules that work with MIP are available in the <a href="../../as-built-as-configured/hybrid-network-configuration#office-365--email-protective-markings-with-aip-technology">Network Configuration ABAC document</a>. These rules are based on regular expressions and are easily adaptable to vendor specific email gateways.</p>
 <p>Classification Label Design Decisions for all agencies and implementation types.</p>
@@ -4505,11 +4505,11 @@
 <tr>
 <td>Auto-labeling</td>
 <td>Configured</td>
-<td>Automatic Label (auto-labeling) polices will be configured to add the correct sensitivity label to inbound emails when an email is configured with a classification outside of the Agency's tenant or through a 3rd party marking tool.</td>
+<td>Automatic Label (auto-labeling) polices will be configured to add the correct sensitivity label to inbound emails when an email is configured with a classification outside of the organisation's tenant or through a 3rd party marking tool.</td>
 </tr>
 <tr>
 <td>Protected Marking Header</td>
-<td>Agency Decision</td>
+<td>Organisation Decision</td>
 <td>Agencies can best determine the method to set the <code>x-protective-marking</code> header based on their requirements. As of February 2022, the most effective method natively is using Exchange Transport rules in conjunction with the gateway rules (for hybrid or PROTECTED deployments) due to character limitations.</td>
 </tr>
 </tbody>
@@ -4537,7 +4537,7 @@
 <tr>
 <td>Retention Policies</td>
 <td>Configured</td>
-<td>To ensure that legislative data retention requirements are met. This is to ensure that the Agency holds the data for fraud detection.</td>
+<td>To ensure that legislative data retention requirements are met. This is to ensure that the organisation holds the data for fraud detection.</td>
 </tr>
 </tbody>
 </table>
@@ -5132,7 +5132,7 @@
 </tbody>
 </table>
 <h2 id="exchange-online-protection">Exchange Online Protection</h2>
-<p>Exchange Online Protection (EOP) is a series of filtering services within Exchange Online that protects the Agency against spam, malware, and other email threats.</p>
+<p>Exchange Online Protection (EOP) is a series of filtering services within Exchange Online that protects the organisation against spam, malware, and other email threats.</p>
 <h3 id="connection-filtering">Connection filtering</h3>
 <p>Connection filtering within Exchange Online Protection provides Exchange Online with a list of known safe IP (IP allow list) addresses to assist with mail filtering. It can also be used to reject messages from various known malicious sources (IP block list). Microsoft provide a dynamic allow list that identifies various sources (safe list) that are considered safe from 3rd-party lists.</p>
 <p>Exchange Online Protection Connection Filtering is always enabled however it can, to a degree, be configured. A connection filter can be implemented to always allow or always block traffic based upon an IP list.</p>
@@ -5449,14 +5449,14 @@
 <tr>
 <td>Applied to</td>
 <td>Configured</td>
-<td>All Agency domains (e.g., dta.gov.au).</td>
+<td>All organisation domains (e.g., dta.gov.au).</td>
 </tr>
 </tbody>
 </table>
 <h3 id="anti-phishing">Anti-phishing</h3>
 <p>Anti-phishing protects users by checking incoming messages for indicators that the message may be spoofed by impersonator or part of a phishing campaign. Most phishing emails involves a malicious actor disguising oneself (spoofing) as an individual who is known to the recipient. The messaged is crafted in a such a way which can trick the user into clicking a link, downloading malware, or stealing user credentials.</p>
 <p>Anti-phishing uses mailbox intelligence to build a profile of communication habits between each user and maps out these relationship patterns. In an event of a phishing campaign it will analyse the message behaviour against the user profiles to determine if the sender is legitimate or an impersonator.</p>
-<p>Anti-spoof specifically analyses the senders address to determine if it is legitimate or forged. Administrators can allow our block specific users from spoofing an internal domain. i.e. An external organisation to send out advertising or products on behalf of the agency.</p>
+<p>Anti-spoof specifically analyses the senders address to determine if it is legitimate or forged. Administrators can allow our block specific users from spoofing an internal domain. i.e. An external organisation to send out advertising or products on behalf of the organisation.</p>
 <p>Anti-phishing Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -5492,7 +5492,7 @@
 <tr>
 <td>Add users to protect</td>
 <td>On</td>
-<td>Impersonation of high profile agency representatives (such as executives) can pose a large agency risk.</td>
+<td>Impersonation of high profile organisation representatives (such as executives) can pose a large organisation risk.</td>
 </tr>
 <tr>
 <td>Add domains to protect</td>
@@ -5522,7 +5522,7 @@
 <tr>
 <td>Spoofing filter settings</td>
 <td>Enable antispoofing protection: On</td>
-<td>Allows the Agency to filter email from senders who are spoofing domains.</td>
+<td>Allows the organisation to filter email from senders who are spoofing domains.</td>
 </tr>
 <tr>
 <td>Enable Unauthenticated Sender Feature</td>
@@ -5571,7 +5571,7 @@
 </tr>
 <tr>
 <td>Easy sharing of Whiteboard from Surface hub</td>
-<td>Agency Decision</td>
+<td>Organisation Decision</td>
 <td>Depending on the location and configuration of the Surface Hub/s within the organisation this setting may be configured.</td>
 </tr>
 </tbody>
@@ -5585,7 +5585,7 @@
 It can also be configured to allow images from Bing and videos from YouTube to be embedded.</p>
 <p>Microsoft Forms is capable of capturing the names of the organisational users who complete a form or survey. This functionality can also be configured globally or on a form by form basis.  </p>
 <p>Surveys and forms can be leveraged for potentially malicious purposes. Phishing protection for Microsoft Forms scans forms for common phishing questions. If they are detect, the form is prevented from being distributed or shared. Phishing protection only protects internal organisation forms.</p>
-<p>At time of writing, Microsoft Forms processes and stores data for Australian tenants within the <a href="https://docs.microsoft.com/en-au/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#australia">United States</a>, it is recommended to not process sensitive information using Microsoft Forms.</p>
+<p>At time of writing, Microsoft Forms processes and stores data for Australian tenants within the <a href="https://learn.microsoft.com/en-au/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#australia">United States</a>, it is recommended to not process sensitive information using Microsoft Forms.</p>
 <p>Microsoft Forms Design Decisions for all agencies and implementation types.</p>
 <table>
 <thead>
@@ -5599,17 +5599,17 @@ It can also be configured to allow images from Bing and videos from YouTube to b
 <tr>
 <td>External Sharing -  Sharing of link and collection of responses</td>
 <td>Enabled</td>
-<td>Sharing of form links will be enabled, it is up to the Agency which forms they wish to publish.</td>
+<td>Sharing of form links will be enabled, it is up to the organisation which forms they wish to publish.</td>
 </tr>
 <tr>
 <td>External Sharing -  Collaboration on the layout and structure</td>
 <td>Enabled</td>
-<td>Collaboration on the layout and structure of forms will be enabled, it is up to the Agency which forms they wish to collaborate on.</td>
+<td>Collaboration on the layout and structure of forms will be enabled, it is up to the organisation which forms they wish to collaborate on.</td>
 </tr>
 <tr>
 <td>External Sharing -  Sharing of form as a template</td>
 <td>Enabled</td>
-<td>Sharing forms as a template will be enabled, it is up to the Agency which forms they wish to publish.</td>
+<td>Sharing forms as a template will be enabled, it is up to the organisation which forms they wish to publish.</td>
 </tr>
 <tr>
 <td>External Sharing -  Sharing of result summary</td>
