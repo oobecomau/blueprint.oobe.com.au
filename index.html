@@ -79,7 +79,7 @@
       
     
     
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -1248,10 +1248,8 @@
   
   
     <h1 id="welcome">Welcome</h1>
-<p>The blueprint is a straightforward and secure way to deploy Microsoft 365 and Azure. Security should make your environment easy and convenient to use, not the opposite. We believe that your modern desktop should be fast, secure, reliable and, overall, a pleasure to use. </p>
-<p>The blueprint provides guidance on all Microsoft 365 features. New, old and yet to come. We test and deploy new features and publish our findings for everyone to use. Better security should be available for all of us.</p>
-<p>We've taken the great work started by the Digital Transformation Agency, and us, then we've added, updated and expanded on it to provide everyone with a simple way to consume cloud services without the risk.</p>
-<p>Have a look around, and if you have a suggestion, feel free to drop us a line in <a href="https://github.com/oobecomau/theblueprint">GitHub</a>.</p>
+<p>The oobe blueprint is changing. With ASD taking the reigns of the DTA Blueprint, we don't want a blueprint with too many cooks in the kitchen. We'll be updating the blueprint.oobe.com.au website to be targeted at our real-world learnings from implementing the ASD blueprint, and adding agile content as it becomes available from our trusted partnerships with Microsoft and others. </p>
+<p>The oobe blueprint will still provide a unique insight into best practices for Microsoft 365 deployments based on our experience in the field</p>
 <p>Check out some of our products below that we use ourselves to assist with Microsoft 365 deployments, and if you need a hand with implementing the blueprint, get in touch.</p>
     
   
@@ -1347,6 +1345,7 @@
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
           <a href="#" class="md-top md-icon" data-md-component="top" hidden>
